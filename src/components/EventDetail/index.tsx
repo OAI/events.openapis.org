@@ -243,16 +243,25 @@ export default function EventDetail({
 
       {/* Agenda Section */}
       {agendaCategories.length > 0 && (
-        <section className="relative z-10 mx-auto mb-12 max-w-[1408px] md:px-6">
+        /* The top margin collapses with the map section's mb-12, so the 140px
+           wins rather than stacking on top of it. */
+        <section className="relative z-10 mx-auto mb-12 mt-20 max-w-[1408px] md:mt-[140px] md:px-6">
           {/* Headings and the date picker keep the 80px side inset (md:px-20);
               the session cards below fill the full column width (no inset). */}
-          <h2 className="m-0 mb-10 px-6 font-onest text-[40px] font-bold leading-[110%] tracking-oai text-[color:var(--ifm-font-color-base)] md:px-20 md:text-[80px] md:leading-[96px]">
+          {/* 80px below this heading, so the track heading that follows gets its
+              80px of air — unless the date picker sits between the two, in which
+              case the picker carries that gap instead. */}
+          <h2
+            className={`m-0 px-6 font-onest text-[40px] font-bold leading-[110%] tracking-oai text-[color:var(--ifm-font-color-base)] md:px-20 md:text-[80px] md:leading-[96px] ${
+              agendaDates.length > 1 ? 'mb-10' : 'mb-10 md:mb-20'
+            }`}
+          >
             Agenda
           </h2>
 
           {/* Date Filter Buttons */}
           {agendaDates.length > 1 && (
-            <div className="mb-10 ml-6 inline-flex items-center rounded-[20px] bg-[rgba(21,25,28,0.08)] p-0 [[data-theme=dark]_&]:bg-[#1f2326] md:ml-20">
+            <div className="mb-10 ml-6 inline-flex items-center rounded-[20px] bg-[rgba(21,25,28,0.08)] p-0 [[data-theme=dark]_&]:bg-[#1f2326] md:mb-20 md:ml-20">
               {agendaDates.map((agendaDate) => {
                 const isActive = selectedDate === agendaDate;
                 return (
@@ -275,7 +284,7 @@ export default function EventDetail({
           <div className="space-y-12 md:space-y-20">
             {agendaCategories.map((category) => (
               <div key={category}>
-                <h3 className="m-0 mb-6 px-6 font-onest text-[32px] font-bold leading-[110%] tracking-oai text-[color:var(--ifm-font-color-base)] md:px-20 md:text-[48px]">
+                <h3 className="m-0 mb-6 px-6 font-onest text-[32px] font-bold leading-[110%] tracking-oai text-[color:var(--ifm-font-color-base)] md:mb-10 md:px-20 md:text-[48px]">
                   {category}
                 </h3>
                 <div className="space-y-2">
@@ -293,7 +302,9 @@ export default function EventDetail({
                         {/* Title on the left, time on the right — same line,
                             vertically centred on desktop; stacked on mobile. */}
                         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-8">
-                          <h4 className="m-0 font-onest text-[24px] font-bold leading-[1.2] tracking-oai text-[#15191c] [[data-theme=dark]_&]:text-white md:text-[32px]">
+                          {/* Capped at 800px so long titles wrap instead of
+                              running the full width of the card. */}
+                          <h4 className="m-0 font-onest text-[24px] font-bold leading-[1.2] tracking-oai text-[#15191c] [[data-theme=dark]_&]:text-white md:max-w-[800px] md:text-[32px]">
                             {session.title}
                           </h4>
                           {session.time && (
@@ -360,7 +371,7 @@ export default function EventDetail({
                     const wrapperProps = {
                       onClick: () => openSession(session),
                       className:
-                        'tile-press block w-full text-left p-6 md:p-8 rounded-[40px] bg-white hover:bg-white/90 [[data-theme=dark]_&]:bg-[#1e2225] [[data-theme=dark]_&]:hover:bg-[#1e2225]/90 transition-colors cursor-pointer relative border-none',
+                        'tile-press block w-full text-left p-6 md:p-10 rounded-[40px] bg-white hover:bg-white/90 [[data-theme=dark]_&]:bg-[#1e2225] [[data-theme=dark]_&]:hover:bg-[#1e2225]/90 transition-colors cursor-pointer relative border-none',
                     };
 
                     return (
