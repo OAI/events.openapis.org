@@ -1,0 +1,437 @@
+# Global speaker registry — the single source of truth for every speaker.
+#
+# Events reference speakers by `slug` (in event.yaml: the top-level `speakers:`
+# list, agenda `speaker:`/`speakers:`, and each talk's `speakers:`). The resolver
+# in src/lib/speakers.ts rehydrates a slug into the {name, position, photo} shape
+# the UI consumes, where `position` = "role | company".
+#
+# Identity vs. affiliation: name/image/description are stable identity and live
+# here. `company` (and `role` when known) hold each speaker's LATEST-known
+# affiliation, reconciled from their most recent per-event override — role and
+# company are taken as a matched pair from that same latest event. Point-in-time
+# affiliations for any given talk are snapshotted per event via
+# data/<year>/<slug>/speakers/speakers.yaml overrides.
+#
+# `badges` is an optional list of membership pills shown after the speaker's name,
+# e.g. `badges: [TSC, OAI]` (TSC = Technical Steering Committee, OAI = OpenAPI
+# Initiative member). Codes are uppercased on render; unknown codes still show,
+# they just get no tooltip. Like every other field it merges per-event, so an
+# event override can pin the badges a speaker held at that event.
+#
+# `image` is either a bare filename (-> data/speakers/image/<file>, copied to
+# public/img/speakers/<slug>.webp by `npm run speakers`) or a full URL / absolute
+# /path (used as-is). Speakers with no image yet resolve to the neutral committed
+# avatar /img/_avatar-placeholder.svg (real photos are harvested in a later pass).
+#
+# Speakers who only appeared at company-less events have no company yet. image is
+# still backfilled in a later pass.
+
+- slug: adeel-ali
+  name: Adeel Ali
+  company: APIMatic
+
+- slug: aditya-rohit
+  name: Aditya Rohit
+  image: aditya-rohit.webp
+  company: SwytchCode
+
+- slug: aditya-tangirala
+  name: Aditya Tangirala
+  image: aditya-tangirala.webp
+  company: Venmo
+
+- slug: adrian-machado
+  name: Adrian Machado
+  company: Zuplo
+
+- slug: adrian-melillo
+  name: Adrian Melillo
+
+- slug: andreas-siegel
+  name: Andreas Siegel
+  company: Pentacor
+
+- slug: annegret-junker
+  name: Annegret Junker
+  company: Codecentric
+
+- slug: anoop-m-d
+  name: Anoop M D
+  company: Bruno
+
+- slug: anupriya-johari
+  name: Anupriya Johari
+  company: Simple Machines
+
+- slug: anusha-jayasundara
+  name: Anusha Jayasundara
+  company: WSO2
+
+- slug: ashish-khichi
+  name: Ashish Khichi
+  company: Credit Agricole
+
+- slug: audrey-kolski
+  name: Audrey Kolski
+
+- slug: badr-nass-lahsen
+  name: Badr Nass Lahsen
+  image: badr-nass-lahsen.webp
+  company: CyberArk
+
+- slug: beppe-catanese
+  name: Beppe Catanese
+  role: Developer Advocate
+  company: Adyen
+
+- slug: bryam-vega
+  name: Bryam Vega
+  company: Thoughtworks
+
+- slug: budhaditya-bhattacharya
+  name: Budhaditya Bhattacharya
+  image: budhaditya-bhattacharya.webp
+  company: Tyk
+
+- slug: carles-arnal
+  name: Carles Arnal
+  company: IBM
+
+- slug: chris-wood
+  name: Chris Wood
+  image: chris-wood.webp
+  company: Ozone API
+
+- slug: dakshitha-ratnayake
+  name: Dakshitha Ratnayake
+  company: WSO2
+
+- slug: dan-ciruli
+  name: Dan Ciruli
+  image: dan-ciruli.webp
+  company: Nutanix
+
+- slug: daniel-gutierrez-diez
+  name: Daniel Gutierrez Diez
+  role: Principal Software Engineer
+  company: FactSet
+
+- slug: daniel-hervas
+  name: Daniel Hervás
+
+- slug: darrel-miller
+  name: Darrel Miller
+  company: Microsoft
+
+- slug: dave-shanley
+  name: Dave Shanley
+  company: Princess Beef Heavy Industries
+
+- slug: david-boyne
+  name: David Boyne
+  company: EventCatalog
+
+- slug: david-oneill
+  name: David O'Neill
+  company: APIContext
+
+- slug: derric-gilling
+  name: Derric Gilling
+  company: WSO2
+
+- slug: dimitri-van-hees
+  name: Dimitri van Hees
+  image: dimitri-van-hees.webp
+  company: Dutch Government
+
+- slug: edouard-lacourt
+  name: Edouard Lacourt
+  role: Software Engineer
+  company: Theodo
+
+- slug: eduardo-maldonado
+  name: Eduardo Maldonado
+  company: The LEGO Group
+
+- slug: emmanuel-bastien
+  name: Emmanuel Bastien
+  company: Shell
+
+- slug: emmanuel-paraskakis
+  name: Emmanuel Paraskakis
+  image: emmanuel-paraskakis.webp
+  company: Level 250
+
+- slug: erik-hansen
+  name: Erik Hansen
+
+- slug: erik-wilde
+  name: Erik Wilde
+  image: erik-wilde.webp
+  company: OpenAPI Initiative
+  badges: [OAI]
+
+- slug: ewen-quimerch
+  name: Ewen Quimerc'h
+  role: Software Engineer
+  company: Theodo
+
+- slug: eyal-sivan
+  name: Eyal Sivan
+
+- slug: fabrizio-lazzaretti
+  name: Fabrizio Lazzaretti
+  company: Wavestone
+
+- slug: felix-medam
+  name: Felix Medam
+  company: Codecentric
+
+- slug: francois-lasne
+  name: Francois Lasne
+
+- slug: frank-kilcommins
+  name: Frank Kilcommins
+  image: frank-kilcommins.webp
+  company: Jentic
+  badges: [TSC, OAI]
+
+- slug: gobe-hobona
+  name: Gobe Hobona
+
+- slug: hari-krishnan
+  name: Hari Krishnan
+  company: Specmatic
+
+- slug: henry-andrews
+  name: Henry Andrews
+  image: henry-andrews.webp
+  company: OpenAPI Initiative
+  badges: [OAI]
+
+- slug: ikenna-nwaiwu
+  name: Ikenna Nwaiwu
+
+- slug: ishraq-khan
+  name: Ishraq Khan
+
+- slug: jeremy-glassenberg
+  name: Jeremy Glassenberg
+  company: Salesforce
+
+- slug: jeremy-snyder
+  name: Jeremy Snyder
+
+- slug: joel-rosario
+  name: Joel Rosario
+  company: Specmatic
+
+- slug: jordan-walsh
+  name: Jordan Walsh
+  company: Postman
+
+- slug: jose-haro-peralta
+  name: Jose Haro Peralta
+
+- slug: kevin-swiber
+  name: Kevin Swiber
+  company: Pointbreak
+
+- slug: kin-lane
+  name: Kin Lane
+  company: Naftiko
+
+- slug: kuldeepak-angrish
+  name: Kuldeepak Angrish
+  image: kuldeepak-angrish.webp
+  company: Tyk
+
+- slug: lorna-mitchell
+  name: Lorna Mitchell
+  image: lorna-mitchell.webp
+  company: TM Forum
+
+- slug: luiz-carneiro
+  name: Luiz Carneiro
+  company: Smapiot
+
+- slug: madhu-sudan-jangid
+  name: Madhu Sudan Jangid
+
+- slug: manasa-hari
+  name: Manasa Hari
+  company: Adobe
+
+- slug: manaswini-talagadadivi
+  name: Manaswini Talagadadivi
+  company: Constructor
+
+- slug: manideep-galala
+  name: Manideep Galala
+  image: manideep-galala.webp
+  company: Microsoft
+
+- slug: manuel-ottlik
+  name: Manuel Ottlik
+  company: HDI Global SE
+
+- slug: mario-alvarez
+  name: Mario Alvarez
+
+- slug: marjukka-niinioja
+  name: Marjukka Niinioja
+  image: marjukka-niinioja.webp
+  company: Osaango
+
+- slug: marty-pitt
+  name: Marty Pitt
+  company: Orbital
+
+- slug: maxim-danilov
+  name: Maxim Danilov
+
+- slug: miguel-quintero
+  name: Miguel Quintero
+  image: miguel-quintero.webp
+  company: Postman
+
+- slug: mike-amundsen
+  name: Mike Amundsen
+
+- slug: mike-holdsworth
+  name: Mike Holdsworth
+  company: Monowai
+
+- slug: miriam-greis
+  name: Miriam Greis
+  company: Adorsys
+
+- slug: naresh-jain
+  name: Naresh Jain
+  image: naresh-jain.webp
+  company: Specmatic
+
+- slug: neelesh-pateriya
+  name: Neelesh Pateriya
+  company: Cisco
+
+- slug: nolan-sullivan
+  name: Nolan Sullivan
+  company: Speakeasy
+
+- slug: nuwan-dias
+  name: Nuwan Dias
+  image: nuwan-dias.webp
+  company: WSO2
+
+- slug: ole-wendland
+  name: Ole Wendland
+  company: INNOQ
+
+- slug: oleg-nenashev
+  name: Oleg Nenashev
+  role: Community Builder and Developer Advocate
+  company: Gradle
+
+- slug: olga-podolyako
+  name: Olga Podolyako
+
+- slug: omri-gazitt
+  name: Omri Gazitt
+
+- slug: patrick-brosse
+  name: Patrick Brosse
+  role: Head of API & DataModel Governance
+  company: Amadeus
+
+- slug: patrick-chiu
+  name: Patrick Chiu
+  company: Telstra
+
+- slug: paul-bradley
+  name: Paul Bradley
+  company: Excelsa
+
+- slug: pavel-kornev
+  name: Pavel Kornev
+  company: SAP
+
+- slug: peter-thomas
+  name: Peter Thomas
+  company: Karate Labs
+
+- slug: rafael-granados
+  name: Rafael Granados
+  role: API Architect
+  company: INDITEX
+
+- slug: rafael-ruiz
+  name: Rafael Ruiz
+  company: 101OBEX
+
+- slug: rahul-de
+  name: Rahul Dé
+  image: rahul-de.webp
+  company: Citi
+
+- slug: raul-nogales
+  name: Raul Nogales
+  image: raul-nogales.webp
+
+- slug: ryan-day
+  name: Ryan Day
+  company: Conference of State Bank Supervisors
+
+- slug: sean-blanchfield
+  name: Sean Blanchfield
+  company: Jentic
+
+- slug: sebastian-rhode
+  name: Sebastian Rhode
+  company: Zeiss
+
+- slug: shireen-nagdive
+  name: Shireen Nagdive
+  company: Salesforce
+
+- slug: simon-harrer
+  name: Simon Harrer
+  image: simon-harrer.webp
+  company: Entropy Data
+
+- slug: simon-heimler
+  name: Simon Heimler
+  company: SAP
+
+- slug: sohaib-tariq
+  name: Sohaib Tariq
+
+- slug: steve-sfartz
+  name: Stève Sfartz
+  company: Cisco
+
+- slug: steven-willmott
+  name: Steven Willmott
+  company: Timewarp
+
+- slug: stu-waldron
+  name: Stu Waldron
+
+- slug: sumit-amar
+  name: Sumit Amar
+  image: sumit-amar.webp
+  company: WEX
+
+- slug: thomas-bayer
+  name: Thomas Bayer
+
+- slug: yan-sun
+  name: Yan Sun
+  company: IATA
+
+- slug: yousaf-nabi
+  name: Yousaf Nabi
+  company: SmartBear
+
+- slug: yusuke-tsutsumi
+  name: Yusuke Tsutsumi

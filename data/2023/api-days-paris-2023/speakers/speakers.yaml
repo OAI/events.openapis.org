@@ -1,0 +1,25 @@
+# Per-event overrides for API Days Paris 2023 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: Getting APIs to Work
+- slug: frank-kilcommins
+  company: SmartBear
+- slug: simon-harrer
+  company: INNOQ
+- slug: oleg-nenashev
+  company: WireMock
+- slug: yan-sun
+  company: IATA
+- slug: badr-nass-lahsen
+  company: CyberArk
+- slug: nolan-sullivan
+  company: Speakeasy
+- slug: steven-willmott
+  company: Timewarp
+- slug: steve-sfartz
+  company: Cisco
+- slug: emmanuel-bastien
+  company: Shell
+- slug: dave-shanley
+  company: Princess Beef Heavy Industries

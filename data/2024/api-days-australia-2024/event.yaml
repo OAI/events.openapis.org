@@ -1,0 +1,32 @@
+title: API Days Australia 2024
+slug: api-days-australia-2024
+event_date: October 16 – 17, 2024
+location: Melbourne Convention and Exhibition Centre, Melbourne, Australia
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Australia 2024, hosted at the
+  Melbourne Convention and Exhibition Centre — a session of talks on the state of
+  OpenAPI, code and portal generation, and the role of API descriptions in
+  federated API management.
+permalink: /events/api-days-australia-2024
+speakers:
+  - erik-wilde
+  - adeel-ali
+  - patrick-chiu
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Australia 2024 — the state of OpenAPI,
+  code and portal generation, and API descriptions in federated API management.
+agenda:
+  October 17:
+    OpenAPI Track:
+      - title: The State of OpenAPI and the OpenAPI Initiative
+        speaker: erik-wilde
+        slidesUrl: http://dret.net/lectures/api-days-australia-2024/oai-track
+      - title: OpenAPI Secrets for Next-Level Code and Portal Generation
+        speaker: adeel-ali
+      - title: The Role of API Descriptions in Federated API Management
+        speaker: patrick-chiu

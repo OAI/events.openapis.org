@@ -1,0 +1,109 @@
+title: API Days Helsinki 2025
+slug: api-days-helsinki-2025
+event_date: June 3 – 4, 2025
+location: Pikku-Finlandia, Helsinki
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Helsinki 2025 — a half-day program on
+  OpenAPI in the age of AI, getting the right API faster with example mapping and
+  Arazzo, the OpenAPI value proposition, and building communities with OpenAPI.
+permalink: /events/api-days-helsinki-2025
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - chris-wood
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Helsinki 2025 — OpenAPI in the age of
+  AI, example mapping with OpenAPI and Arazzo, the OpenAPI value proposition, and
+  building communities with OpenAPI.
+agenda:
+  June 4:
+    OpenAPI Track:
+      - title: 'OAI Track Welcome and OpenAPI in the Age of AI'
+        time: 1:50pm–2:15pm
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-helsinki-2025-welcome-openapi-age-of-ai
+      - title: 'Getting the Right API Faster: DX and AX with Example Mapping, OpenAPI, and Arazzo'
+        time: 2:15pm–2:40pm
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-helsinki-2025-right-api-faster-dx-ax
+      - title: 'The OpenAPI Value Proposition: How OpenAPI Helps You Succeed Building APIs'
+        time: 2:40pm–3:05pm
+        speaker: chris-wood
+        permalink: /events/talks/api-days-helsinki-2025-openapi-value-proposition
+      - title: Building Communities with OpenAPI
+        time: 3:05pm–3:30pm
+        speakers:
+          - frank-kilcommins
+          - chris-wood
+          - erik-wilde
+        permalink: /events/talks/api-days-helsinki-2025-building-communities
+talks:
+  - slug: api-days-helsinki-2025-welcome-openapi-age-of-ai
+    title: 'OAI Track Welcome and OpenAPI in the Age of AI'
+    time: 1:50pm–2:15pm
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      OpenAPI has seen a lot of success since it was created as Swagger in 2010
+      and became OpenAPI in 2016. What is the reason for its continued momentum
+      and how does the landscape change with AI entering the picture in a variety
+      of ways? We look at how OpenAPI can help you, how OAI can help you using
+      OpenAPI better, and how AI means that you have to slightly adjust the way
+      you design and manage your APIs.
+  - slug: api-days-helsinki-2025-right-api-faster-dx-ax
+    title: 'Getting the Right API Faster: DX and AX with Example Mapping, OpenAPI, and Arazzo'
+    time: 2:15pm–2:40pm
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      As AI-augmented tools begin accelerating how APIs are created, the risk of
+      misaligned intent grows. Copilot-style automation can generate endpoints
+      quickly—but without human-centered techniques to shape purpose and
+      behavioural, we risk delivering faster... the wrong thing. Have we ever
+      actually been good at API requirements? In this talk, I'll explore how
+      techniques like Example Mapping—drawn from Behaviour-Driven Development
+      (BDD)—can guide API delivery with clarity and empathy, even as AI takes a
+      larger role in the development process. I'll look at how this human input
+      can support the accurate creation of machine-readable formats like OpenAPI
+      and Arazzo, enabling alignment across design, testing, documentation, and
+      consumption. I'll also zoom out and consider a broader question: how do we
+      build APIs that deliver great Developer Experience (DX) and meaningful Agent
+      Experiences (AX) in a world increasingly mediated by AI consumers? Through
+      examples, practical framing, and some live demos, this session will offer a
+      model for using behavioural techniques and AI capabilities together—so that
+      the intent behind your APIs is never lost in translation.
+  - slug: api-days-helsinki-2025-openapi-value-proposition
+    title: 'The OpenAPI Value Proposition: How OpenAPI Helps You Succeed Building APIs'
+    time: 2:40pm–3:05pm
+    category: OpenAPI Track
+    speakers:
+      - chris-wood
+    description: >-
+      The OpenAPI Specification is a great means to describe the shape and
+      function of your APIs, but do you realize how it permeates your API
+      Lifecycle, how it supports your architecture, and how it can drive down cost
+      and increase efficiency? In this talk we look at the value of the OpenAPI
+      Specification for your business, and explore why the upgrade path for
+      OpenAPI is so important to realizing its benefits.
+  - slug: api-days-helsinki-2025-building-communities
+    title: Building Communities with OpenAPI
+    time: 3:05pm–3:30pm
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+      - chris-wood
+      - erik-wilde
+    description: >-
+      Increasingly, communities need digital ways to stay connected and transact.
+      In this session, we talk about why building your digital community on top of
+      OpenAPI is a good idea, and how to do it. We specifically discuss how
+      OpenAPI serves as the 'shared language' for all members of the community,
+      and what design considerations should go into using OpenAPI specifically in
+      this kind of scenario.

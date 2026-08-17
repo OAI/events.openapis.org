@@ -1,0 +1,217 @@
+title: API Days Munich 2025
+slug: api-days-munich-2025
+event_date: July 2 – 3, 2025
+location: Smartvillage Bogenhausen, Munich, Germany
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Munich 2025, hosted at Smartvillage
+  Bogenhausen in Munich — a keynote and full program on OpenAPI and Arazzo in
+  the age of AI, MCP as an AI-friendly delivery format, semantic metadata for
+  self-repairing stacks, and lean API development.
+permalink: /events/api-days-munich-2025
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - ole-wendland
+  - marty-pitt
+  - annegret-junker
+  - fabrizio-lazzaretti
+  - felix-medam
+  - marjukka-niinioja
+  - andreas-siegel
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Munich 2025 — OpenAPI and Arazzo in
+  the age of AI, MCP for AI consumers, semantic API metadata, the API Product
+  Canvas and lean API development.
+agenda:
+  July 3:
+    OpenAPI Track:
+      - title: APIs and OpenAPI in the Age of AI
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-munich-2025-openapi-age-of-ai
+      - title: 'Arazzo: API Workflows that Unlock Value for Humans and Machines'
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-munich-2025-arazzo-api-workflows
+      - title: 'Describing APIs for AI Consumers: MCP as an AI-Friendly Format'
+        speaker: ole-wendland
+        permalink: /events/talks/api-days-munich-2025-mcp-ai-friendly-format
+      - title: Using Semantic Metadata in APIs to Build Self-Repairing Stacks
+        speaker: marty-pitt
+        permalink: /events/talks/api-days-munich-2025-semantic-metadata-self-repairing
+      - title: 'How to design OpenAPIs in Workshops: The API Product Canvas'
+        speakers:
+          - annegret-junker
+          - fabrizio-lazzaretti
+        permalink: /events/talks/api-days-munich-2025-api-product-canvas
+      - title: 'API Discovery done right: Engaging the right people with your APIs'
+        speaker: felix-medam
+        permalink: /events/talks/api-days-munich-2025-api-discovery-done-right
+      - title: Avoiding the 8 Wastes of Lean API Development with OpenAPI & APIOps
+        speaker: marjukka-niinioja
+        permalink: /events/talks/api-days-munich-2025-lean-api-wastes
+      - title: Bingo! Making Sense of AI-Ready APIs in a Buzzword World
+        speaker: andreas-siegel
+        permalink: /events/talks/api-days-munich-2025-bingo-ai-ready-apis
+      - title: 'Ask us Anything API (AAA): Everything and Anything you ever wanted to know about APIs and OpenAPI'
+        speakers:
+          - marjukka-niinioja
+          - frank-kilcommins
+          - erik-wilde
+        permalink: /events/talks/api-days-munich-2025-ask-us-anything
+talks:
+  - slug: api-days-munich-2025-openapi-age-of-ai
+    title: APIs and OpenAPI in the Age of AI
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      APIs in general and their main description format OpenAPI have seen a lot
+      of success since OpenAPI was created as Swagger in 2010 and became OpenAPI
+      in 2016. What is the reason for its continued momentum and how does the
+      landscape change with AI entering the picture? We look at APIs, OpenAPI and
+      the way how AI plays a role in the API space. How can OpenAPI help you, how
+      can the OpenAPI Initiative (OAI) help you using OpenAPI better, and how does
+      AI influence the way how you design, develop, and deploy your APIs?
+  - slug: api-days-munich-2025-arazzo-api-workflows
+    title: 'Arazzo: API Workflows that Unlock Value for Humans and Machines'
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      The disruptive power of AI comes in its ability to truly assist humans. For
+      AI models to carry out meaningful actions upon our request, they need to
+      leverage APIs under the hood. Interacting with APIs consistently is
+      cumbersome for large language models, mainly down varying levels of quality
+      in APIs and their accompanying reference documentation across the industry.
+      With the intersection of AI and APIs being the nucleus of technical
+      innovation for the years ahead, the question that stands out is: Are we
+      ready for this wave of AI (machine) API consumers? The answer: Arazzo is
+      coming just at the right time! The Arazzo Specification, developed under the
+      OpenAPI Initiative, which enables the ability to craft workflows, a series
+      of API calls, in a human- and machine-readable format. The value on offer
+      from API endpoints can be well understood and consumed faster, making it
+      easier to achieve a specific goal for traditional human consumers – as well
+      as the new wave of AI consumers. Arazzo can provide a sufficient level of
+      predictable determinism to AI models, allowing them to offer a natural
+      language abstraction on top of the business use cases, while in parallel
+      giving interoperability benefits to the actual API providers. The result is
+      more value, with less vendor lock-in, and consistent API offerings for both
+      humans and the new wave of AI consumers, directly or through other agentic
+      protocols like MCP, A2A, etc. The benefits for human consumers are equally
+      valuable, and Arazzo affords the ability to unlock API value and improve
+      developer experience for API producers and consumers.
+  - slug: api-days-munich-2025-mcp-ai-friendly-format
+    title: 'Describing APIs for AI Consumers: MCP as an AI-Friendly Format'
+    category: OpenAPI Track
+    speakers:
+      - ole-wendland
+    description: >-
+      APIs has been around for a long time, and describing them always has been a
+      balancing act between being generic and more broadly reusable, or specific
+      and being tailored at certain classes of consumer. From that perspective,
+      the Model Context Protocol (MCP) could be seen as a specialized delivery
+      mechanism that's specific for LLM consumers. We introduce MCP and how it
+      relates to APIs, and we specifically looks at how supporting MCP as an
+      alternative delivery mechanism can fit into your API strategy and platform.
+  - slug: api-days-munich-2025-semantic-metadata-self-repairing
+    title: Using Semantic Metadata in APIs to Build Self-Repairing Stacks
+    category: OpenAPI Track
+    speakers:
+      - marty-pitt
+    description: >-
+      Enterprises are a mix of different teams, technologies, languages, and
+      specs. That's a feature, not a bug. But bringing these systems together
+      often involves layers of manual integration that are hard to maintain. In
+      this talk, we'll explore how adding semantic metadata to existing API specs
+      – OpenAPI, AsyncAPI, Protobuf, Avro – can unlock a self-repairing federation
+      layer. Using Taxi – an open source language for adding semantics to API
+      specs – we'll show how APIs, Kafka topics, serverless functions, and even S3
+      buckets can be exposed as interoperable, discoverable components in a
+      federated architecture. This enables on-demand integration, reduces tight
+      coupling, and lets APIs evolve without breaking downstream consumers. It's
+      not magic – just a practical way to make distributed systems more robust.
+  - slug: api-days-munich-2025-api-product-canvas
+    title: 'How to design OpenAPIs in Workshops: The API Product Canvas'
+    category: OpenAPI Track
+    speakers:
+      - annegret-junker
+      - fabrizio-lazzaretti
+    description: >-
+      OpenAPI is a great specification language for RESTful APIs, being
+      machine-readable and well-suited for both developers and business analysts.
+      However, when designing APIs in collaboration with IT and business, the YAML
+      or JSON-based standard can be overwhelming for non-technical people. To
+      better communicate API specifications, we developed the API Product Canvas,
+      a tool that helps communicate API specifications with ease. We will present
+      our learnings from designing APIs with IT and non-IT people and how to get
+      to a result in a collaborative way to make well-architected,
+      business-oriented APIs that are understood by developers and work in
+      production.
+  - slug: api-days-munich-2025-api-discovery-done-right
+    title: 'API Discovery done right: Engaging the right people with your APIs'
+    category: OpenAPI Track
+    speakers:
+      - felix-medam
+    description: >-
+      APIs make it possible to offer digital assets and processes. By that,
+      others can use, develop, and integrate with them independently. The value
+      increases significantly when APIs are made widely available – even more if
+      done externally and are incorporated into the business model. For the past
+      eight years, we have been developing and operating an API Developer Portal,
+      that empowers our customers to successfully monetize their APIs. In this
+      talk, we will share our key insights regarding feature set, incorporation
+      and usage of OpenAPI and AsyncAPI Specs, target audience strategies and
+      architectural considerations. We will elaborate why an off-the-shelf
+      solution did not meet our needs and provide you with methods to check the
+      scope of your API Portal for potential blind spots.
+  - slug: api-days-munich-2025-lean-api-wastes
+    title: Avoiding the 8 Wastes of Lean API Development with OpenAPI & APIOps
+    category: OpenAPI Track
+    speakers:
+      - marjukka-niinioja
+    description: >-
+      Many organizations use OpenAPI yet still suffer from redundant work, poor
+      handoffs, or shelfware APIs. Drawing from the “8 Wastes of Lean API
+      Development” and the APIOps Cycles method, this talk shows how to use
+      OpenAPI as a practical lever to eliminate waste across the API lifecycle.
+      Topics include automating API audits, aligning documentation with design
+      intent, reducing rework through better stakeholder collaboration, and
+      fostering governance without blocking speed. A great talk for platform
+      owners, API designers, and product leads who want lean, scalable API
+      ecosystems.
+  - slug: api-days-munich-2025-bingo-ai-ready-apis
+    title: Bingo! Making Sense of AI-Ready APIs in a Buzzword World
+    category: OpenAPI Track
+    speakers:
+      - andreas-siegel
+    description: >-
+      OpenAPI. REST. HATEOAS. APIs.json. MCP. Arazzo. A2A. ACP. LLMs. SDKs. Some
+      of these have been around for years. Some are brand new. All of them are
+      part of a growing conversation about what it means to make APIs AI-ready. If
+      you've recently found yourself nodding through API conversations while
+      secretly playing buzzword bingo in your head — this talk is for you. As
+      large language models and AI agents emerge as new API consumers, many
+      established ideas in API design are being re-evaluated. Standards like
+      OpenAPI, HATEOAS, or APIs.json aren't new — but often still waiting for
+      their breakthrough. Viewed through the lens of machine readability and
+      semantic discovery, they're gaining fresh relevance. Meanwhile, newer
+      concepts like Arazzo, MCP, ACP, and A2A are entering the stage, promising to
+      bridge the gap between traditional APIs and autonomous, AI-driven usage.
+  - slug: api-days-munich-2025-ask-us-anything
+    title: 'Ask us Anything API (AAA): Everything and Anything you ever wanted to know about APIs and OpenAPI'
+    category: OpenAPI Track
+    speakers:
+      - marjukka-niinioja
+      - frank-kilcommins
+      - erik-wilde
+    description: >-
+      Join three API experts for a session where we take questions from the
+      audience and try to answer them as good as possible. Ask about OpenAPI,
+      about API design, about API delivery, or about API strategy, or why we still
+      need APIs with AI doing all the things. We may not know the answers to all
+      the questions but we will try, and maybe the one with the best answer sits
+      right next to you in the audience.

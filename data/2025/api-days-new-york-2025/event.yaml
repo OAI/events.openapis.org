@@ -1,0 +1,198 @@
+title: API Days New York 2025
+slug: api-days-new-york-2025
+event_date: May 14 – 15, 2025
+location: Convene, 360 Madison Avenue, New York
+type: Event
+status: finished
+image: /img/backgrounds/openApiSummitNewYork_background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days New York 2025 — a half-day program on
+  OpenAPI in the age of AI, unifying OpenAPI and AsyncAPI, contract-driven
+  service evolution, and designing APIs for both developers and AI agents.
+permalink: /events/api-days-new-york-2025
+speakers:
+  - erik-wilde
+  - naresh-jain
+  - hari-krishnan
+  - frank-kilcommins
+  - stu-waldron
+  - eyal-sivan
+  - ryan-day
+  - yousaf-nabi
+  - mike-amundsen
+  - yusuke-tsutsumi
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days New York 2025 — OpenAPI in the age of
+  AI, unifying OpenAPI and AsyncAPI, generative-AI API consumption, graceful
+  service evolution and resource-oriented API design.
+agenda:
+  May 15:
+    OpenAPI Track:
+      - title: 'OAI Track Welcome and OpenAPI in the Age of AI'
+        time: 2:00pm–2:25pm
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-new-york-2025-welcome-openapi-age-of-ai
+      - title: 'Unifying OpenAPI & AsyncAPI: Designing JSON Schemas + Examples for Reuse'
+        time: 2:25pm–2:50pm
+        speakers:
+          - naresh-jain
+          - hari-krishnan
+        permalink: /events/talks/api-days-new-york-2025-unifying-openapi-asyncapi
+      - title: 'Getting the Right API Faster: DX and AX with Example Mapping, OpenAPI, and Arazzo'
+        time: 2:50pm–3:15pm
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-new-york-2025-right-api-faster-dx-ax
+      - title: Building Communities with OpenAPI
+        time: 3:15pm–3:40pm
+        speakers:
+          - stu-waldron
+          - eyal-sivan
+          - erik-wilde
+        permalink: /events/talks/api-days-new-york-2025-building-communities
+      - title: How Generative AI Apps Use APIs
+        time: 4:05pm–4:30pm
+        speaker: ryan-day
+        permalink: /events/talks/api-days-new-york-2025-generative-ai-apps-use-apis
+      - title: 'Graceful Service Evolution, Driven by Open Standards, Guided by Contracts'
+        time: 4:30pm–4:55pm
+        speaker: yousaf-nabi
+        permalink: /events/talks/api-days-new-york-2025-graceful-service-evolution
+      - title: 'Designing APIs with OpenAPI: Build the Right APIs the Right Way'
+        time: 4:55pm–5:20pm
+        speaker: mike-amundsen
+        permalink: /events/talks/api-days-new-york-2025-designing-apis-with-openapi
+      - title: 'CLIs, UIs, and Terraform for Free: Using the aep.dev Specification to Build Better APIs'
+        time: 5:20pm–5:45pm
+        speaker: yusuke-tsutsumi
+        permalink: /events/talks/api-days-new-york-2025-clis-uis-terraform-aep
+talks:
+  - slug: api-days-new-york-2025-welcome-openapi-age-of-ai
+    title: 'OAI Track Welcome and OpenAPI in the Age of AI'
+    time: 2:00pm–2:25pm
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      OpenAPI has seen a lot of success since it was created as Swagger in 2010
+      and became OpenAPI in 2016. What is the reason for its continued momentum
+      and how does the landscape change with AI entering the picture in a variety
+      of ways? We look at how OpenAPI can help you, how OAI can help you using
+      OpenAPI better, and how AI means that you have to slightly adjust the way
+      you design and manage your APIs.
+  - slug: api-days-new-york-2025-unifying-openapi-asyncapi
+    title: 'Unifying OpenAPI & AsyncAPI: Designing JSON Schemas + Examples for Reuse'
+    time: 2:25pm–2:50pm
+    category: OpenAPI Track
+    speakers:
+      - naresh-jain
+      - hari-krishnan
+    description: >-
+      In modern event-driven and microservices architectures, APIs don't exist
+      in isolation — business workflows rely on a seamless mix of synchronous
+      (REST) and asynchronous (event-driven) communication. However, maintaining
+      consistency across OpenAPI (for REST APIs) and AsyncAPI (for event-driven
+      APIs) is challenging. In this talk, you'll learn: Why OpenAPI and AsyncAPI
+      need to coexist in modern architectures; Challenges of maintaining
+      consistency between REST APIs and event-driven APIs; How we designed a
+      unified approach where OpenAPI and AsyncAPI share the same JSON schema and
+      examples; Practical implementation strategies to ensure interoperability
+      across multiple protocols (Kafka, Google Pub/Sub, AMQP, etc.); Lessons from
+      real-world implementations at TM Forum, and how you can apply this approach
+      in your organisation.
+  - slug: api-days-new-york-2025-right-api-faster-dx-ax
+    title: 'Getting the Right API Faster: DX and AX with Example Mapping, OpenAPI, and Arazzo'
+    time: 2:50pm–3:15pm
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      As AI-augmented tools begin accelerating how APIs are created, the risk of
+      misaligned intent grows. Copilot-style automation can generate endpoints
+      quickly — but without human-centered techniques to shape purpose and
+      behaviour, we risk delivering faster... the wrong thing. Have we ever
+      actually been good at API requirements? In this talk, I'll explore how
+      techniques like Example Mapping — drawn from Behaviour-Driven Development
+      (BDD) — can guide API delivery with clarity and empathy, even as AI takes a
+      larger role in the development process. I'll look at how this human input
+      can support the accurate creation of machine-readable formats like OpenAPI
+      and Arazzo, enabling alignment across design, testing, documentation, and
+      consumption. I'll also zoom out and consider a broader question: how do we
+      build APIs that deliver great Developer Experience (DX) and meaningful Agent
+      Experiences (AX) in a world increasingly mediated by AI consumers? Through
+      examples, practical framing, and some live demos, this session will offer a
+      model for using behavioural techniques and AI capabilities together — so
+      that the intent behind your APIs is never lost in translation.
+  - slug: api-days-new-york-2025-building-communities
+    title: Building Communities with OpenAPI
+    time: 3:15pm–3:40pm
+    category: OpenAPI Track
+    speakers:
+      - stu-waldron
+      - eyal-sivan
+      - erik-wilde
+    description: >-
+      Increasingly, communities need digital ways to stay connected and transact.
+      In this session, we talk about why building your digital community on top of
+      OpenAPI is a good idea, and how to do it. We specifically discuss how
+      OpenAPI serves as the "shared language" for all members of the community,
+      and what design considerations should go into using OpenAPI specifically in
+      this kind of scenario.
+  - slug: api-days-new-york-2025-generative-ai-apps-use-apis
+    title: How Generative AI Apps Use APIs
+    time: 4:05pm–4:30pm
+    category: OpenAPI Track
+    speakers:
+      - ryan-day
+    description: >-
+      The next wave of API consumers looks to be generative AI applications. API
+      providers need to understand how these applications work, so that they can
+      tailor their APIs to meet their needs. Ryan will review approaches to API
+      usage in AI, with a focus on RAG and Agents. He will also explore the major
+      tool-calling LLMs from vendors such as OpenAI and Anthropic and demonstrate
+      agent frameworks such as LangChain, LangGraph, and Autogen.
+  - slug: api-days-new-york-2025-graceful-service-evolution
+    title: 'Graceful Service Evolution, Driven by Open Standards, Guided by Contracts'
+    time: 4:30pm–4:55pm
+    category: OpenAPI Track
+    speakers:
+      - yousaf-nabi
+    description: >-
+      A look at contract testing over the ages, as a means for graceful service
+      evolution, and how it neatly intersects with the exponential explosion of
+      use of APIs and uptake of OpenAPI as a defining standard. We will explore
+      what a single source of truth looks like, and how perspectives change
+      depending on your viewpoint. We'll learn how to tackle challenges, such as
+      versioning, managing breaking changes, provider drift (spec out of sync with
+      implementation), consumer drift (a view of the used surface area of your
+      API), helping you combat Hyrum's law and provide you real world ways to
+      build APIs now with leading open source tools such as Spectral, Pact &
+      Swagger that will last well into the future.
+  - slug: api-days-new-york-2025-designing-apis-with-openapi
+    title: 'Designing APIs with OpenAPI: Build the Right APIs the Right Way'
+    time: 4:55pm–5:20pm
+    category: OpenAPI Track
+    speakers:
+      - mike-amundsen
+    description: >-
+      This session covers core principles and modern techniques for designing
+      effective, scalable APIs that meet real-world needs including how to
+      leverage the OpenAPI Specification to create clear, reusable, and
+      maintainable API contracts that drive efficient development and robust
+      client-server interactions. Whether you are a designer, programmer,
+      architect, or maintainer, this session will offer valuable insights into
+      building great web APIs.
+  - slug: api-days-new-york-2025-clis-uis-terraform-aep
+    title: 'CLIs, UIs, and Terraform for Free: Using the aep.dev Specification to Build Better APIs'
+    time: 5:20pm–5:45pm
+    category: OpenAPI Track
+    speakers:
+      - yusuke-tsutsumi
+    description: >-
+      aep.dev is an API design specification focused on resource-oriented design,
+      and a supported ecosystem of clients including command-line interfaces, web
+      UIs and Terraform providers. We'll go through a story of a theoretical
+      bookstore API, and walk through the tools we use to generate these APIs and
+      give our users high-quality tools to work with them for nearly no
+      development effort!

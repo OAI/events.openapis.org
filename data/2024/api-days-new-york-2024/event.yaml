@@ -1,0 +1,34 @@
+title: API Days New York 2024
+slug: api-days-new-york-2024
+event_date: April 30 – May 1, 2024
+location: etc.venues 360 Madison, New York
+type: Event
+status: finished
+image: /img/backgrounds/openApiSummitNewYork_background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days New York 2024, hosted at etc.venues
+  360 Madison — a program covering the API Workflows Specification, simplifying
+  API consumption for SDK haters, and next-generation open source OpenAPI
+  tooling.
+permalink: /events/api-days-new-york-2024
+speakers:
+  - frank-kilcommins
+  - darrel-miller
+  - dave-shanley
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days New York 2024 — the API Workflows
+  Specification, simplifying API consumption for SDK haters, and next-gen open
+  source OpenAPI tooling.
+agenda:
+  May 1:
+    OpenAPI Track:
+      - title: 'The API Workflows Specification: The Missing Piece of the API Puzzle!'
+        speaker: frank-kilcommins
+        slidesUrl: https://noti.st/frankkilcommins/qKRHKy/the-workflows-specification-the-missing-piece-of-the-api-puzzle
+      - title: Simplifying Consuming APIs for SDK Haters
+        speaker: darrel-miller
+        videoUrl: https://www.youtube.com/watch?v=9MMjZNYnZag
+      - title: Next Gen Open Source OpenAPI Tooling
+        speaker: dave-shanley

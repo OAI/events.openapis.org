@@ -1,0 +1,369 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ifm-color-primary: #65d100;
+  --ifm-background-color: #ececed;
+  --ifm-font-color-base: #000000;
+  --ifm-heading-color: #000000;
+  --ifm-link-color: #65d100;
+
+  --brand-bg: #ececed;
+  --brand-footer-bg: #f0f0f0;
+  --brand-card: rgba(21, 25, 28, 0.04);
+  --brand-separator: rgba(21, 25, 28, 0.12);
+  --brand-muted: rgba(21, 25, 28, 0.48);
+  --brand-card-dark: #f0f2f4;
+  --brand-placeholder: #e8eaec;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #15191c;
+  --ifm-font-color-base: #ffffff;
+  --ifm-heading-color: #ffffff;
+
+  --brand-bg: #15191c;
+  --brand-footer-bg: #15191c;
+  --brand-card: rgba(255, 255, 255, 0.04);
+  --brand-separator: rgba(255, 255, 255, 0.12);
+  --brand-muted: rgba(255, 255, 255, 0.48);
+  --brand-card-dark: #353535;
+  --brand-placeholder: #1e2226;
+}
+
+html,
+body {
+  height: 100%;
+  color: var(--ifm-font-color-base);
+  font-family: var(--font-onest), 'Onest', sans-serif;
+  letter-spacing: -0.04em;
+  margin: 0;
+  padding: 0;
+}
+
+/* The page scrolls inside #scroll-root instead of the document body. iOS in-app
+   browsers (e.g. Telegram) fail to keep a position:fixed navbar pinned while
+   the body scrolls — the bar drops into the page. Scrolling inside a container
+   means the body never scrolls, so the bar has nothing to come loose from.
+   position: absolute (not fixed) keeps #scroll-root from forming a stacking
+   context, so the fixed full-screen modals inside it still layer above the
+   navbar. */
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fixed-navbar height, read both by the bar itself (components/Navbar) and by
+   the space #scroll-root reserves for it below, so the two can never drift.
+   The bar shrinks to --navbar-h-scrolled once the page is scrolled; only the
+   resting height is reserved, since by then the content has moved up anyway. */
+:root {
+  --navbar-h: 4rem;
+  --navbar-h-scrolled: 3rem;
+}
+
+/* Desktop (Tailwind md) rests taller, to hold the full-size logo. 112px is the
+   one number the design's two margins agree on: everything in the bar is
+   vertically centred, so the 227x68 logo lands 22px from the top and the 40x40
+   action icons land 36px from it. Change this and both move together.
+   Mobile keeps its own smaller 121x36 logo and 4rem bar. */
+@media (min-width: 1024px) {
+  :root {
+    --navbar-h: 7rem;
+    /* Same idea once scrolled: 64px holds the 40px logo with 12px clear above
+       and below, and centres the 40x40 action icons on the same 12px. */
+    --navbar-h-scrolled: 4rem;
+  }
+}
+
+#scroll-root {
+  position: absolute;
+  inset: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  background-color: var(--brand-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Top-left concentric arcs decoration: one instance anchored to the top of the
+   page, scrolled past, leaving flat --brand-bg for the rest of the page.
+   It has to hang off the scrolled content, not <body>: the body never scrolls
+   (see above), so a background there is pinned to the viewport and follows you
+   down the whole page. Painting it on #scroll-root itself has the same problem —
+   a scroll container's own background doesn't move with its contents — and the
+   one value that would fix that, background-attachment: local, is unreliable
+   under -webkit-overflow-scrolling: touch, which is exactly the iOS case
+   #scroll-root exists for. An ordinary in-flow block scrolls because the element
+   scrolls, with no such caveats. */
+#page {
+  background-image: var(--bg1-url, url('/img/background1.svg'));
+  background-size: 1728px 1830px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  /* Clear the fixed navbar. The offset lives here rather than on #scroll-root so
+     that #page still starts at the very top of the scroller: backgrounds paint
+     under padding, so the arcs run up behind the transparent resting navbar the
+     way they did when this was a <body> background. */
+  padding-top: calc(var(--navbar-h) + env(safe-area-inset-top));
+}
+
+[data-theme='dark'] body {
+  background-color: var(--brand-bg);
+}
+
+/* Page sections must be transparent so the arcs decoration shows through.
+   Individual cards/footer keep their own solid backgrounds. */
+main,
+main > section,
+article {
+  background-color: transparent !important;
+}
+
+/* Boomi sponsor section — invert in dark mode.
+   iOS: prefixed -webkit-filter for older iOS Safari (≤ iOS 12) where the
+   un-prefixed filter on <img> inversion is unreliable. */
+[data-theme='dark'] img.boomi-bg {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+/* Logo invert in dark mode (same iOS reasoning) */
+[data-theme='dark'] .navbar-logo-img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+/* Theme toggle: Day/Night state icons from __design/theme_change, swapped on
+   hover/press. Day vs Night is chosen off [data-theme] (the same attribute the
+   rest of the app themes from); the Night variants already suit dark mode, so
+   no invert. All six image URLs come from the component as CSS vars. */
+.navbar-theme-toggle {
+  background-image: var(--th-day-normal);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.navbar-theme-toggle:hover {
+  background-image: var(--th-day-hover);
+}
+.navbar-theme-toggle:active {
+  background-image: var(--th-day-active);
+}
+[data-theme='dark'] .navbar-theme-toggle {
+  background-image: var(--th-night-normal);
+}
+[data-theme='dark'] .navbar-theme-toggle:hover {
+  background-image: var(--th-night-hover);
+}
+[data-theme='dark'] .navbar-theme-toggle:active {
+  background-image: var(--th-night-active);
+}
+
+/* Mobile-only press effect for tile-like elements: shrink 4% + 12% darken.
+   Implemented with filter:brightness(0.88) which is visually equivalent to a
+   12% black overlay without needing a positioned ::after on every tile. */
+@media (max-width: 1023px) {
+  .tile-press {
+    transition:
+      transform 0.15s ease,
+      filter 0.15s ease;
+  }
+  .tile-press:active {
+    transform: scale(0.96);
+    filter: brightness(0.88);
+  }
+}
+
+/* ---- Button fill variants -------------------------------------------------
+   Each button keeps its base colour at rest and shifts to a blended shade on
+   hover / press. The blend is the exact result of compositing the design's
+   translucent overlay over the opaque base, so it's a single solid colour that
+   transitions smoothly (via each button's own transition-* class):
+     green  #65D100  hover  +8% white   → #71D514  press +24% black   → #4D9F00
+     black  #15191C  hover +12% white   → #313537  press +24% black   → #101315
+     white  #FFFFFF  hover +12% #15191C → #E3E3E4  press +24% #15191C → #C7C8C9
+   Disabled fades the whole control to 24% opacity. Buttons keep their own
+   sizing, text colour and motion; these classes set the fill only. */
+.btn-green {
+  background-color: #65d100;
+}
+.btn-green:hover {
+  background-color: #71d514;
+}
+.btn-green:active {
+  background-color: #4d9f00;
+}
+
+.btn-black {
+  background-color: #15191c;
+}
+.btn-black:hover {
+  background-color: #313537;
+}
+.btn-black:active {
+  background-color: #101315;
+}
+
+.btn-white {
+  background-color: #ffffff;
+}
+.btn-white:hover {
+  background-color: #e3e3e4;
+}
+.btn-white:active {
+  background-color: #c7c8c9;
+}
+
+.btn-green:disabled,
+.btn-black:disabled,
+.btn-white:disabled {
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+/* Custom scrollbar for photo gallery */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 2px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+
+/* Drag-to-scroll rows (see lib/useDragScroll): the row is dragged, so no bar is
+   shown. The .overflow-x-auto compound selector outranks the rule above, which
+   would otherwise keep painting the 4px track. */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* legacy Edge */
+}
+.no-scrollbar::-webkit-scrollbar,
+.overflow-x-auto.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Speaker marquee */
+.speakers-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.speakers-marquee__track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.speakers-marquee--left .speakers-marquee__track {
+  animation: marquee-left 80s linear infinite;
+}
+
+.speakers-marquee--right .speakers-marquee__track {
+  animation: marquee-right 80s linear infinite;
+}
+
+.speakers-marquee__item {
+  flex-shrink: 0;
+  width: 428px;
+}
+
+.speakers-marquee:hover .speakers-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+input::placeholder {
+  color: color-mix(in srgb, var(--ifm-font-color-base), transparent 52%);
+}
+
+@media (max-width: 1023px) {
+  .speakers-marquee {
+    display: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+@keyframes arcsSlow {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02) rotate(0.5deg);
+    opacity: 0.9;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.6s ease-out forwards;
+}
+
+.animate-arcs-slow {
+  animation: arcsSlow 20s ease-in-out infinite;
+  transform-origin: center;
+}

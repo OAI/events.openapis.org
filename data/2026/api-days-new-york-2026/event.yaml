@@ -1,0 +1,186 @@
+title: API Days New York 2026
+slug: api-days-new-york-2026
+event_date: May 13 – 14, 2026
+location: Convene, 360 Madison Avenue, New York
+type: Event
+status: finished
+image: /img/backgrounds/openApiSummitNewYork_background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days New York 2026 — a half-day program on
+  building APIs for the age of AI, spanning Arazzo workflows for AI agents,
+  cloud-native APIs, AI-assisted OpenAPI design, and automated
+  spec-to-production pipelines.
+permalink: /events/api-days-new-york-2026
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - dan-ciruli
+  - emmanuel-paraskakis
+  - kin-lane
+  - derric-gilling
+  - bryam-vega
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days New York 2026 — Arazzo workflows for
+  AI agents, cloud-native APIs, AI-assisted OpenAPI design and automated
+  spec-to-production pipelines.
+agenda:
+  May 14:
+    OpenAPI Track:
+      - title: OpenAPI Track Welcome
+        time: 2:10pm–2:15pm
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-new-york-2026-openapi-track-welcome
+      - title: 'Beyond OpenAPI: Workflows That AI Agents Can Actually Execute'
+        time: 2:15pm–2:35pm
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-new-york-2026-workflows-ai-agents-execute
+      - title: Why Cloud Native APIs Are the Engine of AI-Driven Innovation
+        time: 2:40pm–3:05pm
+        speaker: dan-ciruli
+        permalink: /events/talks/api-days-new-york-2026-cloud-native-apis-ai
+      - title: Design OpenAPI with Skills
+        time: 3:10pm–3:35pm
+        speaker: emmanuel-paraskakis
+        permalink: /events/talks/api-days-new-york-2026-design-openapi-with-skills
+      - title: OpenAPI Examples and Tags Are the Missing Link Between Your APIs and AI Agents
+        time: 3:40pm–4:05pm
+        speaker: kin-lane
+        permalink: /events/talks/api-days-new-york-2026-examples-tags-missing-link
+      - title: Optimizing Consumption and Cost of AI APIs in the Enterprise
+        time: 4:30pm–4:55pm
+        speaker: derric-gilling
+        permalink: /events/talks/api-days-new-york-2026-optimizing-ai-api-cost
+      - title: 'API-First Flowline: A Fully Automated Path from AI-Driven Spec Design to Production'
+        time: 5:00pm–5:25pm
+        speaker: bryam-vega
+        permalink: /events/talks/api-days-new-york-2026-api-first-flowline
+talks:
+  - slug: api-days-new-york-2026-openapi-track-welcome
+    title: OpenAPI Track Welcome
+    time: 2:10pm–2:15pm
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      Welcome to the OpenAPI Track! We have an exciting program to share, with
+      presentations talking about new specifications as well as presentations
+      that dive into practices, applications, and an outlook of where things are
+      going in the age of AI.
+  - slug: api-days-new-york-2026-workflows-ai-agents-execute
+    title: 'Beyond OpenAPI: Workflows That AI Agents Can Actually Execute'
+    time: 2:15pm–2:35pm
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      The Arazzo specification continues to evolve as the declarative fabric for
+      describing API workflows. In this talk, you'll get a first look at what's
+      coming in Arazzo 1.1, an important upgrade that extends support from
+      OpenAPI-based services to AsyncAPI-defined systems, enabling true workflow
+      orchestration across synchronous and asynchronous boundaries. We'll also
+      explore new capabilities including AsyncAPI support, enhanced selector
+      support using JSONPath and XPath, chained workflow composition, and early
+      support for human- or agent-in-the-loop steps, where workflows can pause
+      for review, approval, or AI assistance. These improvements help define not
+      just the steps in a workflow, but also the expected interaction models for
+      clients and services. Whether you're building automation across distributed
+      systems, modelling complex flows, exposing use-case-oriented capabilities
+      to AI systems, or designing MCP servers with the right level of capability
+      access, Arazzo 1.1 helps you clearly express how each part of the system
+      should behave and interact. It's a powerful step toward unifying API-first,
+      event-driven, and human-centric integration patterns in a predictable,
+      testable, and scalable manner, and one that works for agents.
+  - slug: api-days-new-york-2026-cloud-native-apis-ai
+    title: Why Cloud Native APIs Are the Engine of AI-Driven Innovation
+    time: 2:40pm–3:05pm
+    category: OpenAPI Track
+    speakers:
+      - dan-ciruli
+    description: >-
+      For software companies embedding AI into their products, Cloud Native is
+      no longer optional, it's foundational. Dan can speak to how cloud native
+      APIs enable faster iteration, more reliable deployments, and cost-efficient
+      scaling, all while ensuring systems remain agile and resilient in an
+      increasingly AI-driven landscape.
+  - slug: api-days-new-york-2026-design-openapi-with-skills
+    title: Design OpenAPI with Skills
+    time: 3:10pm–3:35pm
+    category: OpenAPI Track
+    speakers:
+      - emmanuel-paraskakis
+    description: >-
+      Can we make AI do API Design for us? Reliably? Like the best architect on
+      the team? I built a Claude Code Skill just for that. It generates a
+      complete OpenAPI spec and lints it automatically for quality. You stay in
+      the loop where it matters: the design decisions. AI handles the 1000-line
+      JSON file nobody wants to type. In this session, I'll show you how it works
+      and we'll run it together, hands-on. Take it back to your organization.
+      Adapt it to your standards. Distribute it to every developer on your team
+      (yes, agents too) and ensure high quality API design that checks all the
+      boxes.
+  - slug: api-days-new-york-2026-examples-tags-missing-link
+    title: OpenAPI Examples and Tags Are the Missing Link Between Your APIs and AI Agents
+    time: 3:40pm–4:05pm
+    category: OpenAPI Track
+    speakers:
+      - kin-lane
+    description: >-
+      Your OpenAPI specifications already describe what your APIs can do—but do
+      they describe what that means to the business? With the rise of MCP servers
+      and AI agents consuming APIs at scale, the gap between technical API
+      definitions and business-domain understanding is becoming a real problem
+      for context engineering. OpenAPI 3.2's enhanced tags and the
+      often-overlooked examples object are how you close that gap. At Naftiko,
+      we've been building OpenAPI-first sandboxes for 3rd-party APIs like GitHub,
+      Jira, Notion, and Figma. Each spec is designed around business use cases,
+      not just endpoint coverage. We use the OpenAPI examples object to define
+      realistic, scenario-driven request and response payloads—then deploy them
+      as fully functional mock HTTP APIs and MCP servers using open-source
+      Microcks. The result: AI agents and copilots can safely explore real
+      business workflows without touching production. But examples alone aren't
+      enough. OpenAPI 3.2 tags bring the business and domain alignment that's
+      been missing. By organizing operations around business capabilities rather
+      than resource paths, tags give AI agents—and the humans configuring
+      them—a shared vocabulary for discovery and intent. We'll walk through how
+      we use tags to group operations by domain (e.g., 'project-management',
+      'code-review', 'design-feedback'), how this improves MCP tool discovery,
+      and why this matters as AI integration moves from single-API calls to
+      multi-API orchestration. Join us for a practical, example-driven talk about
+      how OpenAPI specs—when designed with rich examples and intentional
+      tagging—become the foundation for safer, smarter AI integration across your
+      entire API landscape.
+  - slug: api-days-new-york-2026-optimizing-ai-api-cost
+    title: Optimizing Consumption and Cost of AI APIs in the Enterprise
+    time: 4:30pm–4:55pm
+    category: OpenAPI Track
+    speakers:
+      - derric-gilling
+    description: >-
+      This talk focuses on strategies for businesses to efficiently manage their
+      AI products through API governance and observability. It covers methods for
+      reducing costs and optimizing consumption, ensuring effective and scalable
+      AI integration within enterprise environments.
+  - slug: api-days-new-york-2026-api-first-flowline
+    title: 'API-First Flowline: A Fully Automated Path from AI-Driven Spec Design to Production'
+    time: 5:00pm–5:25pm
+    category: OpenAPI Track
+    speakers:
+      - bryam-vega
+    description: >-
+      API-First often fails for the same recurring reasons: contracts live in
+      PDFs, code lives in Git, and governance lives nowhere. The result is
+      contract drift, duplicated models, and late QA discoveries that disrupt
+      entire teams. In this session, I will introduce API-First Flowline, a
+      lightweight and reproducible model that turns OpenAPI into a living
+      pipeline, from design to code, powered by Spectral and OpenAPI Generator.
+      This approach brings structure, automation, and real governance to
+      API-First development. You will learn how to: Enforce API governance
+      through automated Spectral validation on every PR; Apply domain-driven
+      OpenAPI design with consistent and scalable rules; Automatically generate
+      interfaces, DTOs, stubs, and test scaffolding; Detect and prevent breaking
+      changes before they reach implementation; Continuously keep contract and
+      code aligned without human intervention. Through a live demo, we will design
+      an API, validate it, publish it, and regenerate compile-safe code in
+      minutes, eliminating boilerplate and stopping contract drift for good.

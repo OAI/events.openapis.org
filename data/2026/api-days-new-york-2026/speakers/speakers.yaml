@@ -1,0 +1,17 @@
+# Per-event overrides for API Days New York 2026 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: OpenAPI Initiative
+- slug: frank-kilcommins
+  company: Jentic
+- slug: dan-ciruli
+  company: Nutanix
+- slug: emmanuel-paraskakis
+  company: Level 250
+- slug: kin-lane
+  company: Naftiko
+- slug: derric-gilling
+  company: WSO2
+- slug: bryam-vega
+  company: Thoughtworks

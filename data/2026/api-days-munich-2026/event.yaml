@@ -1,0 +1,252 @@
+title: API Days Munich 2026
+slug: api-days-munich-2026
+event_date: July 8 – 9, 2026
+location: Munich, Germany
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Munich 2026, hosted at Smartvillage
+  Bogenhausen — a program on ensuring OpenAPI quality at enterprise scale,
+  schema-based contract testing, writing specifications AI agents can build on,
+  and open-API adoption stories from government and industry.
+permalink: /events/api-days-munich-2026
+speakers:
+  - erik-wilde
+  - pavel-kornev
+  - miriam-greis
+  - annegret-junker
+  - luiz-carneiro
+  - andreas-siegel
+  - dimitri-van-hees
+  - sebastian-rhode
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Munich 2026 — OpenAPI quality at
+  scale, contract testing, specs for AI agents, and open-API adoption stories.
+agenda:
+  July 9:
+    OpenAPI Track:
+      - title: OpenAPI Track Welcome and OpenAPI in the Age of AI
+        time: 11:30am–11:55am
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-munich-2026-welcome-openapi-age-of-ai
+      - title: Your AI Agent Is Only as Good as Your API Description — Ensuring OpenAPI Quality at Enterprise Scale
+        time: 12:00pm–12:25pm
+        speaker: pavel-kornev
+        permalink: /events/talks/api-days-munich-2026-openapi-quality-enterprise-scale
+      - title: 'Schema-Based Contract Testing: Preventing API Drift in Practice'
+        time: 12:30pm–12:55pm
+        speaker: miriam-greis
+        permalink: /events/talks/api-days-munich-2026-schema-based-contract-testing
+      - title: 'From Sticky Notes to AsyncAPI and OpenAPI: Specs LLMs Can Actually Build'
+        time: 2:00pm–2:25pm
+        speaker: annegret-junker
+        permalink: /events/talks/api-days-munich-2026-sticky-notes-to-specs
+      - title: 'Building Interoperable Agents: When A2A Meets MCP'
+        time: 2:30pm–2:55pm
+        speaker: luiz-carneiro
+        permalink: /events/talks/api-days-munich-2026-interoperable-agents-a2a-mcp
+      - title: 'MCP Hands-On: How We Opened Up APIs for AI Agents'
+        time: 3:00pm–3:25pm
+        speaker: andreas-siegel
+        permalink: /events/talks/api-days-munich-2026-mcp-hands-on
+      - title: 'Building the Front Door to Dutch Government APIs, Schemas and AI'
+        time: 4:00pm–4:25pm
+        speaker: dimitri-van-hees
+        permalink: /events/talks/api-days-munich-2026-dutch-government-apis
+      - title: 'APIs and Standards for Microscopy and BioImage Analysis: Openness as Competitive Strategy'
+        time: 4:30pm–4:55pm
+        speaker: sebastian-rhode
+        permalink: /events/talks/api-days-munich-2026-microscopy-apis-openness
+talks:
+  - slug: api-days-munich-2026-welcome-openapi-age-of-ai
+    title: OpenAPI Track Welcome and OpenAPI in the Age of AI
+    time: 11:30am–11:55am
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      Welcome to the OpenAPI Track! We have an exciting program to share, with
+      presentations talking about new specifications as well as presentations
+      that dive into tooling, practices, applications, and value creation. We
+      also have a brief look of where OpenAPI is situated in the age of AI and
+      MCP, and what possible next steps look like to make OpenAPI more AI-ready
+      out of the box.
+  - slug: api-days-munich-2026-openapi-quality-enterprise-scale
+    title: Your AI Agent Is Only as Good as Your API Description — Ensuring OpenAPI Quality at Enterprise Scale
+    time: 12:00pm–12:25pm
+    category: OpenAPI Track
+    speakers:
+      - pavel-kornev
+    description: >-
+      AI agents don't read documentation — they read metadata. As API-driven
+      automation and agentic architectures become the norm, the quality of your
+      OpenAPI descriptions is no longer a nice-to-have; it's the foundation that
+      determines whether machines can reliably discover, understand, and
+      orchestrate your services. Yet across the industry, most API descriptions
+      remain incomplete, inconsistent, or outright misleading — and existing
+      linting tools only scratch the surface. In this talk, we share how a large
+      enterprise managing thousands of APIs tackled metadata quality head-on.
+      We'll have a look at the current validation tooling, expose its blind
+      spots, and present the approach we built to enforce rich,
+      machine-consumable API descriptions at scale — without slowing down the
+      hundreds of teams that ship them. You'll learn how decentralized
+      governance, automated validation pipelines, and a shift-left mindset can
+      coexist with high developer velocity, and why getting this right is the
+      single most impactful thing you can do to make your APIs AI-ready.
+  - slug: api-days-munich-2026-schema-based-contract-testing
+    title: 'Schema-Based Contract Testing: Preventing API Drift in Practice'
+    time: 12:30pm–12:55pm
+    category: OpenAPI Track
+    speakers:
+      - miriam-greis
+    description: >-
+      OpenAPI descriptions are often incomplete or outdated, which makes API
+      drift a common problem. Over time, descriptions and implementations
+      diverge, leading to broken integrations and frustrated consumers. In this
+      talk, we explore how schema-based contract testing helps detect and
+      prevent API drift early, drawing on real-world experience. After a brief
+      introduction on API testing and a comparison of different contract testing
+      approaches, I'll demonstrate how to implement schema-based contract testing
+      with Portman. Portman is an open-source tool that injects contract and
+      variation tests into API collections with minimal configurations in JSON or
+      YAML. The advantages of schema-based contract testing are clear: It’s easy
+      to learn, easy to control, and comes with low maintenance overhead.
+      However, schema-based contract testing is not a silver bullet, so knowing
+      its limits is key. You'll leave with best practices, common pitfalls, and a
+      clear path to getting started with schema-based contract testing, including
+      the knowledge to decide when this approach is the right fit.
+  - slug: api-days-munich-2026-sticky-notes-to-specs
+    title: 'From Sticky Notes to AsyncAPI and OpenAPI: Specs LLMs Can Actually Build'
+    time: 2:00pm–2:25pm
+    category: OpenAPI Track
+    speakers:
+      - annegret-junker
+    description: >-
+      Most teams have now tried handing an LLM a vague description and asking for
+      an API. The results are familiar: plausible-looking endpoints, invented
+      fields, events that don't match anything real, and bugs that take hours to
+      trace. The easy reaction is to blame the model. That's the wrong angle.
+      LLMs don't produce wrong APIs because they're not capable — they produce
+      wrong APIs because they have no access to your domain. The fix is something
+      API teams can already recognize: a precise specification. This talk shows
+      that the collaborative modeling practices used to build shared
+      understanding — Domain Storytelling and EventStorming — double as a
+      remarkably good way to derive that specification, across both styles of
+      API. EventStorming's command/event/policy structure maps almost
+      one-to-one onto an API surface: commands become synchronous REST
+      operations, domain events become asynchronous channels and messages, and
+      policies become the orchestration and business rules that connect them.
+      Bounded contexts become clean service and product boundaries. The result
+      is a paired OpenAPI and AsyncAPI specification that is, in effect, a
+      machine-readable domain model. Using CookWithUs, a recipe-sharing platform
+      modeled and built across three iterations, we walk a concrete pipeline:
+      model the domain, derive the synchronous REST surface and the event-driven
+      async surface together, and split both specs by bounded context. We show
+      exactly what a well-formed spec gives an LLM — and exactly where generation
+      breaks down when the spec is incomplete, ambiguous, or missing its events.
+      We show how a sharper Ubiquitous Language produces a measurably better
+      OpenAPI document, a cleaner set of AsyncAPI channels, and a frontend the
+      model can generate without inventing a single field. The central claim is
+      simple: every naming decision, every event you make explicit, every scoping
+      choice travels all the way into the generated code. A spec is only as good
+      as the language behind it — and async APIs in particular punish vague
+      language, because an event nobody named precisely is an event nobody can
+      consume reliably. This is not a talk about replacing API designers with AI.
+      It's about what happens when rigorous API specification meets a powerful new
+      tool, and why the modeling work always comes first.
+  - slug: api-days-munich-2026-interoperable-agents-a2a-mcp
+    title: 'Building Interoperable Agents: When A2A Meets MCP'
+    time: 2:30pm–2:55pm
+    category: OpenAPI Track
+    speakers:
+      - luiz-carneiro
+    description: >-
+      It is time to move from isolated chatbots to ecosystems of collaborating
+      agents. But how do we ensure agents can talk to each other without building
+      proprietary silos? In this session, we will break down interoperable AI
+      using two powerful open standards recently donated to the Linux Foundation:
+      the Agent-to-Agent (A2A) protocol and the Model Context Protocol (MCP). We
+      will start with a live demo of a deployed multi agent system, where an
+      orchestrator agent coordinates the collaboration of multiple agents using
+      A2A, while some of those agents share an MCP server. After the demo, we
+      will deconstruct the system architecture. While explaining these Apache 2.0
+      licensed protocols, we will walk through the engineering process to rebuild
+      the presented agentic system from scratch. Join to see how A2A and MCP work
+      hand in hand to create a new, open platform for Agentic AI, and why you
+      should jump right in!
+  - slug: api-days-munich-2026-mcp-hands-on
+    title: 'MCP Hands-On: How We Opened Up APIs for AI Agents'
+    time: 3:00pm–3:25pm
+    category: OpenAPI Track
+    speakers:
+      - andreas-siegel
+    description: >-
+      AI agents can now access APIs directly via function calling and tool use.
+      With reasoning, an OpenAPI spec, and a bit of hope, this approach can
+      already solve a surprising amount. But how far does it really go when
+      dealing with enterprise systems – and where does it hit its limits? That's
+      exactly the question we explore. We start by looking at how an AI agent
+      connects directly to an API: Does it find the right endpoints? Does it pass
+      parameters correctly? How reliable are the results? We then introduce the
+      Model Context Protocol (MCP) as an integration layer and show what
+      concretely changes: standardized discovery instead of trial and error,
+      semantic tool descriptions that give the agent real context, and a protocol
+      that addresses aspects like authentication and authorization. MCP is no
+      free lunch, though – the integration effort shifts rather than disappears.
+      Implementing a good MCP server is an architectural challenge in its own
+      right. Drawing on our experience from client projects and our own
+      development work, we show when MCP delivers real value and where the direct
+      API route remains the more pragmatic choice.
+  - slug: api-days-munich-2026-dutch-government-apis
+    title: 'Building the Front Door to Dutch Government APIs, Schemas and AI'
+    time: 4:00pm–4:25pm
+    category: OpenAPI Track
+    speakers:
+      - dimitri-van-hees
+    description: >-
+      developer.overheid.nl is the central platform where developers discover and
+      work with APIs, JSON schemas, AI skills, open source projects, and tooling
+      across the Dutch government. This talk walks through how the platform came
+      to be, the problems it solves for both government organisations and the
+      developers building on top of them, and where it's headed. A particular
+      focus is the API Register: how we collect, standardise, and expose metadata
+      for hundreds of government APIs, the design choices behind it, and how it
+      helps developers find the right API while helping government organisations
+      publish theirs in a consistent, discoverable way.
+  - slug: api-days-munich-2026-microscopy-apis-openness
+    title: 'APIs and Standards for Microscopy and BioImage Analysis: Openness as Competitive Strategy'
+    time: 4:30pm–4:55pm
+    category: OpenAPI Track
+    speakers:
+      - sebastian-rhode
+    description: >-
+      Application Programming Interfaces (APIs) bridge imaging hardware,
+      acquisition software, and analytical tools in modern microscopy, enabling
+      automated workflows, reproducible research, and computational integration.
+      ZEISS offers comprehensive APIs - ZEN-API for platform control,
+      libCZI/pylibCZIrw for file access — that transform products into platforms.
+      Opening formats and publishing APIs compounds value through
+      interoperability and network effects: third-party integration increases
+      ecosystem value, strengthening market position. Open APIs also enforce code
+      quality and systematic technical debt management, as public interfaces
+      demand stability and documentation—benefiting internal development
+      practices. Open standards like OME-TIFF and OME-ZARR ensure cross-vendor
+      interoperability, prevent lock-in, and enable long-term data
+      accessibility—critical for reproducible science and collaborative research.
+      While microscopy appears domain-specific, these principles apply
+      universally: medical imaging, industrial systems, and consumer electronics
+      all benefit from open APIs and standardized formats. Companies embracing
+      openness build ecosystems, reduce integration costs, and establish platform
+      leadership. ZEISS demonstrates how openness creates sustainable competitive
+      advantage: technical excellence through enforced discipline, business
+      growth through network effects, and industry leadership through ecosystem
+      development. Open APIs enforce rigorous engineering discipline: development
+      teams must prioritize code quality, maintain clean interfaces, and
+      systematically manage technical debt. Public APIs cannot hide poor design
+      choices—they demand documentation, stability, and backward compatibility.
+      This internal discipline benefits ZEISS by creating more maintainable,
+      robust software that reduces long-term costs and accelerates feature
+      development.

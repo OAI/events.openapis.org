@@ -1,0 +1,38 @@
+title: API Days London 2024
+slug: api-days-london-2024
+event_date: September 18 – 19, 2024
+location: etc.venues, 155 Bishopsgate, London
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days London 2024, hosted at etc.venues —
+  a program on the Arazzo specification, guided API onboarding workflows, API
+  description pipelines and open standards for geospatial APIs.
+permalink: /events/api-days-london-2024
+speakers:
+  - frank-kilcommins
+  - sohaib-tariq
+  - lorna-mitchell
+  - gobe-hobona
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days London 2024 — the Arazzo
+  specification, guided API onboarding workflows, API description pipelines and
+  open standards for geospatial APIs.
+agenda:
+  September 18:
+    OpenAPI Track:
+      - title: The Arazzo Specification
+        speaker: frank-kilcommins
+        videoUrl: https://www.youtube.com/watch?v=Lrsl5KV9Fuw
+      - title: Reimagining API onboarding with Guided walkthroughs and the Arazzo Workflow Specification
+        speaker: sohaib-tariq
+        slidesUrl: slides/Sohaib-Tariq-APIdays-London-2024.pdf
+      - title: Explore API Description Pipelines
+        speaker: lorna-mitchell
+        slidesUrl: https://noti.st/lornajane/qMalys
+      - title: Open Standards for Getting your APIs into the Geospatial Ecosystem
+        speaker: gobe-hobona
+        slidesUrl: https://portal.ogc.org/files/?artifact_id=109228

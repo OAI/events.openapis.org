@@ -1,0 +1,21 @@
+# Per-event overrides for API Days Munich 2025 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: INNOQ
+- slug: frank-kilcommins
+  company: SmartBear
+- slug: ole-wendland
+  company: INNOQ
+- slug: marty-pitt
+  company: Orbital
+- slug: annegret-junker
+  company: Codecentric
+- slug: fabrizio-lazzaretti
+  company: Wavestone
+- slug: felix-medam
+  company: Codecentric
+- slug: marjukka-niinioja
+  company: Osaango
+- slug: andreas-siegel
+  company: Pentacor

@@ -1,0 +1,97 @@
+title: API Days Singapore 2024
+slug: api-days-singapore-2024
+event_date: April 17 — 18, 2024
+location: The Arts House at The Old Parliament, Singapore
+type: Event
+status: finished
+image: /img/backgrounds/apiDaysSingapore_background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Singapore 2024, hosted at The Arts
+  House at The Old Parliament — a day of talks on API standards, maturity,
+  code generation and gateway security.
+permalink: /events/api-days-singapore-2024
+speakers:
+  - mario-alvarez
+  - adrian-melillo
+  - sohaib-tariq
+  - madhu-sudan-jangid
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Singapore 2024 — logistics API
+  standards, API maturity assessment, OpenAPI code generation and API gateway
+  identity management.
+agenda:
+  April 18:
+    OpenAPI Track:
+      - title: 'Best-In-Class Logistics APIs: The Power of Standards in DHL''s Planet-Scale API program'
+        speaker: mario-alvarez
+        permalink: /events/talks/api-days-singapore-2024-logistics-apis-standards
+      - title: Introducing a Practical API Maturity Assessment using an OpenAPI example to determine cross-organisational maturity
+        speaker: adrian-melillo
+        permalink: /events/talks/api-days-singapore-2024-api-maturity-assessment
+      - title: 'OpenAPI for Code & Docs Generation: Lessons from 1 Million API Definitions'
+        speaker: sohaib-tariq
+        permalink: /events/talks/api-days-singapore-2024-openapi-codegen-lessons
+      - title: API Gateway integration with Identity Management
+        speaker: madhu-sudan-jangid
+        permalink: /events/talks/api-days-singapore-2024-api-gateway-identity
+talks:
+  - slug: api-days-singapore-2024-logistics-apis-standards
+    title: 'Best-In-Class Logistics APIs: The Power of Standards in DHL''s Planet-Scale API program'
+    description: >-
+      In today's digital age, APIs have become the building blocks of business
+      transformation, enabling connectivity, and amplifying capabilities. This
+      talk will walk you through our journey at DHL Group towards crafting
+      best-in-class logistics APIs as enablers, empowering our customers to grow
+      and expand. We will explore how adopting standards helped us overcome
+      challenges along the way.
+    category: OpenAPI Track
+    speakers:
+      - mario-alvarez
+  - slug: api-days-singapore-2024-api-maturity-assessment
+    title: Introducing a Practical API Maturity Assessment using an OpenAPI example to determine cross-organisational maturity
+    description: >-
+      This presentation introduces an API maturity assessment model that has
+      multiple dimensions to provide both an end-to-end and cross organisational
+      view providing practical advice using an ITIL-based approach. In this
+      session we will explain in more detail how our assessment model can help
+      your organisation start on the right path on your API journey or drive
+      additional value from existing APIs with advice across people, process and
+      technology. We will do this by referencing some specific examples of
+      evaluating how organisations implement standards, and specifically
+      OpenAPI, to provide best practice across each of these pillars.
+    category: OpenAPI Track
+    speakers:
+      - adrian-melillo
+  - slug: api-days-singapore-2024-openapi-codegen-lessons
+    title: 'OpenAPI for Code & Docs Generation: Lessons from 1 Million API Definitions'
+    description: >-
+      OpenAPI-based Code Generation has become Ubiquitous. You can take your pick
+      of Opensource or Proprietary tools that require only your OpenAPI
+      Definition to generate API Clients and Reference Documentation. However,
+      OpenAPI and other popular API specification formats do not enforce any
+      standards for Code Generation. Thus we often see Code Generators creating
+      ugly or downright unusable code for API Definitions that are Syntactically
+      and Semantically correct. This talk will draw upon the learnings from
+      analyzing over 1 million API Definitions in various formats, predominantly
+      OpenAPI/Swagger. It will highlight common mistakes made by Developers which
+      are not typically highlighted by OpenAPI Validation and Linting tools but
+      can negatively impact the quality of generated Code and Documentation. The
+      talk will emphasize how the right validation and linting process can help
+      you overcome all of these issues efficiently in order to help you build a
+      world-class Developer Experience for your API.
+    category: OpenAPI Track
+    speakers:
+      - sohaib-tariq
+    slidesUrl: https://docs.google.com/presentation/d/1d1tryNK6oPknDQDcqxqLZteSTq-dx9ygkT3ksTYXY2s/edit?usp=sharing
+  - slug: api-days-singapore-2024-api-gateway-identity
+    title: API Gateway integration with Identity Management
+    description: >-
+      How API Gateways can be used to enhance security postures of an
+      Organization. The decision factors of choosing a right Gateway tool for
+      different use cases. Different design patterns and how the limitations can
+      be solved for the said patterns.
+    category: OpenAPI Track
+    speakers:
+      - madhu-sudan-jangid

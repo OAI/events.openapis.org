@@ -1,0 +1,11 @@
+# Per-event overrides for API Days Australia 2023 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: 'OAI Ambassador & Getting APIs to Work'
+- slug: adeel-ali
+  company: APIMatic
+- slug: paul-bradley
+  company: Excelsa
+- slug: jordan-walsh
+  company: Postman

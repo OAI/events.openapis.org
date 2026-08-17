@@ -1,0 +1,35 @@
+title: JAX Mainz 2024
+slug: jax-mainz
+event_date: April 22 – 26, 2024
+location: Rheingoldhalle, Mainz, Germany
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at JAX Mainz 2024, hosted at the Rheingoldhalle —
+  a program of talks on OpenAPI and its ecosystem, standard API descriptions for
+  better API management, data contracts, and automating API product delivery.
+permalink: /events/jax-mainz
+speakers:
+  - thomas-bayer
+  - audrey-kolski
+  - simon-harrer
+  - ikenna-nwaiwu
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at JAX Mainz 2024 — OpenAPI and its ecosystem,
+  standard API descriptions for API management, data contracts, and automating
+  API product delivery.
+agenda:
+  April 24:
+    OpenAPI Track:
+      - title: 'OpenAPI: Mehr als nur ein Format. Einführung und Einblick in das Ökosystem'
+        speaker: thomas-bayer
+      - title: Standard API Descriptions for Better API Management
+        speaker: audrey-kolski
+      - title: Data Contracts sind die APIs für Daten
+        speaker: simon-harrer
+        slidesUrl: https://innoq.app.box.com/s/7auvdq528qxh4ceuv8m7ft37tnekr52c
+      - title: Patterns for automating API product delivery
+        speaker: ikenna-nwaiwu

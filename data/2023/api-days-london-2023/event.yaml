@@ -1,0 +1,106 @@
+title: API Days London 2023
+slug: api-days-london-2023
+event_date: September 13 – 14, 2023
+location: etc.venues, 155 Bishopsgate, London
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days London 2023, hosted at etc.venues on
+  Bishopsgate — a program of talks on the state of OpenAPI, secure-by-design API
+  development, API governance, and the emerging API Workflows Specification.
+permalink: /events/api-days-london-2023
+speakers:
+  - erik-wilde
+  - jose-haro-peralta
+  - lorna-mitchell
+  - frank-kilcommins
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days London 2023 — the state of OpenAPI,
+  secure-by-design APIs, API governance without tears, and the API Workflows
+  Specification.
+agenda:
+  September 13:
+    OpenAPI Track:
+      - title: OAI Track Introduction and the State of OpenAPI
+        speaker: erik-wilde
+        slidesUrl: http://dret.net/lectures/api-days-london-2023/
+      - title: 'Secure by Design: Leveraging OpenAPI for Security and Reliability'
+        speaker: jose-haro-peralta
+        permalink: /events/talks/api-days-london-2023-secure-by-design
+      - title: API Governance Without Tears
+        speaker: lorna-mitchell
+        permalink: /events/talks/api-days-london-2023-api-governance-without-tears
+      - title: 'The API Workflows Specification: The Missing Piece of the API puzzle'
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-london-2023-api-workflows-specification
+        slidesUrl: https://noti.st/frankkilcommins/FfbA40/the-workflows-specification-the-missing-piece-of-the-api-puzzle
+talks:
+  - slug: api-days-london-2023-secure-by-design
+    title: 'Secure by Design: Leveraging OpenAPI for Security and Reliability'
+    category: OpenAPI Track
+    speakers:
+      - jose-haro-peralta
+    description: >-
+      APIs are transforming the way we build applications and deliver business
+      value. Organisations can tap into new revenue streams by productizing their
+      services through APIs. However, with the growing use of APIs also come new
+      security risks. APIs represent gateways into our systems, and security
+      vulnerabilities in our APIs open organisations to new types of attacks. In
+      this talk, I’ll explain how API design affects security and reliability. A
+      good strategy to minimise API security risks is adopting a secure and
+      reliable by-design approach. I'll explain how we can leverage OpenAPI to
+      enhance the reliability and security of our APIs. I’ll explain how we can
+      leverage tools like fuzzy testers to automate our API security testing
+      workflow and ensure our APIs are reliable. I’ll also show how to leverage
+      OpenAPI to design robust schemas that minimise security vulnerabilities and
+      enhance reliability. For example, strict schemas without additional
+      properties can reduce the risk of mass assignment attacks, while
+      constraining property values through enumerations and other strategies can
+      reduce the risk of SQL injection and other types of attacks. Although robust
+      API design alone won’t protect us against every single vulnerability, it can
+      go a long way to deliver a secure and reliable user experience. I’ll include
+      practical examples of secure and reliable API design.
+  - slug: api-days-london-2023-api-governance-without-tears
+    title: API Governance Without Tears
+    category: OpenAPI Track
+    speakers:
+      - lorna-mitchell
+    description: >-
+      API governance is about making good APIs into great APIs that are
+      delightful and productive to publish and consume. This talk will show you
+      how to choose appropriate standards, an efficient process, and the best
+      available tools for your use case. Developer success is front and center in
+      API governance; getting it right benefits the developers using the API, but
+      also the developers building it.  We'll talk about API standards, about
+      getting all stakeholders engaged with the process, and how to deliver API
+      projects effectively.  Come along and learn how to set your API delivery
+      teams up for success in this session aimed at architects, tech leads and
+      anyone who wants their API to succeed without fuss.
+  - slug: api-days-london-2023-api-workflows-specification
+    title: 'The API Workflows Specification: The Missing Piece of the API puzzle'
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      Join this talk to learn all about the API Workflows Specification, being
+      developed under the OpenAPI Initiative, which aims to compliment current
+      specifications such as, OpenAPI and AsyncAPI, by enabling the ability to
+      define and document workflows, which are a series of API calls that together
+      accomplish a specific business objective. This will provide a deterministic
+      recipe for using APIs and enable code generation tooling for a given API(s)
+      based on use-cases. Additionally, the specification will improve regulatory
+      checks, bridge gaps where use-case flows span multiple API definitions. In
+      general, there’s enormous potential to enhance the developer experience (DX)
+      and API documentation by enabling graphical rendering of workflows, the
+      specification will improve human understanding of how to consume API
+      endpoints to achieve a goal. Workflow documents can stay up to date and be
+      assertable against the underlying APIs, reducing the need for out-of-band
+      documentation sharing, and reduce the time and effort required to implement
+      complex workflows, and automate testing and other repetitive tasks. Overall,
+      the API Workflows Specification will improve the capability of API
+      specifications to tell the story of the API(s) in a manner that can improve
+      interoperability across many industries.
+    slidesUrl: https://noti.st/frankkilcommins/FfbA40/the-workflows-specification-the-missing-piece-of-the-api-puzzle

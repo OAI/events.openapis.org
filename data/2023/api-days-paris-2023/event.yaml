@@ -1,0 +1,56 @@
+title: API Days Paris 2023
+slug: api-days-paris-2023
+event_date: December 6 – 8, 2023
+location: Centre des Nouvelles Industries et Technologies (CNIT), Paris, France
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Paris 2023, hosted at the CNIT — two
+  days of talks spanning API specifications, data contracts, OpenAPI
+  extensibility, governance at scale, code generation and API discovery.
+permalink: /events/api-days-paris-2023
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - simon-harrer
+  - oleg-nenashev
+  - yan-sun
+  - badr-nass-lahsen
+  - nolan-sullivan
+  - steven-willmott
+  - steve-sfartz
+  - emmanuel-bastien
+  - dave-shanley
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Paris 2023 — API specifications, data
+  contracts, OpenAPI extensibility, governance, code generation and API
+  discovery.
+agenda:
+  December 6/7:
+    OpenAPI Track:
+      - title: OAI Track Introduction and The State of OpenAPI
+        speaker: erik-wilde
+      - title: 'The API Workflows Specification: The Missing Piece of the API puzzle'
+        speaker: frank-kilcommins
+        slidesUrl: https://noti.st/frankkilcommins/qKRHKy/the-workflows-specification-the-missing-piece-of-the-api-puzzle
+      - title: 'OpenAPI for Your Data Mesh: An Introduction to Data Contracts'
+        speaker: simon-harrer
+      - title: 'OpenAPI Extensibility: The Good, the Bad, and the Ugly'
+        speaker: oleg-nenashev
+      - title: How OpenAPI supports airline industry standards and beyond
+        speaker: yan-sun
+      - title: 'OpenAPI 3.1 and Spring-Boot 3: What''s New?'
+        speaker: badr-nass-lahsen
+      - title: Get Your OpenAPI Spec Ready For Code Generation
+        speaker: nolan-sullivan
+      - title: 'API Discovery: Standards, Publishing & Search'
+        speaker: steven-willmott
+      - title: Managing OpenAPI Documents at Scale
+        speaker: steve-sfartz
+      - title: 'API design first: A case for a better language'
+        speaker: emmanuel-bastien
+      - title: 'Quality, Compliance, and Change Control for OpenAPI'
+        speaker: dave-shanley

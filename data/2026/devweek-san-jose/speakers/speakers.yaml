@@ -1,0 +1,28 @@
+# Per-event overrides for Developer Week San Jose 2026 — point-in-time
+# affiliation (company as of this event). Merged over the global registry per
+# field; the global registry holds the speaker's latest-known company
+# (reconciled later).
+- slug: erik-wilde
+  company: OpenAPI Initiative
+- slug: frank-kilcommins
+  company: Jentic
+- slug: henry-andrews
+  company: OpenAPI Initiative
+- slug: sumit-amar
+  company: WEX
+- slug: manideep-galala
+  company: Microsoft
+- slug: aditya-tangirala
+  company: Venmo
+- slug: aditya-rohit
+  company: SwytchCode
+- slug: emmanuel-paraskakis
+  company: Level 250
+- slug: nuwan-dias
+  company: WSO2
+- slug: kuldeepak-angrish
+  company: Tyk
+- slug: budhaditya-bhattacharya
+  company: Tyk
+- slug: rafael-ruiz
+  company: 101OBEX

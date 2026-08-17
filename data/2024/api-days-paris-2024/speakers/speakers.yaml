@@ -1,0 +1,33 @@
+# Per-event overrides for API Days Paris 2024 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: frank-kilcommins
+  role: Principal API Technical Evangelist
+  company: SmartBear
+- slug: erik-wilde
+  company: INNOQ
+- slug: darrel-miller
+  company: Microsoft
+- slug: oleg-nenashev
+  role: Community Builder and Developer Advocate
+  company: Gradle
+- slug: manuel-ottlik
+  company: HDI Global SE
+- slug: rafael-granados
+  role: API Architect
+  company: INDITEX
+- slug: ewen-quimerch
+  role: Software Engineer
+  company: Theodo
+- slug: edouard-lacourt
+  role: Software Engineer
+  company: Theodo
+- slug: patrick-brosse
+  role: Head of API & DataModel Governance
+  company: Amadeus
+- slug: beppe-catanese
+  role: Developer Advocate
+  company: Adyen
+- slug: daniel-gutierrez-diez
+  role: Principal Software Engineer
+  company: FactSet

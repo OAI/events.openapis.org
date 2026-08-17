@@ -1,0 +1,277 @@
+title: API Days India 2026
+slug: api-days-india-2026
+event_date: August 19 – 20, 2026
+location: Conrad Bengaluru, Bengaluru, India
+type: Event
+status: upcoming
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days India 2026, hosted at Conrad
+  Bengaluru — a program on OpenAPI in the age of AI, structuring API work,
+  Arazzo workflows for AI agents, event-driven AsyncAPI governance, and building
+  and testing specs with LLMs.
+permalink: /events/api-days-india-2026
+speakers:
+  - erik-wilde
+  - marjukka-niinioja
+  - frank-kilcommins
+  - dakshitha-ratnayake
+  - annegret-junker
+  - anoop-m-d
+  - peter-thomas
+  - mike-holdsworth
+  - joel-rosario
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days India 2026 in Bengaluru — OpenAPI in
+  the age of AI, Arazzo agent workflows, AsyncAPI governance, and LLM-built,
+  tested API specs.
+agenda:
+  August 20:
+    OpenAPI Track:
+      - title: OpenAPI Track Welcome and OpenAPI in the Age of AI
+        time: 11:00am–11:25am
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-india-2026-welcome-openapi-age-of-ai
+      - title: 'Fixing API Chaos: A Practical, Open Method to Structure API Work'
+        time: 11:30am–11:55am
+        speaker: marjukka-niinioja
+        permalink: /events/talks/api-days-india-2026-fixing-api-chaos
+      - title: 'Beyond OpenAPI: API Workflows That AI Agents Can Actually Execute'
+        time: 12:00pm–12:25pm
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-india-2026-workflows-ai-agents-execute
+      - title: 'Beyond Request/Response: What AI Agents Actually Need From Your Event Streams'
+        time: 12:30pm–12:55pm
+        speaker: dakshitha-ratnayake
+        permalink: /events/talks/api-days-india-2026-beyond-request-response-event-streams
+      - title: 'From Sticky Notes to AsyncAPI and OpenAPI: Specs LLMs Can Actually Build'
+        time: 2:00pm–2:25pm
+        speaker: annegret-junker
+        permalink: /events/talks/api-days-india-2026-sticky-notes-asyncapi-openapi
+      - title: OpenCollection – An Open Specification for Describing API Collections
+        time: 2:30pm–2:55pm
+        speaker: anoop-m-d
+        permalink: /events/talks/api-days-india-2026-opencollection-api-collections
+      - title: 'Beyond OpenAPI and AsyncAPI: AI Agents Wrote the Spec, Code, and Tests – Now What?'
+        time: 3:00pm–3:25pm
+        speaker: peter-thomas
+        permalink: /events/talks/api-days-india-2026-agents-wrote-spec-code-tests
+      - title: 'Contracts Earn Trust: API-First Delivery for Teams and for Agents'
+        time: 4:00pm–4:25pm
+        speaker: mike-holdsworth
+        permalink: /events/talks/api-days-india-2026-contracts-earn-trust
+      - title: 'When Linting Shrugs: Dynamic Checks for API Specs'
+        time: 4:30pm–4:55pm
+        speaker: joel-rosario
+        permalink: /events/talks/api-days-india-2026-when-linting-shrugs
+talks:
+  - slug: api-days-india-2026-welcome-openapi-age-of-ai
+    title: OpenAPI Track Welcome and OpenAPI in the Age of AI
+    time: 11:00am–11:25am
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      OpenAPI has seen a lot of success since it was created as Swagger in 2010
+      and became OpenAPI in 2016. What is the reason for its continued momentum
+      and how does the landscape change with AI entering the picture in a variety
+      of ways? We look at how OpenAPI can help you, how OAI can help you using
+      OpenAPI better, and how AI means that you have to slightly adjust the way
+      you design and manage your APIs.
+  - slug: api-days-india-2026-fixing-api-chaos
+    title: 'Fixing API Chaos: A Practical, Open Method to Structure API Work'
+    time: 11:30am–11:55am
+    category: OpenAPI Track
+    speakers:
+      - marjukka-niinioja
+    description: >-
+      Most API problems are not caused by bad tools or missing lifecycle models.
+      They happen because API work is fragmented across teams, roles, and
+      responsibilities. Design happens in isolation. Governance slows things
+      down. Delivery is inconsistent. Documentation is incomplete. Ownership is
+      unclear. This session introduces APIOps Cycles, an open, practical method
+      for structuring API work across design, governance, and delivery. Instead
+      of adding another framework or tool, it provides a way to map how API work
+      actually happens—and where it breaks. You will learn how to identify
+      bottlenecks, missing ownership, weak feedback loops, and disconnected
+      artifacts using a simple, repeatable approach based on stations, lines, and
+      canvases. APIOps Cycles is fully open, free to use, and supported by
+      open-source tooling. It works with your existing API platforms (Apigee,
+      Kong, MuleSoft, AWS, etc.) and can be applied immediately in enterprise
+      environments. This is not a lifecycle model. It is a way to make API work
+      visible, structured, and improvable.
+  - slug: api-days-india-2026-workflows-ai-agents-execute
+    title: 'Beyond OpenAPI: API Workflows That AI Agents Can Actually Execute'
+    time: 12:00pm–12:25pm
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      AI agents can call individual API endpoints, but multi-step workflows?
+      That's where they struggle. OpenAPI describes what each endpoint does, but
+      not how to orchestrate them into business processes. Agents are left to
+      infer sequencing, handle conditional logic, and manage state across
+      calls—burning tokens and producing unpredictable results. The Arazzo
+      Specification solves this by providing machine-readable workflow
+      descriptions that agents can execute directly. And Arazzo 1.1 takes it
+      further, extending support from OpenAPI-based REST services to
+      AsyncAPI-defined event systems, enabling true workflow orchestration across
+      synchronous and asynchronous boundaries. This talk explores what's new in
+      Arazzo 1.1: AsyncAPI support for event-driven workflows, enhanced selector
+      support using JSONPath and XPath for precise data extraction, and chained
+      workflow composition for reusable process libraries. These capabilities
+      transform how agents interact with APIs—from inferring workflows to
+      executing defined processes. Whether you're building automation across
+      distributed systems, exposing use-case-oriented capabilities to AI agents,
+      or designing MCP servers with governed capability access, Arazzo 1.1
+      provides the declarative fabric for predictable, testable, agent-executable
+      workflows. If OpenAPI tells agents what they can call, Arazzo tells them
+      what they should do—and how to do it reliably.
+  - slug: api-days-india-2026-beyond-request-response-event-streams
+    title: 'Beyond Request/Response: What AI Agents Actually Need From Your Event Streams'
+    time: 12:30pm–12:55pm
+    category: OpenAPI Track
+    speakers:
+      - dakshitha-ratnayake
+    description: >-
+      An agent subscribes to a real-time event stream. It processes every event
+      by calling an LLM. Over a weekend, it burns through hundreds of dollars.
+      Every individual event was valid. Every subscription was authenticated.
+      Nothing in the monitoring flagged it because the system was never designed
+      to govern how agents consume streams. This is the demo-to-production gap
+      for event-driven AI. Developers build agent systems on raw event streams
+      and they work. But in production, three things break. Agents can't discover
+      what channels exist without hardcoded configurations. Any agent can
+      subscribe to any topic because there's no channel-level access boundary.
+      And there's no visibility into what each agent is consuming or what it costs
+      when a high-throughput stream triggers LLM calls on every event. This talk
+      uses a primary scenario of agents consuming a WebSocket stream backed by
+      Kafka to show what AsyncAPI v3 provides: describable channels, schema
+      contracts, and security documentation that your gateway layer can enforce.
+      We walk through a real spec snippet. We cover the governance patterns that
+      address the failure modes above, what exists in tooling today, and what
+      still requires custom implementation. And we look at where AsyncAPI fits
+      alongside MCP and OpenAPI in the emerging agent stack. You will leave with
+      three diagnostic questions to evaluate your own event-driven interfaces and
+      a clear sense of what is production-ready today and where the gaps remain.
+  - slug: api-days-india-2026-sticky-notes-asyncapi-openapi
+    title: 'From Sticky Notes to AsyncAPI and OpenAPI: Specs LLMs Can Actually Build'
+    time: 2:00pm–2:25pm
+    category: OpenAPI Track
+    speakers:
+      - annegret-junker
+    description: >-
+      Most teams have now tried handing an LLM a vague description and asking for
+      an API. The results are familiar: plausible-looking endpoints, invented
+      fields, events that don't match anything real, and bugs that take hours to
+      trace. The easy reaction is to blame the model. That's the wrong angle.
+      LLMs don't produce wrong APIs because they're not capable — they produce
+      wrong APIs because they have no access to your domain. The fix is something
+      API teams can already recognize: a precise specification. This talk shows
+      that the collaborative modeling practices used to build shared
+      understanding — Domain Storytelling and EventStorming — double as a
+      remarkably good way to derive that specification, across both styles of
+      API. EventStorming's command/event/policy structure maps almost
+      one-to-one onto an API surface: commands become synchronous REST
+      operations, domain events become asynchronous channels and messages, and
+      policies become the orchestration and business rules that connect them.
+      Bounded contexts become clean service and product boundaries. The result is
+      a paired OpenAPI and AsyncAPI specification that is, in effect, a
+      machine-readable domain model. Using CookWithUs, a recipe-sharing platform
+      modeled and built across three iterations, we walk a concrete pipeline:
+      model the domain, derive the synchronous REST surface and the event-driven
+      async surface together, and split both specs by bounded context. We show
+      exactly what a well-formed spec gives an LLM — and exactly where generation
+      breaks down when the spec is incomplete, ambiguous, or missing its events.
+      We show how a sharper Ubiquitous Language produces a measurably better
+      OpenAPI document, a cleaner set of AsyncAPI channels, and a frontend the
+      model can generate without inventing a single field. The central claim is
+      simple: every naming decision, every event you make explicit, every scoping
+      choice travels all the way into the generated code. A spec is only as good
+      as the language behind it — and async APIs in particular punish vague
+      language, because an event nobody named precisely is an event nobody can
+      consume reliably. This is not a talk about replacing API designers with AI.
+      It's about what happens when rigorous API specification meets a powerful new
+      tool, and why the modeling work always comes first.
+  - slug: api-days-india-2026-opencollection-api-collections
+    title: OpenCollection – An Open Specification for Describing API Collections
+    time: 2:30pm–2:55pm
+    category: OpenAPI Track
+    speakers:
+      - anoop-m-d
+    description: >-
+      APIs are the primary interface to modern software, and standards like
+      OpenAPI have transformed how we define and describe them. Yet developers
+      still struggle to understand how APIs are actually used. Workflows,
+      examples, integration patterns, and operational knowledge often live
+      outside API specifications. In this talk, I'll share the story behind
+      OpenCollection, an open specification that powers Bruno, used by over a
+      million developers every month. We'll explore the problem we're trying to
+      solve, the principles that guided the design of the specification, and why
+      we believe open and interoperable standards are essential for the future of
+      API tooling.
+  - slug: api-days-india-2026-agents-wrote-spec-code-tests
+    title: 'Beyond OpenAPI and AsyncAPI: AI Agents Wrote the Spec, Code, and Tests – Now What?'
+    time: 3:00pm–3:25pm
+    category: OpenAPI Track
+    speakers:
+      - peter-thomas
+    description: >-
+      The digital world is going agent-orchestrated, and generation got cheap: an
+      AI agent can now write the spec, the code, and the tests in one sitting. But
+      when the agent grades its own work, can you trust the code just because the
+      tests are green? The real question of the agent era is not whether it can
+      build the API - but whether it's doing what it's supposed to, and how you'd
+      know. OpenAPI and AsyncAPI describe an API's shape, and spec-driven tools
+      like Spec Kit and Kiro structure generation - but none of them
+      deterministically verify the implementation against the intent. This talk
+      explains the missing layer with live demos: coverage that catches a bug
+      living in an untested input combination even when every endpoint shows up as
+      “covered” by your tests. Watch how negative-test and scenario gaps are
+      surfaced in gRPC and Kafka, and then Claude Code driving the whole thing
+      over MCP - reading the coverage worklist, closing the gaps, and driving a
+      real UI - while the ship/no-ship verdict stays deterministic. When agents
+      regenerate code on demand, the code is disposable - what's worth governing
+      is the spec, the checks, the contracts, and the evidence of what actually
+      ran.
+  - slug: api-days-india-2026-contracts-earn-trust
+    title: 'Contracts Earn Trust: API-First Delivery for Teams and for Agents'
+    time: 4:00pm–4:25pm
+    category: OpenAPI Track
+    speakers:
+      - mike-holdsworth
+    description: >-
+      API specs are no longer just documentation - they are the bridge between
+      human engineers and autonomous systems. Drawing on a real-world federated
+      platform initiative, this talk shows how deterministic contracts matured
+      into trusted architectural assets: stubs that drive parallel team
+      development, contract-verifying pipelines, and automated architectural PR
+      review. The deeper shift comes with AI - a critical industry paradox where
+      rigid, deterministic specifications are exactly what makes probabilistic AI
+      shippable. Attendees will walk away with a new mental model for translating
+      plain-English intent into reliable, autonomous action behind trustworthy API
+      guardrails.
+  - slug: api-days-india-2026-when-linting-shrugs
+    title: 'When Linting Shrugs: Dynamic Checks for API Specs'
+    time: 4:30pm–4:55pm
+    category: OpenAPI Track
+    speakers:
+      - joel-rosario
+    description: >-
+      Static linting is an essential first line of defense for API specifications.
+      It catches syntax errors, style violations, missing fields, and many
+      structural issues before they escape into implementation. But semantic
+      failures are also expensive: a schema may be valid and still fail to
+      describe behavior that clients and servers can rely on. This talk explores a
+      more dynamic approach to validating API specs. Instead of only reading the
+      spec as a document, we exercise it as an executable description of behavior
+      using mocks, generated tests, boundary values, and examples. That forces
+      subtle issues into the open: contradictory constraints, impractical limits,
+      confusing content negotiation, ambiguous status codes, and missing error
+      cases. Through concrete examples and demos, we will compare what static
+      linting catches with what dynamic validation reveals. We will also look at
+      where this fits in an API delivery workflow so teams can use linting for
+      fast structural feedback and dynamic validation for deeper confidence before
+      specs reach consumers.

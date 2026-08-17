@@ -1,0 +1,256 @@
+title: API Days London 2025
+slug: api-days-london-2025
+event_date: September 22 – 24, 2025
+location: Convene, 155 Bishopsgate, London
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days London 2025 — a program on OpenAPI in
+  the age of AI, delivering APIs for AI with Arazzo and Example Mapping, data
+  contracts, what's new in OpenAPI 3.2, and documenting event-driven
+  architectures with AsyncAPI.
+permalink: /events/api-days-london-2025
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - simon-harrer
+  - lorna-mitchell
+  - sean-blanchfield
+  - pavel-kornev
+  - simon-heimler
+  - naresh-jain
+  - rahul-de
+  - anupriya-johari
+  - david-boyne
+  - annegret-junker
+  - fabrizio-lazzaretti
+  - eduardo-maldonado
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days London 2025 — OpenAPI in the age of
+  AI, delivering APIs with Arazzo, data contracts, OpenAPI 3.2, ORD metadata
+  catalogs and AsyncAPI observability.
+agenda:
+  September 24:
+    OpenAPI Track:
+      - title: OAI Track Welcome and OpenAPI in the Age of AI
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-london-2025-welcome-openapi-age-of-ai
+      - title: 'Delivering APIs for AI: Getting it Right with OpenAPI, Arazzo, and Example Mapping'
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-london-2025-delivering-apis-for-ai
+      - title: 'Data Contracts: Treating Data as APIs'
+        speaker: simon-harrer
+        permalink: /events/talks/api-days-london-2025-data-contracts
+      - title: 'What''s new in OpenAPI 3.2'
+        speaker: lorna-mitchell
+        permalink: /events/talks/api-days-london-2025-whats-new-openapi-3-2
+      - title: Architecting Enterprise Agent Tool Infrastructure with OpenAPI and Arazzo
+        speaker: sean-blanchfield
+        permalink: /events/talks/api-days-london-2025-agent-tool-infrastructure
+      - title: 'Beyond OpenAPI: How to build a well-connected metadata catalog across silos'
+        speakers:
+          - pavel-kornev
+          - simon-heimler
+        permalink: /events/talks/api-days-london-2025-metadata-catalog-silos
+      - title: Is Your API Agentic-AI Ready?
+        speaker: naresh-jain
+        permalink: /events/talks/api-days-london-2025-api-agentic-ai-ready
+      - title: Spec-first design without generating any code
+        speakers:
+          - rahul-de
+          - anupriya-johari
+        permalink: /events/talks/api-days-london-2025-spec-first-design
+      - title: Documenting your event-driven architectures with OpenAPI and AsyncAPI
+        speaker: david-boyne
+        permalink: /events/talks/api-days-london-2025-documenting-eda
+      - title: 'How to design AsyncAPIs in Workshops: The API Product Canvas'
+        speakers:
+          - annegret-junker
+          - fabrizio-lazzaretti
+        permalink: /events/talks/api-days-london-2025-asyncapi-product-canvas
+      - title: Enhance Event Observability with AsyncAPI and OpenTelemetry
+        speaker: eduardo-maldonado
+        permalink: /events/talks/api-days-london-2025-event-observability-otel
+talks:
+  - slug: api-days-london-2025-welcome-openapi-age-of-ai
+    title: OAI Track Welcome and OpenAPI in the Age of AI
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      OpenAPI has seen a lot of success since it was created as Swagger in 2010
+      and became OpenAPI in 2016. What is the reason for its continued momentum
+      and how does the landscape change with AI entering the picture in a variety
+      of ways? We look at how OpenAPI can help you, how OAI can help you using
+      OpenAPI better, and how AI means that you have to slightly adjust the way
+      you design and manage your APIs.
+  - slug: api-days-london-2025-delivering-apis-for-ai
+    title: 'Delivering APIs for AI: Getting it Right with OpenAPI, Arazzo, and Example Mapping'
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      As AI-driven tools accelerate API creation, the risk of losing sight of
+      the original intent increases significantly. Copilot-style automation can
+      rapidly generate endpoints—but without careful, human-centred practices to
+      shape purpose and behaviour, we risk simply accelerating delivery of the
+      wrong thing. But have we ever actually been good at defining API
+      requirements clearly? In this talk, we'll explore how techniques such as
+      Example Mapping — borrowed from Behaviour-Driven Development (BDD) — can
+      inject clarity, empathy, and intention into the API design process, even as
+      AI takes a more prominent role. I'll show how structured human input can
+      flow directly into machine-readable formats such as OpenAPI and Arazzo,
+      ensuring alignment across design, testing, documentation, and developer
+      experience. We'll also zoom out to address a larger question: how can we
+      build APIs that deliver exceptional Developer Experience (DX) and meaningful
+      Agent Experiences (AX) in a world increasingly mediated by AI consumers?
+      Through practical examples, concrete guidance, and engaging demos, this
+      session offers a clear model for responsibly combining behavioural
+      techniques and AI — ensuring your API's intent is never lost in translation.
+  - slug: api-days-london-2025-data-contracts
+    title: 'Data Contracts: Treating Data as APIs'
+    category: OpenAPI Track
+    speakers:
+      - simon-harrer
+    description: >-
+      APIs brought order to software development through contracts, lifecycle
+      management, and clear ownership. Yet in data, chaos often reigns: schema
+      drift, silent breakages, and no shared language between producers and
+      consumers. Enter the Open Data Contract Standard (ODCS) — an open initiative
+      under the Linux Foundation that applies API thinking to data. Think of
+      OpenAPI, but for data: a contract-first approach that enables robust data
+      pipelines, clearly defined interfaces, and enforceable guarantees across
+      teams. This talk shows how ODCS enables API-like discipline in data sharing,
+      supports contract-driven development for data products, and introduces
+      schema validation and lifecycle management into data workflows. These
+      capabilities lay the foundation for scalable data marketplaces within
+      organizations, making data assets discoverable, reliable, and reusable. As
+      an outlook, we'll explore the emerging Open Data Product Standard (ODPS),
+      which builds on ODCS by grouping contracts into coherent, reusable building
+      blocks. Together, ODCS and ODPS pave the way for a composable data
+      architecture that aligns with data mesh and data-as-a-product principles.
+  - slug: api-days-london-2025-whats-new-openapi-3-2
+    title: 'What''s new in OpenAPI 3.2'
+    category: OpenAPI Track
+    speakers:
+      - lorna-mitchell
+    description: >-
+      Keeping up with all the new standards all the time can be hard work!
+      Instead, come to this session and get an overview of what's new in the
+      OpenAPI 3.2 release so you know what to expect when it's time to upgrade.
+      You'll hear about support for more HTTP methods, multipart formats, and for
+      handling the full query string as one input. There's a big upgrade to tags,
+      allowing nesting, multiple tag types, and more metadata - replacing the
+      extensions you're probably already using with tags. Also included are
+      document identities, security scheme additions, and upgraded support for
+      XML-format APIs. Come along to learn more and prepare for the future!
+  - slug: api-days-london-2025-agent-tool-infrastructure
+    title: Architecting Enterprise Agent Tool Infrastructure with OpenAPI and Arazzo
+    category: OpenAPI Track
+    speakers:
+      - sean-blanchfield
+    description: >-
+      MCP is a protocol, not a schema. This talk discusses how to leverage your
+      existing investment into API infra & OpenAPI by using Arazzo as the missing
+      layer: the open-standard workflow format for AI agent tools. Used together,
+      OpenAPI, Arazzo and MCP can leverage your existing infra to scale up the
+      capabilities available to your agents, maximising reliability, auditability
+      and security, while simultaneously avoiding obsolescence/continuity risk.
+  - slug: api-days-london-2025-metadata-catalog-silos
+    title: 'Beyond OpenAPI: How to build a well-connected metadata catalog across silos'
+    category: OpenAPI Track
+    speakers:
+      - pavel-kornev
+      - simon-heimler
+    description: >-
+      Open Resource Discovery (ORD) is a standardized protocol designed to
+      describe, discover, and utilize the resources and capabilities of
+      applications and services. It offers a consistent format for metadata and
+      integrates with various metadata standards like OpenAPI, AsyncAPI, and
+      GraphQL. ORD's decentralized and federated approach allows metadata to be
+      published and discovered across different systems without a central
+      authority, enhancing scalability and resilience. In this presentation we
+      would like to share our experience how to tackle integration challenge at
+      enterprise scale using ORD and open standards like OpenAPI. The ORD
+      specification is governed by a newly created NeoNephos Foundation by Linux
+      Foundation.
+  - slug: api-days-london-2025-api-agentic-ai-ready
+    title: Is Your API Agentic-AI Ready?
+    category: OpenAPI Track
+    speakers:
+      - naresh-jain
+    description: >-
+      As the world moves rapidly toward agentic workflows and AI-powered
+      automation, the expectations from APIs are being radically redefined. No
+      longer just 'dumb clients; with static contracts, modern APIs must empower
+      intelligent agents and adapt to dynamic, conversational, and highly
+      integrative scenarios — serving as the digital backbone for both human and
+      machine agents. In this interactive session, we'll explore how to design
+      APIs that are truly 'Agentic-AI Ready.' Through a live demo, you'll see how
+      natural language can bridge the gap between business intent and technical
+      implementation, enabling anyone, not just developers, to define, prototype,
+      and validate APIs in real time.
+  - slug: api-days-london-2025-spec-first-design
+    title: Spec-first design without generating any code
+    category: OpenAPI Track
+    speakers:
+      - rahul-de
+      - anupriya-johari
+    description: >-
+      We all know the values of keeping specs, specially standards like OpenAPI
+      at the centre of design along with your users and simplify maintenance
+      issues. More often than not, we see devs generating the spec from code and
+      for those who don't they generate the code from the spec. How about no
+      codegen? How about a way of design that allows all tools to be dynamic
+      enough to react to spec changes and be in sync without rebuilding. This talk
+      presents that very premise, some tooling that's already being used in
+      production and more ideas.
+  - slug: api-days-london-2025-documenting-eda
+    title: Documenting your event-driven architectures with OpenAPI and AsyncAPI
+    category: OpenAPI Track
+    speakers:
+      - david-boyne
+    description: >-
+      Governance for event-driven architectures is always an after thought. Many
+      companies often end up in a complex mess when building these distributed
+      systems, including the lack of standards, discoverability and ownership. If
+      we treat schemas as a first class citizen, we can utilize OpenAPI and
+      AsyncAPI to help us document our event-driven architectures and bring
+      discoverability to our teams. In this talk we will explore how to get the
+      most of our OpenAPI and AsyncAPI specifications, how to document queries,
+      commands, events and even domains. We will also look at how to build a
+      catalog of information for your teams to explore and discover your
+      event-driven architectures.
+  - slug: api-days-london-2025-asyncapi-product-canvas
+    title: 'How to design AsyncAPIs in Workshops: The API Product Canvas'
+    category: OpenAPI Track
+    speakers:
+      - annegret-junker
+      - fabrizio-lazzaretti
+    description: >-
+      Designing APIs can become tedious and error-prone. Discussing the
+      specification code, especially with business experts, might become
+      difficult. However, API design is teamwork, and the best way to do so is
+      through workshops. The API product canvas offers a template to discuss
+      synchronous and asynchronous APIs with IT specialists and business experts
+      collaboratively.
+  - slug: api-days-london-2025-event-observability-otel
+    title: Enhance Event Observability with AsyncAPI and OpenTelemetry
+    category: OpenAPI Track
+    speakers:
+      - eduardo-maldonado
+    description: >-
+      In this session, we will explore how to enhance observability in
+      event-driven architectures by combining AsyncAPI and OpenTelemetry. As
+      distributed systems become complex, understanding the flow of asynchronous
+      events becomes critical for reliability, debugging, and performance
+      optimization. We’ll walk through a practical example of using OpenTelemetry
+      to produce and propagate traces across messages, enabling end-to-end
+      visibility into event flows. AsyncAPI will be used to define and document
+      event contracts, bringing structure and consistency to messaging patterns.
+      This approach can be applied across message brokers, helping teams
+      standardize their observability practices using open standards and gain
+      deeper insights into their systems.

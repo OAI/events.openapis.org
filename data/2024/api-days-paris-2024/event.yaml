@@ -1,0 +1,141 @@
+title: API Days Paris 2024
+slug: api-days-paris-2024
+event_date: December 2 – 5, 2024
+location: Centre des Nouvelles Industries et Technologies, Paris, France
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative program at API Days Paris 2024, hosted at the Centre des
+  Nouvelles Industries et Technologies — a full-day OAI Track of talks on OpenAPI
+  governance, design and tooling, preceded by a day of hands-on OpenAPI
+  workshops.
+permalink: /events/api-days-paris-2024
+speakers:
+  - thomas-bayer
+  - mike-amundsen
+  - frank-kilcommins
+  - yousaf-nabi
+  - erik-wilde
+  - darrel-miller
+  - oleg-nenashev
+  - naresh-jain
+  - manuel-ottlik
+  - rafael-granados
+  - ewen-quimerch
+  - edouard-lacourt
+  - patrick-brosse
+  - francois-lasne
+  - ikenna-nwaiwu
+  - maxim-danilov
+  - beppe-catanese
+  - daniel-gutierrez-diez
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track and workshops at API Days Paris 2024 — talks on
+  OpenAPI governance, design and tooling, plus hands-on workshops on OpenAPI and
+  Arazzo.
+agenda:
+  December 2:
+    Workshops:
+      - title: 'Introduction to OpenAPI: Understanding and Using OpenAPI in Practice'
+        speaker: thomas-bayer
+        permalink: /events/talks/api-days-paris-2024-introduction-to-openapi
+      - title: 'Designing APIs with OpenAPI: Build the Right APIs the Right Way'
+        speaker: mike-amundsen
+        permalink: /events/talks/api-days-paris-2024-designing-apis-openapi
+      - title: 'API Delivery with OpenAPI: Enhancing Governance, Workflows, and Developer Experience'
+        speakers:
+          - frank-kilcommins
+          - yousaf-nabi
+        permalink: /events/talks/api-days-paris-2024-api-delivery-openapi
+  December 3:
+    OpenAPI Track:
+      - title: 'Opening: OAI Track Introduction and the State of OpenAPI'
+        time: 10:00am
+        speaker: erik-wilde
+        slidesUrl: http://dret.net/lectures/api-days-paris-2024/
+      - title: 'Keynote: Delivering Authentic Intelligence with OpenAPI'
+        time: 10:25am
+        speaker: darrel-miller
+      - title: 'Walk the OpenAPI Talk, Moonwalk the Developer Experience!'
+        time: 11:10am
+        speaker: oleg-nenashev
+      - title: 'Project API Forge: Streamlining Dev-First API Lifecycle Management'
+        time: 11:35am
+        speaker: naresh-jain
+      - title: Using xRegistry To Centralize Entity Schemas for Integration Products
+        time: 12:00pm
+        speaker: manuel-ottlik
+      - title: 'API Scoring - The Secret Weapon in the Battle for API Excellence'
+        time: 12:25pm
+        speaker: rafael-granados
+      - title: Generate OpenAPI Schema from Golang Code with the Fuego Framework
+        time: 1:50pm
+        speakers:
+          - ewen-quimerch
+          - edouard-lacourt
+      - title: 'Inclusive APIs: How to Extend OpenAPI for Accessibility'
+        time: 2:15pm
+        speaker: patrick-brosse
+      - title: 'What''s up Doc? The Doctor a New Tool Player for Open API'
+        time: 2:40pm
+        speaker: francois-lasne
+      - title: Tackling OpenAPI Drift
+        time: 3:05pm
+        speaker: ikenna-nwaiwu
+      - title: 'An alternative view on OpenAPI docs, start finally doing it right!'
+        time: 3:55pm
+        speaker: maxim-danilov
+      - title: 7 Rules for crafting developer-friendly API libraries
+        time: 4:20pm
+        speaker: beppe-catanese
+      - title: Describing API Workflows with Arazzo
+        time: 4:45pm
+        speaker: frank-kilcommins
+      - title: Orchestrating APIs using AWS Step Functions
+        time: 5:10pm
+        speaker: daniel-gutierrez-diez
+talks:
+  - slug: api-days-paris-2024-introduction-to-openapi
+    title: 'Introduction to OpenAPI: Understanding and Using OpenAPI in Practice'
+    category: Workshops
+    speakers:
+      - thomas-bayer
+    description: >-
+      OpenAPI has become essential for the design, documentation, and seamless
+      integration of APIs, providing a standardized description language that
+      enhances collaboration. This course covers the core principles and
+      practical use of OpenAPI, empowering you to explore, create, and integrate
+      OpenAPI descriptions confidently in your design, development, management,
+      and governance workflows.
+  - slug: api-days-paris-2024-designing-apis-openapi
+    title: 'Designing APIs with OpenAPI: Build the Right APIs the Right Way'
+    category: Workshops
+    speakers:
+      - mike-amundsen
+    description: >-
+      In this workshop, join industry expert Mike Amundsen for an in-depth,
+      hands-on exploration of API design using the OpenAPI Specification. This
+      workshop will cover core principles and modern techniques for designing
+      effective, scalable APIs that meet real-world needs. Participants will learn
+      how to leverage the OpenAPI Specification to create clear, reusable, and
+      maintainable API contracts that drive efficient development and robust
+      client-server interactions.
+  - slug: api-days-paris-2024-api-delivery-openapi
+    title: 'API Delivery with OpenAPI: Enhancing Governance, Workflows, and Developer Experience'
+    category: Workshops
+    speakers:
+      - frank-kilcommins
+      - yousaf-nabi
+    description: >-
+      Join this workshop to explore a collaborative, design-first approach to API
+      delivery, using OpenAPI as the single source of truth. Set within a
+      financial payments scenario, this session covers everything from defining
+      business requirements and infusing API standards awareness through example
+      mapping, to ensuring seamless integration and consumer testing for safe API
+      evolution. Attendees will learn how OpenAPI and Arazzo can drive
+      documentation, virtualization, and contract testing to streamline API
+      evolution, enhance governance, and elevate developer and consumer
+      experiences.

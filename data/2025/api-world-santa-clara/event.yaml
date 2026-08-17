@@ -1,0 +1,67 @@
+title: API World Santa Clara 2025
+slug: api-world-santa-clara
+event_date: September 4, 2025
+location: Santa Clara Convention Center, Santa Clara, CA
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative program at API World Santa Clara 2025 — a full day of
+  talks on OpenAPI in the age of AI, building agent-ready and AI-powered APIs,
+  the third wave of API management, API governance, and the OpenAPI, Arazzo and
+  Overlays ecosystem.
+permalink: /events/api-world-santa-clara
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - david-oneill
+  - manasa-hari
+  - adrian-machado
+  - shireen-nagdive
+  - emmanuel-paraskakis
+  - kevin-swiber
+  - neelesh-pateriya
+  - jeremy-glassenberg
+  - budhaditya-bhattacharya
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Summit at API World Santa Clara 2025 — OpenAPI in the age of AI,
+  agent-ready APIs, the AI-powered API stack, API governance, and OpenAPI,
+  Arazzo and Overlays.
+agenda:
+  September 4:
+    OpenAPI Summit:
+      - title: OAI Track Welcome and OpenAPI in the Age of AI
+        time: 9:30am–9:55am
+        speaker: erik-wilde
+      - title: 'Getting the Right API Faster: DX and AX with Example Mapping, OpenAPI, and Arazzo'
+        time: 10:00am–10:25am
+        speaker: frank-kilcommins
+      - title: 'Your APIs Aren''t Ready for Agentic AI — OpenAPI Can Fix That'
+        time: 10:30am–10:55am
+        speaker: david-oneill
+      - title: 'The AI-Powered API Stack: Automating API Development, Testing, and Documentation with GenAI'
+        time: 11:00am–11:25am
+        speaker: manasa-hari
+      - title: The Third-Wave of API Management
+        time: 11:30am–11:55am
+        speaker: adrian-machado
+      - title: 'Building APIs for the AI Era: Why OpenAPI is Non-Negotiable'
+        time: 1:00pm–1:25pm
+        speaker: shireen-nagdive
+      - title: Build AI-Ready APIs with MCP
+        time: 1:30pm–1:55pm
+        speaker: emmanuel-paraskakis
+      - title: 'OpenAPI''s AI Renaissance: From Description to Orchestration'
+        time: 2:00pm–2:25pm
+        speaker: kevin-swiber
+      - title: 'AI-Powered APIs and API-Enabled AI: A Symbiotic Evolution Driving Mutual Innovation'
+        time: 2:30pm–2:55pm
+        speaker: neelesh-pateriya
+      - title: 'API Governance: The Latest Trends Is Making Teams Love Standardization'
+        time: 3:00pm–3:25pm
+        speaker: jeremy-glassenberg
+      - title: 'Into the OpenAPI Multiverse: Why OAS, Arazzo, and Overlays are Essential for an AI-Ready Future'
+        time: 3:30pm–3:55pm
+        speaker: budhaditya-bhattacharya

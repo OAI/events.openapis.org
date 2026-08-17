@@ -1,0 +1,15 @@
+# Optional manual ordering for event listings — the PRIMARY order source.
+#
+# List event slugs (the data/<year>/<slug>/ folder name) in the order you want
+# them to appear at the FRONT of the list. Any event NOT listed here falls back
+# to date order among the finished events (most recent first).
+#
+# We pin the upcoming events here, soonest first, so they lead the listing.
+# (Left unpinned, the date fallback would place past events ahead of upcoming
+# ones.) Finished events are intentionally NOT listed — they self-order by date,
+# newest first, so no edit is needed when an event's date passes or a new past
+# event is added. When an upcoming event finishes, just remove it from this list.
+
+- api-days-india-2026
+- api-days-london-2026
+- api-days-paris-2026

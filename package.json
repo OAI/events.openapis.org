@@ -1,0 +1,66 @@
+{
+  "name": "openapi-events-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "speakers": "node scripts/sync-speakers.mjs",
+    "covers": "node scripts/sync-covers.mjs",
+    "predev": "npm run speakers && npm run covers",
+    "dev": "next dev",
+    "prebuild": "npm run speakers && npm run covers",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "precf:build": "npm run speakers && npm run covers",
+    "cf:build": "CF_BUILD=1 opennextjs-cloudflare build",
+    "cf:preview": "npm run cf:build && opennextjs-cloudflare preview",
+    "cf:deploy": "npm run cf:build && opennextjs-cloudflare deploy",
+    "cf:typegen": "wrangler types",
+    "preview:webkit": "playwright open --browser=webkit http://localhost:3000",
+    "preview:iphone": "playwright open --device=\"iPhone 14 Pro\" http://localhost:3000",
+    "preview:iphone17": "playwright open --browser=webkit --viewport-size=440,956 --user-agent=\"Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1\" http://localhost:3000",
+    "preview:ipad": "playwright open --device=\"iPad Pro 11\" http://localhost:3000",
+    "img": "node scripts/convert-image.mjs",
+    "covers:export": "node scripts/export-covers.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "js-yaml": "^4.1.1",
+    "next": "^16.3.0",
+    "next-themes": "^0.4.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@opennextjs/cloudflare": "^1.20.2",
+    "@playwright/test": "^1.59.1",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.4",
+    "eslint-config-prettier": "^10.1.8",
+    "postcss": "^8.5.26",
+    "prettier": "^3.8.3",
+    "prettier-plugin-tailwindcss": "^0.7.3",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.100.0"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "sharp": "$sharp"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

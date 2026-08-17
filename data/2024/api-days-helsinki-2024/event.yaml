@@ -1,0 +1,68 @@
+title: API Days Helsinki 2024
+slug: api-days-helsinki-2024
+event_date: May 28 – 29, 2024
+location: Pikku-Finlandia, Helsinki
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Helsinki 2024, hosted at
+  Pikku-Finlandia — a session of talks on the state of OpenAPI, the new Arazzo
+  workflow specification, easy SDK generation and where OpenAPI is heading.
+permalink: /events/api-days-helsinki-2024
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - daniel-hervas
+  - ishraq-khan
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Helsinki 2024 — the state of OpenAPI,
+  the Arazzo Specification for API workflows, easy SDK generation and where
+  OpenAPI is going.
+agenda:
+  May 29:
+    OpenAPI Track:
+      - title: OAI Track Introduction and the State of OpenAPI
+        speaker: erik-wilde
+        slidesUrl: http://dret.net/lectures/api-days-helsinki-2024/oai-track
+      - title: 'The Arazzo Specification: A Tapestry for API Workflows'
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-helsinki-2024-arazzo-specification
+        slidesUrl: https://noti.st/frankkilcommins/2Sgric/the-arazzo-specification-a-tapestry-for-api-workflows
+      - title: 'Simplify your service integration: Build SDKs easily'
+        speaker: daniel-hervas
+      - title: 'OpenAPI: Where It''s Been and Where It''s Going'
+        speaker: ishraq-khan
+talks:
+  - slug: api-days-helsinki-2024-arazzo-specification
+    title: 'The Arazzo Specification: A Tapestry for API Workflows'
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      Officially announcing the Arazzo Specification which enables the ability to
+      define and document workflows, a series of API calls, that when woven
+      together accomplish a specific business objective. The new specification was
+      developed under the OpenAPI Initiative, and complements current
+      specifications, including OpenAPI and AsyncAPI. Arazzo provides a
+      deterministic recipe for using APIs and enables code generation tooling for
+      a given API based on use-cases. Additionally, Arazzo improves regulatory
+      checks and bridges gaps where use-case flows span multiple API descriptions.
+      The new specification provides a sufficient level of predictable determinism
+      to AI models, allowing them to offer a natural language abstraction on top of
+      the business use cases, while in parallel giving interoperability benefits to
+      the actual API providers. The result is more value, with less vendor
+      lock-in, and consistent API offerings for both humans and the new wave of AI
+      consumers. In general, there’s enormous potential to enhance the developer
+      experience (DX) and API documentation by enabling graphical rendering of API
+      workflows. The specification also improves human understanding of how to
+      consume API endpoints to achieve a specific goal. Arazzo descriptions can
+      stay up-to-date and be assertable against the underlying APIs. This reduces
+      the need for out-of-band documentation sharing, reduces the time and effort
+      required to implement complex workflows, and automates testing and other
+      repetitive tasks. Overall, the Arazzo Specification improves the capability
+      of API specifications to tell the story of the API in a manner that improves
+      interoperability across industries.
+    slidesUrl: https://noti.st/frankkilcommins/2Sgric/the-arazzo-specification-a-tapestry-for-api-workflows

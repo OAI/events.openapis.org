@@ -1,0 +1,9 @@
+# Per-event overrides for API Days Australia 2024 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: INNOQ
+- slug: adeel-ali
+  company: APIMatic
+- slug: patrick-chiu
+  company: Telstra

@@ -1,0 +1,11 @@
+# Per-event overrides for API Days Singapore 2026 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: OpenAPI Initiative
+- slug: manaswini-talagadadivi
+  company: Constructor
+- slug: anusha-jayasundara
+  company: WSO2
+- slug: ashish-khichi
+  company: Credit Agricole

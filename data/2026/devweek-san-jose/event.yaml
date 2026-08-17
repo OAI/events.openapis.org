@@ -1,0 +1,263 @@
+title: Developer Week San Jose 2026
+slug: devweek-san-jose
+event_date: February 18 – 20, 2026
+location: San Jose Convention Center, San Jose, CA
+type: Event
+status: finished
+image: /img/backgrounds/developerWeekSummit_background.jpg
+description: >-
+  The OpenAPI Summit at Developer Week San Jose 2026 — a full-day program on
+  OpenAPI in the age of AI, making APIs AI-ready, what's new in OpenAPI 3.2,
+  AI-driven API design, and building the composable backbone of AI-ready
+  platforms.
+permalink: /events/devweek-san-jose
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - henry-andrews
+  - sumit-amar
+  - manideep-galala
+  - aditya-tangirala
+  - aditya-rohit
+  - emmanuel-paraskakis
+  - nuwan-dias
+  - kuldeepak-angrish
+  - budhaditya-bhattacharya
+  - rafael-ruiz
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Summit at Developer Week San Jose 2026 — OpenAPI in the age of AI,
+  AI-ready API design, OpenAPI 3.2, LLM-safe API chunking and AI-native
+  platforms.
+agenda:
+  February 18:
+    OpenAPI Summit:
+      - title: Summit Welcome and OpenAPI in the Age of AI
+        time: 9:30am–9:55am
+        speaker: erik-wilde
+        permalink: /events/talks/devweek-san-jose-welcome-openapi-age-of-ai
+      - title: 'You may have OpenAPI, but is it AI-Ready?'
+        time: 10:00am–10:25am
+        speaker: frank-kilcommins
+        permalink: /events/talks/devweek-san-jose-openapi-ai-ready
+      - title: 'What''s new in OpenAPI 3.2?'
+        time: 10:30am–10:55am
+        speaker: henry-andrews
+        permalink: /events/talks/devweek-san-jose-whats-new-openapi-32
+      - title: 10x Boost in API Development Velocity Using Practical AI Tooling
+        time: 11:00am–11:25am
+        speaker: sumit-amar
+        permalink: /events/talks/devweek-san-jose-10x-api-velocity-ai-tooling
+      - title: 'The New Developer Stack: Integrating AI into the Core of Enterprise Systems'
+        time: 11:30am–11:55am
+        speakers:
+          - manideep-galala
+          - aditya-tangirala
+        permalink: /events/talks/devweek-san-jose-new-developer-stack-ai
+      - title: 'Bridging SDKs, OpenAPI, and AI: A Unified Schema for LLM-Safe API Chunking'
+        time: 1:00pm–1:25pm
+        speaker: aditya-rohit
+        permalink: /events/talks/devweek-san-jose-bridging-sdks-openapi-ai
+      - title: AI-Driven API Design with OpenAPI
+        time: 1:30pm–1:55pm
+        speaker: emmanuel-paraskakis
+        permalink: /events/talks/devweek-san-jose-ai-driven-api-design
+      - title: 'APIs Weren''t Built for AI: Now What?'
+        time: 2:00pm–2:25pm
+        speaker: nuwan-dias
+        permalink: /events/talks/devweek-san-jose-apis-not-built-for-ai
+      - title: 'The API-to-AI Pipeline: Building the Composable Backbone of AI-Ready Platforms'
+        time: 2:30pm–2:55pm
+        speakers:
+          - kuldeepak-angrish
+          - budhaditya-bhattacharya
+        permalink: /events/talks/devweek-san-jose-api-to-ai-pipeline
+      - title: 'From API Chaos to Clarity: The Role of OpenAPI in Standardized Tooling'
+        time: 3:00pm–3:25pm
+        speaker: rafael-ruiz
+        permalink: /events/talks/devweek-san-jose-api-chaos-to-clarity
+talks:
+  - slug: devweek-san-jose-welcome-openapi-age-of-ai
+    title: Summit Welcome and OpenAPI in the Age of AI
+    time: 9:30am–9:55am
+    category: OpenAPI Summit
+    speakers:
+      - erik-wilde
+    description: >-
+      Welcome to the OpenAPI Summit! We have an exciting program to share, with
+      presentations talking about new specifications as well as presentations
+      that dive into practices, applications, and an outlook of things are going.
+      We also we have a brief look of where OpenAPI is situated in the age of AI
+      and MCP, and how things are going to develop after the recent publication
+      of version 3.2 of the specification.
+  - slug: devweek-san-jose-openapi-ai-ready
+    title: 'You may have OpenAPI, but is it AI-Ready?'
+    time: 10:00am–10:25am
+    category: OpenAPI Summit
+    speakers:
+      - frank-kilcommins
+    description: >-
+      I have worked with and reviewed thousands of APIs across startups,
+      enterprises, and global platforms. Almost all shipped an OpenAPI
+      Description. Yet through the lens of AI systems and intelligent agents,
+      most failed a simple test. They were designed for humans (often badly),
+      not machines. In this session I will share what I have learned from helping
+      organisations make their APIs truly AI-ready, breaking down the six
+      dimensions that determine whether an API can be understood, reasoned over,
+      discovered, and safely executed by intelligent systems. These include
+      foundational compliance, developer experience, semantic clarity, agent
+      usability, security, and AI discoverability. Using the Jentic API Scoring
+      Framework as a visual guide, I will show how to assess AI-readiness, where
+      most teams stumble, and the simple changes that dramatically improve both
+      human and machine understanding.
+  - slug: devweek-san-jose-whats-new-openapi-32
+    title: 'What''s new in OpenAPI 3.2?'
+    time: 10:30am–10:55am
+    category: OpenAPI Summit
+    speakers:
+      - henry-andrews
+    description: >-
+      Come hear how and when to use the new features of the OpenAPI
+      Specification 3.2! This talk will highlight AI-friendly features such as
+      streaming media, structured tags, and improved examples, among other
+      features. It will also include a brief look at areas we are researching for
+      3.3.
+  - slug: devweek-san-jose-10x-api-velocity-ai-tooling
+    title: 10x Boost in API Development Velocity Using Practical AI Tooling
+    time: 11:00am–11:25am
+    category: OpenAPI Summit
+    speakers:
+      - sumit-amar
+    description: >-
+      This session focuses on accelerating development velocity using Generative
+      AI tooling. In this session, we will use various AI tools to aid with API
+      design, development/code generation, APIs unit/integration testing, and
+      observability. We'll outline various stages in API development lifecycle,
+      and highlight practical examples of automated help using Microsoft Copilot
+      with GPT 5 and Cursor AI with Claude Sonnet. We'll cover generating refined
+      API specs, developer documentation, data contracts and general API service
+      scaffolding, unit and integration test code, and injecting observability
+      hooks to establish granular alerts and dashboards.
+  - slug: devweek-san-jose-new-developer-stack-ai
+    title: 'The New Developer Stack: Integrating AI into the Core of Enterprise Systems'
+    time: 11:30am–11:55am
+    category: OpenAPI Summit
+    speakers:
+      - manideep-galala
+      - aditya-tangirala
+    description: >-
+      AI is no longer a sidecar, it’s the new runtime for enterprise software.
+      This talk explores how to embed AI capabilities within existing platforms
+      and micro-services. We’ll cover architecture evolution patterns, API design
+      for AI endpoints, and change management strategies for teams transitioning
+      from traditional systems to AI-native infrastructure. Whether you’re
+      building for internal developers or customer-facing apps, this session
+      provides a roadmap for sustainable AI adoption. Key takeaways: - Patterns
+      for integrating LLMs and APIs with enterprise systems - How to align AI
+      initiatives with platform goals - Strategies to balance innovation speed
+      with governance.
+  - slug: devweek-san-jose-bridging-sdks-openapi-ai
+    title: 'Bridging SDKs, OpenAPI, and AI: A Unified Schema for LLM-Safe API Chunking'
+    time: 1:00pm–1:25pm
+    category: OpenAPI Summit
+    speakers:
+      - aditya-rohit
+    description: >-
+      API teams today work with multiple representations of the same system:
+      SDKs encode behavior and types in code, OpenAPI describes surface
+      contracts, and documentation explains intent in prose. These artefacts
+      evolve independently, resulting in fragmented semantics and no single
+      source of truth. This fragmentation becomes especially problematic when
+      APIs are consumed by LLMs. Common approaches such as simply chunking
+      OpenAPI files, SDK code, or documentation, often split schemas, workflows,
+      and error semantics across boundaries that destroy context. The result is
+      brittle reasoning and hallucinations, even when the underlying API is
+      well-designed. In this talk, we focus on two practical concepts: A unified
+      intermediate schema that preserves semantic intent across SDKs and OpenAPI,
+      acting as a shared backbone for tooling and automation LLM-safe chunking,
+      where schemas, types, workflows, and errors are structured into stable,
+      meaningful units that models can reason over without losing context Drawing
+      from real-world, multi-language API codebases (Node.js, Python, Go, Java,
+      TypeScript, etc), we discuss why existing representations fall short, what
+      properties such a unified schema must have, and how it enables both
+      accurate OpenAPI generation and more reliable LLM-driven use cases.
+  - slug: devweek-san-jose-ai-driven-api-design
+    title: AI-Driven API Design with OpenAPI
+    time: 1:30pm–1:55pm
+    category: OpenAPI Summit
+    speakers:
+      - emmanuel-paraskakis
+    description: >-
+      Good API design is no longer reserved for experts. With LLMs and OpenAPI,
+      you can go from user research to a validated prototype in under an hour — a
+      process that used to take weeks. But AI isn't magic. Context is everything.
+      In this session, you'll learn a practical workflow for AI-driven API
+      design: synthesizing market research into markdown, standardizing your API
+      guidelines, treating prompts as code, and validating outputs with linting
+      and real users. Walk away with prompts, templates, and a repeatable process
+      you can use Monday morning.
+  - slug: devweek-san-jose-apis-not-built-for-ai
+    title: 'APIs Weren''t Built for AI: Now What?'
+    time: 2:00pm–2:25pm
+    category: OpenAPI Summit
+    speakers:
+      - nuwan-dias
+    description: >-
+      APIs power modern digital systems. But they were designed for human
+      developers building deterministic applications. Today, those APIs are
+      increasingly consumed by AI-driven and agentic systems that are
+      probabilistic, non-deterministic, and autonomous by nature. This mismatch
+      introduces real risks: runaway costs, unexpected behavior, security gaps,
+      and brittle integrations. Making APIs “AI-ready” requires more than adding
+      an OpenAPI description or exposing an endpoint to an LLM. It demands
+      rethinking APIs across multiple dimensions: how they are designed, how they
+      are consumed, and how they are governed at runtime. In this session, we
+      explore why traditional API assumptions break down in AI-driven
+      environments and what architectural changes are required to address them.
+      We’ll examine design patterns for AI-friendly APIs, challenges introduced
+      by agentic consumption, and the critical role of API gateways, policies,
+      and observability in controlling risk. AI-ready APIs aren’t accidental,
+      they’re intentional. This talk shows what that intent looks like in
+      practice.
+  - slug: devweek-san-jose-api-to-ai-pipeline
+    title: 'The API-to-AI Pipeline: Building the Composable Backbone of AI-Ready Platforms'
+    time: 2:30pm–2:55pm
+    category: OpenAPI Summit
+    speakers:
+      - kuldeepak-angrish
+      - budhaditya-bhattacharya
+    description: >-
+      95% of all AI initiatives failed across organizations in 2025! Why? Lack of
+      AI-readiness, underestimating the complexities of the AI value chain and
+      treating MCP as the entire AI strategy! Yes, every organization wants to be
+      ‘AI-ready,’ but few realize that the journey starts long before the first
+      LLM prompt is written — it begins with APIs and API management. However,
+      rigid, inflexible, and proprietary API platforms only compound the problem
+      since they can’t keep up or cater to the evolving needs of the business. So,
+      in this workshop, we’ll explore how open standards like OpenAPI, OAuth, and
+      OpenTelemetry can help you build a composable API layer that’s secure,
+      observable, and built for scale. We’ll then turn your APIs into AI-ready
+      tools using the Model Context Protocol (MCP), connecting them to LLMs, data
+      sources, and other services to create AI-native applications. Key
+      takeaways: 1. Why APIs are the first step toward AI-readiness. 2. How OAS,
+      OAuth, and Otel work together to build strong foundations. 3. What the
+      Model Context Protocol (MCP) unlocks for developers building AI-native
+      applications Expect practical examples, clear patterns, and a few ‘aha’
+      moments about where APIs fit in the AI era.
+  - slug: devweek-san-jose-api-chaos-to-clarity
+    title: 'From API Chaos to Clarity: The Role of OpenAPI in Standardized Tooling'
+    time: 3:00pm–3:25pm
+    category: OpenAPI Summit
+    speakers:
+      - rafael-ruiz
+    description: >-
+      As API ecosystems grow, teams often struggle with fragmented tooling and
+      inconsistent practices. This session explores how the OpenAPI
+      Specification (OAS) brings order to API development by enabling
+      standardized, interoperable, and vendor-agnostic tooling. We’ll examine how
+      standards-based approaches improve automation, governance, and
+      collaboration across the API lifecycle, and why they offer clear advantages
+      over proprietary solutions. Through practical examples, the talk shows how
+      OAS-driven tools help organizations reduce complexity, accelerate digital
+      transformation, and build scalable API platforms without vendor lock-in.

@@ -1,0 +1,21 @@
+# Per-event overrides for API Days India 2026 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: OpenAPI Initiative
+- slug: marjukka-niinioja
+  company: Osaango
+- slug: frank-kilcommins
+  company: Jentic
+- slug: dakshitha-ratnayake
+  company: WSO2
+- slug: annegret-junker
+  company: Codecentric
+- slug: anoop-m-d
+  company: Bruno
+- slug: peter-thomas
+  company: Karate Labs
+- slug: mike-holdsworth
+  company: Monowai
+- slug: joel-rosario
+  company: Specmatic

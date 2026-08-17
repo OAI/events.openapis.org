@@ -1,0 +1,25 @@
+# Per-event overrides for API World Santa Clara 2025 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: INNOQ
+- slug: frank-kilcommins
+  company: SmartBear
+- slug: david-oneill
+  company: APIContext
+- slug: manasa-hari
+  company: Adobe
+- slug: adrian-machado
+  company: Zuplo
+- slug: shireen-nagdive
+  company: Salesforce
+- slug: emmanuel-paraskakis
+  company: Level 250
+- slug: kevin-swiber
+  company: Pointbreak
+- slug: neelesh-pateriya
+  company: Cisco
+- slug: jeremy-glassenberg
+  company: Salesforce
+- slug: budhaditya-bhattacharya
+  company: Tyk

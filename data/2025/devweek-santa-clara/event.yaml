@@ -1,0 +1,72 @@
+title: Developer Week Santa Clara 2025
+slug: devweek-santa-clara
+event_date: February 11 – 13, 2025
+location: Santa Clara Convention Center, Santa Clara, CA
+type: Event
+status: finished
+image: /img/backgrounds/developerWeekSummit_background.jpg
+description: >-
+  The OpenAPI Initiative program at Developer Week Santa Clara 2025, hosted at
+  the Santa Clara Convention Center — OAI workshops on API linting and contract
+  testing, followed by a full OpenAPI track covering API management, Arazzo
+  workflows, OpenAPI 3.2, overlays, authorization, governance and resiliency
+  testing.
+permalink: /events/devweek-santa-clara
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - adrian-machado
+  - henry-andrews
+  - kevin-swiber
+  - omri-gazitt
+  - jeremy-snyder
+  - erik-hansen
+  - olga-podolyako
+  - hari-krishnan
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative program at Developer Week Santa Clara 2025 — OAI
+  workshops plus a full track on API management, Arazzo, OpenAPI 3.2, overlays,
+  governance and API resiliency.
+agenda:
+  February 11:
+    Workshops:
+      - title: 'Linting API Descriptions: Why consistency is king for Developer Experience!'
+        time: 12:00pm
+        speaker: erik-wilde
+      - title: 'Introduction to Contract Testing: Evolving APIs Safely'
+        time: 1:00pm
+        speaker: frank-kilcommins
+  February 12:
+    OpenAPI Track:
+      - title: The Third Wave of API Management
+        time: 9:30am
+        speaker: adrian-machado
+      - title: 'OpenAPI Summit Introduction: Why and How to Use OpenAPI'
+        time: 10:00am
+        speaker: erik-wilde
+      - title: Describing API Workflows with Arazzo
+        time: 10:30am
+        speaker: frank-kilcommins
+      - title: 'The Future of OpenAPI: OpenAPI Version 3.2 and the Road to Moonwalk'
+        time: 11:00am
+        speaker: henry-andrews
+      - title: 'OpenAPI Overlays: Strategies for API Description Management'
+        time: 11:30am
+        speaker: kevin-swiber
+      - title: Your Cheat Code for API Authorization
+        time: 1:00pm
+        speaker: omri-gazitt
+      - title: No AI without APIs
+        time: 1:30pm
+        speaker: jeremy-snyder
+      - title: 'APIOps: Interface Development at Scale'
+        time: 2:00pm
+        speaker: erik-hansen
+      - title: API Governance in the age of AI
+        time: 2:30pm
+        speaker: olga-podolyako
+      - title: API Resiliency Testing
+        time: 3:00pm
+        speaker: hari-krishnan

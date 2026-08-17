@@ -1,0 +1,180 @@
+title: API Days Amsterdam 2026
+slug: api-days-amsterdam-2026
+event_date: June 9 – 10, 2026
+location: Tolhuistuin, Amsterdam, Netherlands
+type: Event
+status: finished
+image: /img/backgrounds/apiDaysAsmterdam_background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Amsterdam 2026, hosted at Tolhuistuin
+  — an afternoon program on the Arazzo workflow specification, OpenAPI examples
+  and tags for AI agents, deriving specs from domain models, and governing AI
+  discovery with open standards.
+permalink: /events/api-days-amsterdam-2026
+speakers:
+  - erik-wilde
+  - frank-kilcommins
+  - kin-lane
+  - annegret-junker
+  - carles-arnal
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Amsterdam 2026 — Arazzo 1.1 workflows
+  for AI agents, OpenAPI examples and tags, domain-model-driven specs, and A2A
+  agent-card governance.
+agenda:
+  June 10:
+    OpenAPI Track:
+      - title: OpenAPI Track Welcome
+        time: 1:40pm–1:45pm
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-amsterdam-2026-track-welcome
+      - title: 'Beyond OpenAPI: Workflows That AI Agents Can Actually Execute'
+        time: 1:45pm–2:05pm
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-amsterdam-2026-workflows-ai-agents
+      - title: OpenAPI Examples and Tags Are the Missing Link Between Your APIs and AI Agents
+        time: 2:05pm–2:30pm
+        speaker: kin-lane
+        permalink: /events/talks/api-days-amsterdam-2026-examples-tags-ai-agents
+      - title: Your Domain Model Is Your API Spec — and Your First Prompt
+        time: 2:30pm–2:55pm
+        speaker: annegret-junker
+        permalink: /events/talks/api-days-amsterdam-2026-domain-model-api-spec
+      - title: 'From OpenAPI to Agent Cards: Governing AI Discovery with Open Standards'
+        time: 2:55pm–3:20pm
+        speaker: carles-arnal
+        permalink: /events/talks/api-days-amsterdam-2026-openapi-agent-cards
+talks:
+  - slug: api-days-amsterdam-2026-track-welcome
+    title: OpenAPI Track Welcome
+    time: 1:40pm–1:45pm
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      Welcome to the OpenAPI Track! We have an exciting program to share, with
+      presentations talking about new specifications as well as presentations
+      that dive into practices, applications, and an outlook of where things are
+      going in the age of AI.
+  - slug: api-days-amsterdam-2026-workflows-ai-agents
+    title: 'Beyond OpenAPI: Workflows That AI Agents Can Actually Execute'
+    time: 1:45pm–2:05pm
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      The Arazzo specification continues to evolve as the declarative fabric for
+      describing API workflows. In this talk, you'll get a first look at what's
+      coming in Arazzo 1.1, an important upgrade that extends support from
+      OpenAPI-based services to AsyncAPI-defined systems, enabling true workflow
+      orchestration across synchronous and asynchronous boundaries. We'll also
+      explore new capabilities including AsyncAPI support, enhanced selector
+      support using JSONPath and XPath, chained workflow composition, and early
+      support for human- or agent-in-the-loop steps, where workflows can pause
+      for review, approval, or AI assistance. These improvements help define not
+      just the steps in a workflow, but also the expected interaction models for
+      clients and services. Whether you're building automation across
+      distributed systems, modelling complex flows, exposing use-case-oriented
+      capabilities to AI systems, or designing MCP servers with the right level
+      of capability access, Arazzo 1.1 helps you clearly express how each part of
+      the system should behave and interact. It's a powerful step toward unifying
+      API-first, event-driven, and human-centric integration patterns in a
+      predictable, testable, and scalable manner, and one that works for agents.
+  - slug: api-days-amsterdam-2026-examples-tags-ai-agents
+    title: OpenAPI Examples and Tags Are the Missing Link Between Your APIs and AI Agents
+    time: 2:05pm–2:30pm
+    category: OpenAPI Track
+    speakers:
+      - kin-lane
+    description: >-
+      Your OpenAPI specifications already describe what your APIs can do—but do
+      they describe what that means to the business? With the rise of MCP servers
+      and AI agents consuming APIs at scale, the gap between technical API
+      definitions and business-domain understanding is becoming a real problem
+      for context engineering. OpenAPI 3.2's enhanced tags and the
+      often-overlooked examples object are how you close that gap. At Naftiko,
+      we've been building OpenAPI-first sandboxes for 3rd-party APIs like GitHub,
+      Jira, Notion, and Figma. Each spec is designed around business use cases,
+      not just endpoint coverage. We use the OpenAPI examples object to define
+      realistic, scenario-driven request and response payloads—then deploy them
+      as fully functional mock HTTP APIs and MCP servers using open-source
+      Microcks. The result: AI agents and copilots can safely explore real
+      business workflows without touching production. But examples alone aren't
+      enough. OpenAPI 3.2 tags bring the business and domain alignment that's
+      been missing. By organizing operations around business capabilities rather
+      than resource paths, tags give AI agents—and the humans configuring
+      them—a shared vocabulary for discovery and intent. We'll walk through how
+      we use tags to group operations by domain (e.g., 'project-management',
+      'code-review', 'design-feedback'), how this improves MCP tool discovery,
+      and why this matters as AI integration moves from single-API calls to
+      multi-API orchestration. Join us for a practical, example-driven talk about
+      how OpenAPI specs—when designed with rich examples and intentional
+      tagging—become the foundation for safer, smarter AI integration across your
+      entire API landscape.
+  - slug: api-days-amsterdam-2026-domain-model-api-spec
+    title: Your Domain Model Is Your API Spec — and Your First Prompt
+    time: 2:30pm–2:55pm
+    category: OpenAPI Track
+    speakers:
+      - annegret-junker
+    description: >-
+      Most teams have now tried handing an LLM a vague description and asking for
+      an API. The results are familiar: plausible-looking endpoints, invented
+      fields, events that don't match anything real, and bugs that take hours to
+      trace. The easy reaction is to blame the model. That's the wrong angle.
+      LLMs don't produce wrong APIs because they're not capable — they produce
+      wrong APIs because they have no access to your domain. The fix is something
+      API teams can already recognize: a precise specification. This talk shows
+      that the collaborative modeling practices used to build shared
+      understanding — Domain Storytelling and EventStorming — double as a
+      remarkably good way to derive that specification, across both styles of
+      API. EventStorming's command/event/policy structure maps almost one-to-one
+      onto an API surface: commands become synchronous REST operations, domain
+      events become asynchronous channels and messages, and policies become the
+      orchestration and business rules that connect them. Bounded contexts become
+      clean service and product boundaries. The result is a paired OpenAPI and
+      AsyncAPI specification that is, in effect, a machine-readable domain model.
+      Using CookWithUs, a recipe-sharing platform modeled and built across three
+      iterations, we walk a concrete pipeline: model the domain, derive the
+      synchronous REST surface and the event-driven async surface together, and
+      split both specs by bounded context. We show exactly what a well-formed
+      spec gives an LLM — and exactly where generation breaks down when the spec
+      is incomplete, ambiguous, or missing its events. We show how a sharper
+      Ubiquitous Language produces a measurably better OpenAPI document, a cleaner
+      set of AsyncAPI channels, and a frontend the model can generate without
+      inventing a single field. The central claim is simple: every naming
+      decision, every event you make explicit, every scoping choice travels all
+      the way into the generated code. A spec is only as good as the language
+      behind it — and async APIs in particular punish vague language, because an
+      event nobody named precisely is an event nobody can consume reliably. This
+      is not a talk about replacing API designers with AI. It's about what
+      happens when rigorous API specification meets a powerful new tool, and why
+      the modeling work always comes first.
+  - slug: api-days-amsterdam-2026-openapi-agent-cards
+    title: 'From OpenAPI to Agent Cards: Governing AI Discovery with Open Standards'
+    time: 2:55pm–3:20pm
+    category: OpenAPI Track
+    speakers:
+      - carles-arnal
+    description: >-
+      OpenAPI standardized how we describe REST APIs. AsyncAPI did the same for
+      event-driven architectures. Now the A2A (Agent-to-Agent) Protocol brings
+      that same open-standards approach to AI agents — structured capability
+      declarations, typed interfaces, and machine-readable discovery. The pattern
+      is the same one the industry has relied on for a decade: describe your
+      interface in a standard format, register it, version it, and let consumers
+      discover it programmatically. In this session, I'll show how Apicurio
+      Registry — a project that already governs OpenAPI, AsyncAPI, Avro, and
+      Protobuf definitions — now manages AI-native artifacts: A2A Agent Cards,
+      prompt templates, and model schemas. You'll see a live demo of agents
+      registering their capabilities as standardized Agent Cards, discovering
+      each other through registry queries, and relying on the same compatibility
+      rules that protect your API specs to prevent breaking changes across the
+      agent ecosystem. Attendees will walk away with a clear view of the
+      open-standards arc from OpenAPI to AsyncAPI to A2A Agent Cards, a working
+      pattern for registry-backed agent discovery using the A2A Protocol,
+      Concrete strategies for version-controlling prompt templates with backward
+      compatibility checks, and an understanding of how existing API governance
+      tooling extends directly to multi-agent AI.

@@ -1,0 +1,117 @@
+title: API Days Singapore 2026
+slug: api-days-singapore-2026
+event_date: April 14 – 15, 2026
+location: Marina Bay Sands, Singapore
+type: Event
+status: finished
+image: /img/backgrounds/apiDaysSingapore_background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Singapore 2026, hosted at Marina Bay
+  Sands — a half-day program on API standards in the age of AI, designing API
+  boundaries for humans and agents, the evolution of API style guides, and
+  spec-first API development.
+permalink: /events/api-days-singapore-2026
+speakers:
+  - erik-wilde
+  - manaswini-talagadadivi
+  - anusha-jayasundara
+  - ashish-khichi
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Singapore 2026 — API standards in the
+  age of AI, intentional API boundaries, AI-driven API style guides and
+  spec-first development.
+agenda:
+  April 15:
+    OpenAPI Track:
+      - title: Patterns for API Standards in the Age of AI
+        time: 11:10am–11:35am
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-singapore-2026-patterns-api-standards
+      - title: 'The Boundary is a Decision, Not a Default: Designing APIs for Humans, Systems and Agents'
+        time: 11:35am–12:00pm
+        speaker: manaswini-talagadadivi
+        permalink: /events/talks/api-days-singapore-2026-boundary-decision-not-default
+      - title: 'From Linting to Learning: The Evolution of API Style Guides in the Age of AI'
+        time: 12:00pm–12:25pm
+        speaker: anusha-jayasundara
+        permalink: /events/talks/api-days-singapore-2026-linting-to-learning
+      - title: 'Spec First, Ship Faster: The API Development Revolution You''ve Been Waiting For'
+        time: 12:25pm–12:50pm
+        speaker: ashish-khichi
+        permalink: /events/talks/api-days-singapore-2026-spec-first-ship-faster
+talks:
+  - slug: api-days-singapore-2026-patterns-api-standards
+    title: Patterns for API Standards in the Age of AI
+    time: 11:10am–11:35am
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      If there's one thing that's certain in 2026, it's that AI will force and
+      help us to use more digital tools than ever. How do we best connect these
+      tools, combine them, and build them into repeatable and trustable
+      workflows? We look at how API standards can help by allowing us to define
+      well-defined interfaces and expose them in a way that works well for AI. We
+      also look at how to build a layer on top of these that allows AI to execute
+      deterministic and well-defined workflows.
+  - slug: api-days-singapore-2026-boundary-decision-not-default
+    title: 'The Boundary is a Decision, Not a Default: Designing APIs for Humans, Systems and Agents'
+    time: 11:35am–12:00pm
+    category: OpenAPI Track
+    speakers:
+      - manaswini-talagadadivi
+    description: >-
+      Every system has a line between its internal services and the outside
+      world. Most teams never consciously draw it. It just emerges, and by the
+      time anyone notices, internal complexity is already leaking out. This talk
+      makes that boundary a first-class engineering decision. Using gRPC
+      internally and HTTP/JSON externally as a lens, we explore what breaks when
+      the boundary is left undecided and what it looks like to design it
+      deliberately. With AI agents now consuming APIs autonomously at runtime,
+      the cost of ambiguity has never been higher. Agents don't complain. They
+      just fail or move on to your competitor. Leave with a concrete model for
+      designing your external API edge intentionally, for every consumer,
+      including the ones you never anticipated.
+  - slug: api-days-singapore-2026-linting-to-learning
+    title: 'From Linting to Learning: The Evolution of API Style Guides in the Age of AI'
+    time: 12:00pm–12:25pm
+    category: OpenAPI Track
+    speakers:
+      - anusha-jayasundara
+    description: >-
+      Traditional API style guides have long relied on rule-based linting to
+      enforce consistency across OpenAPI, GraphQL, gRPC, and AsyncAPI designs.
+      But as organizations scale their API programs, and as AI agents become new
+      consumers of APIs, these static rulesets are proving insufficient. A new
+      generation of tooling is emerging that uses AI and machine learning to
+      transform API governance from rigid validation into intelligent, semantic
+      analysis. In this session, we'll explore how AI is reshaping API style
+      enforcement, from natural-language rule generation to semantic
+      anti-pattern detection, and intent-aware design validation. We'll walk
+      through how tools like Spectral, GraphQL Linter, and Buf laid the
+      foundation, and how projects like Optic's LintGPT, Postman's AI
+      Governance, and SwaggerHub's prompt-based rules are pushing the boundaries.
+  - slug: api-days-singapore-2026-spec-first-ship-faster
+    title: 'Spec First, Ship Faster: The API Development Revolution You''ve Been Waiting For'
+    time: 12:25pm–12:50pm
+    category: OpenAPI Track
+    speakers:
+      - ashish-khichi
+    description: >-
+      What if every API you built worked exactly as intended — before a single
+      line of code was written? At most organizations, developers dive into code,
+      teams misalign, and weeks later, you're reworking what should have been
+      obvious from day one. We've accepted this chaos as normal. It isn't. Spec
+      Driven Development changes everything. SDD puts the specification at the
+      center of the API lifecycle — not as an afterthought, not as documentation
+      you write after the fact, but as the single source of truth that drives
+      design, development, testing, and delivery. When your spec is right,
+      everything downstream falls into place. Automatically. Consistently. At
+      scale. In this talk, we'll walk through how forward-thinking engineering
+      teams are eliminating ambiguity from the API development process — aligning
+      product, development, and QA around a contract everyone understands before
+      implementation begins. We'll explore how tools like OpenAPI, combined with a
+      disciplined spec-first workflow, compress delivery cycles, reduce rework,
+      and produce APIs that are not just functional — but truly excellent

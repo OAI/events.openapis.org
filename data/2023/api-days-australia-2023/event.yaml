@@ -1,0 +1,43 @@
+title: API Days Australia 2023
+slug: api-days-australia-2023
+event_date: October 11 – 12, 2023
+location: Pullman Melbourne Albert Park, Albert Park, Australia
+type: Event
+status: finished
+image: /img/background.jpg
+description: >-
+  The OpenAPI Initiative track at API Days Australia 2023, hosted at the Pullman
+  Melbourne Albert Park — an afternoon of talks on the state of OpenAPI, code and
+  portal generation, a programmatic approach to API success, and a panel on the
+  future of API specifications.
+permalink: /events/api-days-australia-2023
+speakers:
+  - erik-wilde
+  - adeel-ali
+  - paul-bradley
+  - jordan-walsh
+tags:
+  - event
+metaDescription: >-
+  The OpenAPI Initiative track at API Days Australia 2023 — the state of OpenAPI,
+  code and portal generation, and a panel on the future of API specifications.
+agenda:
+  October 11:
+    OpenAPI Track:
+      - title: OAI Track Introduction and the State of OpenAPI
+        time: 1:30pm
+        speaker: erik-wilde
+        slidesUrl: http://dret.net/lectures/api-days-australia-2023/
+      - title: OpenAPI Secrets for Next-Level Code and Portal Generation
+        time: 1:55pm
+        speaker: adeel-ali
+      - title: A programmatic approach to API success including OpenAPI
+        time: 2:20pm
+        speaker: paul-bradley
+      - title: Panel on The Future of API Specifications
+        time: 2:45pm
+        speakers:
+          - jordan-walsh
+          - adeel-ali
+          - paul-bradley
+          - erik-wilde

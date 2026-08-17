@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "oai-events",
+  "compatibility_date": "2025-03-25",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
+  // R2 incremental cache + self-reference service are intentionally omitted:
+  // every page is static/SSG today, so no ISR cache is needed. Add them per
+  // https://opennext.js.org/cloudflare/caching if on-demand revalidation is
+  // introduced later.
+}

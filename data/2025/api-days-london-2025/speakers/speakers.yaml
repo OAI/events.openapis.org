@@ -1,0 +1,31 @@
+# Per-event overrides for API Days London 2025 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: Jentic
+- slug: frank-kilcommins
+  company: SmartBear
+- slug: simon-harrer
+  company: INNOQ
+- slug: lorna-mitchell
+  company: TM Forum
+- slug: sean-blanchfield
+  company: Jentic
+- slug: pavel-kornev
+  company: SAP
+- slug: simon-heimler
+  company: SAP
+- slug: naresh-jain
+  company: Specmatic
+- slug: rahul-de
+  company: Citi
+- slug: anupriya-johari
+  company: Citi
+- slug: david-boyne
+  company: EventCatalog
+- slug: annegret-junker
+  company: Codecentric
+- slug: fabrizio-lazzaretti
+  company: Wavestone
+- slug: eduardo-maldonado
+  company: The LEGO Group

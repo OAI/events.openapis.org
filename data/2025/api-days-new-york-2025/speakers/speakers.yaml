@@ -1,0 +1,15 @@
+# Per-event overrides for API Days New York 2025 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: INNOQ
+- slug: naresh-jain
+  company: Specmatic
+- slug: hari-krishnan
+  company: Specmatic
+- slug: frank-kilcommins
+  company: SmartBear
+- slug: ryan-day
+  company: Conference of State Bank Supervisors
+- slug: yousaf-nabi
+  company: SmartBear
