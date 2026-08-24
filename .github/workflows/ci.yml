@@ -1,0 +1,69 @@
+name: CI
+
+# Runs on pull requests and on pushes to main. Both triggers matter: this repo
+# is also pushed to directly, so a pull_request-only workflow would leave those
+# commits unchecked. deploy.yml builds on push too, but it never lints,
+# typechecks or runs the tests.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Lint, typecheck & build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      # No NEXT_PUBLIC_BASE_PATH here: deploy.yml supplies the Pages base path
+      # when it builds for real. This build only has to prove the export works.
+      - name: Build
+        run: npm run build
+
+  e2e:
+    name: End-to-end tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # playwright.config.ts enables the four WebKit projects whenever CI is
+      # set, so WebKit has to be installed here alongside Chromium.
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium webkit
+
+      - name: Run Playwright tests
+        run: npm run test:e2e
