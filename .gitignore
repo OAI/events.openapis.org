@@ -52,3 +52,8 @@ dev-assets/
 # Flat cover export produced by `npm run covers:export` (a handoff artifact;
 # the source of truth stays in data/<year>/<slug>/images/).
 /covers-export/
+
+# Playwright run artifacts (traces/screenshots on failure, and the HTML report
+# if one is requested — the configured reporter is 'list').
+/test-results/
+/playwright-report/

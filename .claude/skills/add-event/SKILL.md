@@ -21,24 +21,31 @@ into the `{name, position, photo}` shape the UI renders.
    event image and each speaker photo (local path or URL).
 
 2. **Convert every image to repo-hosted WebP** with the `convert-image` skill /
-   `npm run img`. Cover/gallery go to `public/img/events/<event-slug>/`; speaker
-   avatars go to `data/speakers/image/` (the source of truth) and are published
-   by `npm run speakers`. Do **not** put remote URLs into new speaker entries if
-   you can host them — though a URL in `image:` is allowed and used as-is.
+   `npm run img`. Everything committed lives under `data/`: the cover in
+   `data/<year>/<event-slug>/images/` (published to `public/` by `npm run covers`)
+   and speaker avatars in `data/speakers/image/` (published by `npm run speakers`).
+   Nothing under `public/img/events/` is committed — `npm run covers` rebuilds
+   that folder on every dev/build and deletes anything it did not publish. Do
+   **not** put remote URLs into new speaker entries if you can host them —
+   though a URL in `image:` is allowed and used as-is.
+
+   The converter reads the year from the event's existing `event.yaml`. When
+   converting **before** step 4, pass `--year <YYYY>`.
 
    **Preferred — batch the inbox.** Have the user drop raw files into
    `source-images/<event-slug>/` (gitignored): the event image named `cover.*`,
    each speaker file named after the speaker slug (`frank-kilcommins.jpg`),
-   optional `gallery/` subfolder. Then:
+   optional `gallery/` subfolder (converted, but not rendered anywhere yet — see
+   the `convert-image` skill). Then:
 
    ```bash
-   npm run img -- --event <event-slug> --all
+   npm run img -- --event <event-slug> --all --year <year>
    ```
 
    **Or one image at a time** (path or URL):
 
    ```bash
-   npm run img -- "<url-or-path>" --event <event-slug> --kind cover
+   npm run img -- "<url-or-path>" --event <event-slug> --kind cover --year <year>
    npm run img -- "<url-or-path>" --kind avatar --name frank-kilcommins   # global speaker
    ```
 
@@ -48,20 +55,26 @@ into the `{name, position, photo}` shape the UI renders.
 4. **Create `data/<year>/<event-slug>/event.yaml`** with the schema below,
    referencing speakers by slug.
 
-5. **Publish speakers + regenerate `SPEAKERS.md`:**
+5. **Publish images + regenerate `SPEAKERS.md`:**
 
    ```bash
-   npm run speakers
+   npm run speakers   # avatars -> public/img/speakers/, rewrites SPEAKERS.md
+   npm run covers     # covers  -> public/img/events/<slug>/, rewrites data/covers.generated.yml
    ```
 
-   It also runs automatically on `npm run dev` / `npm run build`. It **fails with
-   a clear error** if an event references a slug that isn't in the registry.
+   Both also run automatically on `npm run dev` / `npm run build`. `speakers`
+   **fails with a clear error** if an event references a slug that isn't in the
+   registry. `covers` writes `data/covers.generated.yml`, which **is** committed
+   and which overrides the `image:` field in `event.yaml` — so commit it along
+   with the new cover.
 
 6. **Ordering (optional).** Events are listed by date by default (upcoming
    soonest-first, past most-recent-first). To pin a specific order, add the slug
    to `data/events.order.yml` — that file is the primary order source.
 
 7. **Verify**: `npm run typecheck` then `npm run build` (must emit `out/`).
+   The build re-runs `speakers` + `covers` first, so it also catches an unknown
+   speaker slug or a cover that never made it into `data/`.
 
 ## Schema — `data/<year>/<event-slug>/event.yaml`
 
@@ -74,7 +87,7 @@ event_date: 'October 14 — 15, 2026' # human string; em dash (—) for ranges; 
 location: 'Tokyo International Forum, Japan'
 type: 'Event' # 'Event' | 'Conference' | 'Masterclass'
 status: 'upcoming' # 'active' (featured) | 'upcoming' | 'finished'
-image: '/img/events/api-days-tokyo/cover.webp' # repo-hosted WebP from step 2
+image: '/img/background.jpg' # fallback only — data/<year>/<slug>/images/cover* wins
 time_start: '09:00'
 time_end: '17:00'
 description: 'One-line summary of the event.'
@@ -163,6 +176,7 @@ so they keep the title that was true then.
 ## Adding a speaker to an existing event
 
 1. Convert the avatar (global): `npm run img -- "<url-or-path>" --kind avatar --name <speaker-slug>`.
+   (`--override` makes it event-specific instead; it needs `--event <slug>`.)
 2. Add the speaker to `data/speakers/speakers.yaml` (if not already there).
 3. Add the `<speaker-slug>` to that event's `speakers:` list (and/or agenda/talks)
    in `data/<year>/<event-slug>/event.yaml`.

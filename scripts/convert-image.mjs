@@ -1,30 +1,39 @@
 #!/usr/bin/env node
 // Convert event/speaker/gallery images to the site's best-fit size + WebP.
 //
-// Cover/gallery images are per-event under public/img/events/<event-slug>/.
-// Speaker avatars are the source of truth in data/ and published to public/ by
-// `npm run speakers`:
-//   public/img/events/<event>/cover.webp
-//   public/img/events/<event>/gallery/NN.webp
-//   data/speakers/image/<speaker-slug>.webp                         (global speaker)
-//   data/<year>/<event>/speakers/image/<speaker-slug>.webp          (event override, --override)
+// Covers and speaker avatars are the committed source of truth in data/; the
+// copies under public/img/ are gitignored build artifacts, published by
+// `npm run covers` / `npm run speakers` (both run on predev/prebuild):
+//   data/<year>/<event>/images/cover.webp                            (event cover)
+//   data/speakers/image/<speaker-slug>.webp                          (global speaker)
+//   data/<year>/<event>/speakers/image/<speaker-slug>.webp           (event override, --override)
+//   public/img/events/<event>/gallery/NN.webp                        (gallery, served as-is)
+//
+// Writing a cover straight into public/ would be pointless: sync-covers.mjs
+// rebuilds that folder from data/ on every dev/build and deletes anything it
+// did not publish, so the file would vanish and never be committed.
 //
 // Two modes:
 //
 // 1) Single image (local path or remote URL):
 //      node scripts/convert-image.mjs <input> --kind avatar --name <speaker-slug>
-//      node scripts/convert-image.mjs <input> --event <slug> --kind <cover|gallery> [--name <slug>]
+//      node scripts/convert-image.mjs <input> --event <slug> --kind cover [--name <landmark>] [--year YYYY]
+//      node scripts/convert-image.mjs <input> --event <slug> --kind gallery [--name <slug>]
 //      node scripts/convert-image.mjs <input> --event <slug> --kind avatar --name <slug> --override
 //
 // 2) Batch a whole inbox folder (source-images/<event>/), gitignored:
-//      node scripts/convert-image.mjs --event <slug> --all
+//      node scripts/convert-image.mjs --event <slug> --all [--year YYYY]
 //    Convention inside source-images/<event>/:
-//      cover.*            -> public/img/events/<event>/cover.webp
+//      cover.*            -> data/<year>/<event>/images/cover.webp
 //      <speaker-slug>.*   -> data/speakers/image/<speaker-slug>.webp  (global; name the file after the speaker)
 //      gallery/*          -> public/img/events/<event>/gallery/NN.webp (numbered in sorted order)
 //
+// The year is read from the event's existing data/<year>/<event>/event.yaml;
+// pass --year to convert images before that file exists.
+//
 // Each converted file's path is printed to stdout, with a hint on how to
-// reference it (avatars: set `image:` in a speakers.yaml, then `npm run speakers`).
+// reference it (covers: `npm run covers`; avatars: set `image:` in a
+// speakers.yaml, then `npm run speakers`).
 
 import sharp from 'sharp';
 import { mkdir, writeFile, readFile, readdir, stat } from 'node:fs/promises';
@@ -44,13 +53,32 @@ const PRESETS = {
   gallery: { width: 1600, height: null, fit: 'inside', quality: 80, sub: 'gallery' },
 };
 
+// --all and --override are booleans; everything else takes the next token. A
+// boolean must not swallow its successor (`--override` as the last argument used
+// to parse as undefined, silently downgrading an override avatar to a global one).
+const BOOLEAN_FLAGS = new Set(['all', 'override']);
+const VALUE_FLAGS = new Set(['event', 'kind', 'name', 'year']);
+
 function parseArgs(argv) {
   const args = { _: [] };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a === '--all') args.all = true;
-    else if (a.startsWith('--')) args[a.slice(2)] = argv[++i];
-    else args._.push(a);
+    if (!a.startsWith('--')) {
+      args._.push(a);
+      continue;
+    }
+    const flag = a.slice(2);
+    if (BOOLEAN_FLAGS.has(flag)) {
+      args[flag] = true;
+    } else if (VALUE_FLAGS.has(flag)) {
+      const value = argv[++i];
+      if (value === undefined || value.startsWith('--')) {
+        throw new Error(`--${flag} needs a value.`);
+      }
+      args[flag] = value;
+    } else {
+      throw new Error(`Unknown argument: ${a}`);
+    }
   }
   return args;
 }
@@ -72,9 +100,14 @@ async function loadInput(input) {
   return readFile(path.resolve(input));
 }
 
-// Find the year folder holding data/<year>/<event>/event.yaml (for --override).
-async function resolveEventYear(event) {
-  if (!event) throw new Error('avatar --override requires --event <slug>.');
+// Find the year folder holding data/<year>/<event>/event.yaml. An explicit
+// --year wins, so images can be converted before the event.yaml exists.
+async function resolveEventYear(event, year) {
+  if (!event) throw new Error('This --kind is event-scoped; pass --event <slug>.');
+  if (year) {
+    if (!/^\d{4}$/.test(String(year))) throw new Error(`--year must be a 4-digit year, got "${year}".`);
+    return String(year);
+  }
   const dataDir = path.join(ROOT, 'data');
   for (const e of await readdir(dataDir, { withFileTypes: true })) {
     if (!e.isDirectory() || !/^\d{4}$/.test(e.name)) continue;
@@ -85,18 +118,30 @@ async function resolveEventYear(event) {
       /* not in this year */
     }
   }
-  throw new Error(`No event "${event}" found under data/<year>/. Create its event.yaml first.`);
+  throw new Error(
+    `No event "${event}" found under data/<year>/. Create its event.yaml first, ` +
+      `or pass --year <YYYY> to place the image ahead of it.`,
+  );
 }
 
 // Decide where a converted file lands and how to reference it afterward.
-async function destFor({ event, kind, name, override }) {
+async function destFor({ event, kind, name, override, year }) {
+  if (kind === 'cover') {
+    // Committed source of truth; sync-covers.mjs publishes it into public/ and
+    // records it in data/covers.generated.yml, which wins over event.yaml `image:`.
+    const y = await resolveEventYear(event, year);
+    return {
+      outDir: path.join(ROOT, 'data', y, event, 'images'),
+      hint: `run \`npm run covers\` to publish it to /img/events/${event}/ and refresh data/covers.generated.yml`,
+    };
+  }
   if (kind === 'avatar') {
     if (override) {
-      const year = await resolveEventYear(event);
-      const dir = path.join(ROOT, 'data', year, event, 'speakers', 'image');
+      const y = await resolveEventYear(event, year);
+      const dir = path.join(ROOT, 'data', y, event, 'speakers', 'image');
       return {
         outDir: dir,
-        hint: `override for "${event}": set image: ${name}.webp for slug "${name}" in data/${year}/${event}/speakers/speakers.yaml, then \`npm run speakers\``,
+        hint: `override for "${event}": set image: ${name}.webp for slug "${name}" in data/${y}/${event}/speakers/speakers.yaml, then \`npm run speakers\``,
       };
     }
     return {
@@ -104,16 +149,16 @@ async function destFor({ event, kind, name, override }) {
       hint: `global speaker: add { slug: ${name}, image: ${name}.webp, ... } to data/speakers/speakers.yaml, then \`npm run speakers\``,
     };
   }
-  // cover / gallery -> served straight from public/
+  // gallery -> served straight from public/ (committed as-is)
   return { outDir: path.join(ROOT, 'public/img/events', event, PRESETS[kind].sub), hint: null };
 }
 
 // Convert one source (path/URL/buffer) to WebP at its destination.
-async function convertOne({ input, buffer, event, kind, name, override }) {
+async function convertOne({ input, buffer, event, kind, name, override, year }) {
   const preset = PRESETS[kind];
   if (!preset) throw new Error(`Unknown --kind "${kind}" (use cover|avatar|gallery)`);
 
-  const { outDir, hint } = await destFor({ event, kind, name, override });
+  const { outDir, hint } = await destFor({ event, kind, name, override, year });
   await mkdir(outDir, { recursive: true });
   const outFile = path.join(outDir, `${name}.webp`);
 
@@ -138,7 +183,7 @@ async function convertOne({ input, buffer, event, kind, name, override }) {
   return relPath;
 }
 
-async function runBatch(event) {
+async function runBatch(event, year) {
   const inbox = path.join(ROOT, 'source-images', event);
   let entries;
   try {
@@ -157,7 +202,7 @@ async function runBatch(event) {
   }
 
   if (cover) {
-    await convertOne({ input: path.join(inbox, cover), event, kind: 'cover', name: 'cover' });
+    await convertOne({ input: path.join(inbox, cover), event, kind: 'cover', name: 'cover', year });
   } else {
     console.error('• no cover.* found — skipping event image');
   }
@@ -181,8 +226,9 @@ async function runBatch(event) {
   }
 
   console.error(
-    `\nDone. Cover/gallery live under /img/events/${event}/. Speaker avatars went to ` +
-      `data/speakers/image/ — add each to data/speakers/speakers.yaml, then \`npm run speakers\`.`,
+    `\nDone. Run \`npm run covers\` to publish the cover, and add each speaker to ` +
+      `data/speakers/speakers.yaml then run \`npm run speakers\`. ` +
+      `Gallery images (if any) are served from /img/events/${event}/gallery/.`,
   );
 }
 
@@ -190,13 +236,14 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const event = args.event;
   const override = !!args.override;
+  const year = args.year;
 
   if (args.all) {
     if (!event) {
       console.error('Batch mode needs --event <event-slug>.');
       process.exit(1);
     }
-    await runBatch(event);
+    await runBatch(event, year);
     return;
   }
 
@@ -207,8 +254,8 @@ async function main() {
 
   if (!input || !kind || !PRESETS[kind]) {
     console.error('Usage: node scripts/convert-image.mjs <input> --kind avatar --name <speaker-slug>');
-    console.error('   or: node scripts/convert-image.mjs <input> --event <slug> --kind <cover|gallery> [--name <slug>]');
-    console.error('   or: node scripts/convert-image.mjs --event <slug> --all   (batch source-images/<slug>/)');
+    console.error('   or: node scripts/convert-image.mjs <input> --event <slug> --kind <cover|gallery> [--name <slug>] [--year YYYY]');
+    console.error('   or: node scripts/convert-image.mjs --event <slug> --all [--year YYYY]   (batch source-images/<slug>/)');
     process.exit(1);
   }
 
@@ -219,13 +266,16 @@ async function main() {
   }
 
   let name = args.name ? slugify(args.name) : null;
-  if (!name) {
-    if (kind === 'cover') name = 'cover';
-    else name = slugify(path.basename(input.split('?')[0]) || kind);
+  if (kind === 'cover') {
+    // sync-covers.mjs only picks up files matching /^cover.*/, so a --name is a
+    // descriptive suffix (cover-heidelberg-castle.webp), not a replacement.
+    name = name && name !== 'cover' ? `cover-${name.replace(/^cover-/, '')}` : 'cover';
+  } else if (!name) {
+    name = slugify(path.basename(input.split('?')[0]) || kind);
   }
   if (!name) throw new Error('Could not derive a name; pass --name <slug>.');
 
-  await convertOne({ input, event, kind, name, override });
+  await convertOne({ input, event, kind, name, override, year });
 }
 
 main().catch((err) => {
