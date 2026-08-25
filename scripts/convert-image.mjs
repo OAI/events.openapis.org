@@ -128,11 +128,11 @@ async function resolveEventYear(event, year) {
 async function destFor({ event, kind, name, override, year }) {
   if (kind === 'cover') {
     // Committed source of truth; sync-covers.mjs publishes it into public/ and
-    // records it in data/covers.generated.yml, which wins over event.yaml `image:`.
+    // checks that the event's `image:` field names the published path.
     const y = await resolveEventYear(event, year);
     return {
       outDir: path.join(ROOT, 'data', y, event, 'images'),
-      hint: `run \`npm run covers\` to publish it to /img/events/${event}/ and refresh data/covers.generated.yml`,
+      hint: `run \`npm run covers\` to publish it to /img/events/${event}/ — it prints the \`image:\` line to set in event.yaml`,
     };
   }
   if (kind === 'avatar') {

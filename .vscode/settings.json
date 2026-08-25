@@ -1,0 +1,12 @@
+{
+  // Maps each hand-authored YAML file under data/ to its JSON Schema in schemas/,
+  // for completion, hover docs and inline errors. Needs the redhat.vscode-yaml
+  // extension (recommended in extensions.json); editors that speak
+  // yaml-language-server directly read the same schemas — see schemas/README.md.
+  "yaml.schemas": {
+    "./schemas/event.schema.json": ["**/data/*/*/event.yaml"],
+    "./schemas/speakers.schema.json": ["**/data/speakers/speakers.yaml"],
+    "./schemas/speakers.override.schema.json": ["**/data/*/*/speakers/speakers.yaml"],
+    "./schemas/events.order.schema.json": ["**/data/events.order.yml"]
+  }
+}

@@ -59,14 +59,15 @@ into the `{name, position, photo}` shape the UI renders.
 
    ```bash
    npm run speakers   # avatars -> public/img/speakers/, rewrites SPEAKERS.md
-   npm run covers     # covers  -> public/img/events/<slug>/, rewrites data/covers.generated.yml
+   npm run covers     # covers  -> public/img/events/<slug>/, checks each event.yaml `image:`
    ```
 
    Both also run automatically on `npm run dev` / `npm run build`. `speakers`
    **fails with a clear error** if an event references a slug that isn't in the
-   registry. `covers` writes `data/covers.generated.yml`, which **is** committed
-   and which overrides the `image:` field in `event.yaml` — so commit it along
-   with the new cover.
+   registry. `covers` **fails with a clear error** if an event has a cover whose
+   published path doesn't match its `image:` field (or vice versa) — the message
+   names the exact line to write. Nothing is generated back into `data/`, so the
+   only thing to commit is the cover itself and the `image:` line.
 
 6. **Ordering (optional).** Events are listed by date by default (upcoming
    soonest-first, past most-recent-first). To pin a specific order, add the slug
@@ -74,7 +75,8 @@ into the `{name, position, photo}` shape the UI renders.
 
 7. **Verify**: `npm run typecheck` then `npm run build` (must emit `out/`).
    The build re-runs `speakers` + `covers` first, so it also catches an unknown
-   speaker slug or a cover that never made it into `data/`.
+   speaker slug, a cover that never made it into `data/`, or an `image:` field
+   that doesn't match the cover.
 
 ## Schema — `data/<year>/<event-slug>/event.yaml`
 
@@ -87,7 +89,7 @@ event_date: 'October 14 — 15, 2026' # human string; em dash (—) for ranges; 
 location: 'Tokyo International Forum, Japan'
 type: 'Event' # 'Event' | 'Conference' | 'Masterclass'
 status: 'upcoming' # 'active' (featured) | 'upcoming' | 'finished'
-image: '/img/background.jpg' # fallback only — data/<year>/<slug>/images/cover* wins
+image: '/img/events/api-days-tokyo/cover.jpg' # published cover; `npm run covers` checks this matches
 time_start: '09:00'
 time_end: '17:00'
 description: 'One-line summary of the event.'

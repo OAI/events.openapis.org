@@ -133,5 +133,6 @@ npm run img -- ./downloads/tokyo.jpg --event api-days-tokyo --kind cover --year 
 - For higher quality, give a large source (pravatar `…/512`, unsplash `?w=2000`) —
   downscaling beats upscaling.
 - After converting, run `npm run speakers` (avatars → `public/`, refreshes
-  `SPEAKERS.md`) and `npm run covers` (covers → `public/`, rewrites the committed
-  `data/covers.generated.yml`). See the `add-event` skill, which calls this for you.
+  `SPEAKERS.md`) and `npm run covers` (covers → `public/`, then checks each event's
+  `image:` field and prints the line to set). See the `add-event` skill, which
+  calls this for you.

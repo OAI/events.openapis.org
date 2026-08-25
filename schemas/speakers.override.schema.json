@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenAPI Events — per-event speaker overrides",
+  "description": "data/<year>/<slug>/speakers/speakers.yaml — point-in-time overrides layered over the global registry, typically the company a speaker worked for at that event. Same entry shape as the registry, but only `slug` is required: list just the fields that differ. Merging is per field, except list-valued fields (`badges`, `urls`) which replace the registry's list wholesale.",
+  "type": "array",
+  "minItems": 1,
+  "items": { "$ref": "./speakers.schema.json#/$defs/entry" }
+}

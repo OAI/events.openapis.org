@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenAPI Events — manual listing order",
+  "description": "data/events.order.yml — event slugs pinned to the FRONT of every listing, in the order given. Anything not listed falls back to date order (finished events most-recent-first). Upcoming events are pinned here soonest-first; finished ones are intentionally left out so they self-order.",
+  "type": "array",
+  "items": {
+    "type": "string",
+    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+    "description": "An event's data/<year>/<slug>/ folder name. A slug that matches no event is simply ignored."
+  },
+  "uniqueItems": true
+}

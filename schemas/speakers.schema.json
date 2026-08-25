@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "speakers.schema.json",
+  "title": "OpenAPI Events — global speaker registry",
+  "description": "data/speakers/speakers.yaml — the single source of truth for every speaker. Events reference these entries by slug; per-event files under data/<year>/<slug>/speakers/speakers.yaml override individual fields (see speakers.override.schema.json). Resolved by src/lib/speakers.ts.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "allOf": [
+      { "$ref": "#/$defs/entry" },
+      {
+        "type": "object",
+        "required": ["name"],
+        "properties": { "name": { "type": "string", "minLength": 1 } },
+        "$comment": "Registry entries must carry a name; without one the UI falls back to rendering the raw slug. Per-event overrides reuse $defs/entry directly, where name is optional."
+      }
+    ]
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "title": "Speaker",
+      "required": ["slug"],
+      "additionalProperties": false,
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Stable identifier used everywhere a speaker is referenced. Also names the published photo, /img/speakers/<slug>.webp."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Display name. Stable identity — never overridden per event."
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Job title. Rendered as \"role | company\"; taken as a matched pair with `company` from the speaker's most recent event."
+        },
+        "company": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Latest-known affiliation. Point-in-time affiliation for a given event belongs in that event's speakers/speakers.yaml override."
+        },
+        "image": {
+          "type": "string",
+          "pattern": "^(https?://.+|/.+|[A-Za-z0-9._-]+\\.(webp|jpg|jpeg|png|svg|avif))$",
+          "description": "A bare filename resolves to data/speakers/image/<file>, published to /img/speakers/<slug>.webp by `npm run speakers`. A full URL or a site-absolute /path is used verbatim. Omit it and the speaker gets the neutral committed avatar.",
+          "examples": ["dan-ciruli.webp"]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional bio."
+        },
+        "badges": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Membership pills shown after the name. Uppercased on render; unknown codes still show, they just get no tooltip.",
+          "examples": [["TSC", "OAI"]]
+        },
+        "urls": {
+          "description": "External links, rendered as icons next to the speaker. A speaker with no `urls` shows no icons — nothing is guessed from the name. Merged as a whole list per event, not entry by entry.",
+          "$comment": "if/then rather than oneOf so a bad link reports against the shape actually written instead of a branch mismatch.",
+          "if": { "type": "array" },
+          "then": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/link" } },
+          "else": { "$ref": "#/$defs/link" }
+        }
+      }
+    },
+    "link": {
+      "type": "object",
+      "title": "Speaker link",
+      "required": ["url"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Picks the icon and the default accessible label. linkedin, github and x have marks; twitter/site/homepage are aliases; anything else falls back to a globe. Defaults to \"website\" when omitted.",
+          "examples": ["linkedin", "github", "x", "website"]
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://",
+          "description": "Used verbatim as the href. An entry without one is dropped rather than rendered as a dead anchor."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides the default label when the generic one reads wrong.",
+          "examples": ["My LinkedIn Profile"]
+        }
+      }
+    }
+  }
+}

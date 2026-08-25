@@ -33,13 +33,12 @@ run on their own:
 
 ```bash
 npm run speakers     # data/speakers/image/ -> public/, validates slugs, rewrites SPEAKERS.md
-npm run covers       # data/<year>/<slug>/images/cover* -> public/, rewrites data/covers.generated.yml
+npm run covers       # data/<year>/<slug>/images/cover* -> public/, checks each event.yaml `image:`
 ```
 
 Everything they write into `public/img/` is a **gitignored build artifact**; the
-committed source of truth is under `data/`. Two of their outputs *are* committed,
-because the runtime cannot read the filesystem and needs them bundled:
-[`SPEAKERS.md`](SPEAKERS.md) and [`data/covers.generated.yml`](data/covers.generated.yml).
+committed source of truth is under `data/`. The one committed output is
+[`SPEAKERS.md`](SPEAKERS.md), which is documentation rather than build input.
 
 ## Content: events & images
 
@@ -125,8 +124,10 @@ The raw filename becomes the slug (`frank-kilcommins.jpg` → `frank-kilcommins`
 
 A cover is any file named `cover*` in an event's `images/` folder; the descriptive
 suffix names the landmark (`cover-olympic-stadium.jpg`) and several events
-legitimately reuse the same photo. It **overrides** the `image:` field in
-`event.yaml`, which is only the fallback for events without a cover yet.
+legitimately reuse the same photo. `npm run covers` publishes it to
+`/img/events/<slug>/cover.<ext>`, and the event's `image:` field must name that
+path — the script fails the build if the two disagree, in either direction. An
+event with no cover yet points `image:` somewhere else, e.g. `/img/background.jpg`.
 `npm run covers:export` collects every cover into a flat `covers-export/` folder
 keyed by event, for review or handoff.
 
@@ -174,7 +175,7 @@ event_date: 'October 14 — 15, 2026' # human string; em dash (—) for ranges
 location: 'Tokyo International Forum, Japan'
 type: 'Event' # Event | Conference | Masterclass
 status: 'upcoming' # active (featured) | upcoming | finished
-image: '/img/background.jpg' # fallback; data/<year>/<slug>/images/cover* wins
+image: '/img/events/api-days-tokyo/cover.jpg' # = the published cover; see Content: events & images
 time_start: '09:00'
 time_end: '17:00'
 description: 'One-line summary.'
