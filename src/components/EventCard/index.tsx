@@ -1,8 +1,10 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { asset } from '@/lib/basePath';
+import { eventPhase } from '@/lib/eventPhase';
+import { useNow } from '@/lib/useNow';
 
 interface EventCardProps {
   title: string;
@@ -14,17 +16,12 @@ interface EventCardProps {
   status?: 'active' | 'upcoming' | 'finished';
   featured?: boolean;
   startDate?: string;
+  endDate?: string;
 }
 
-function useCountdown(target?: string) {
-  const [now, setNow] = useState(0);
-  useEffect(() => {
-    if (!target) return;
-    setNow(Date.now());
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, [target]);
-
+// `now` is 0 until mounted (see useNow), which is also when the countdown must
+// render nothing — the server has no clock to count from.
+function countdownTo(target: string | undefined, now: number) {
   if (!target || now === 0) return null;
   const t = new Date(target).getTime();
   const diff = Math.max(0, t - now);
@@ -45,15 +42,20 @@ export default function EventCard({
   status = 'upcoming',
   featured = false,
   startDate,
+  endDate,
 }: EventCardProps) {
-  // Past events have no ticket sale, so no countdown (and the CTA is disabled).
-  // Without a real startDate there's nothing to count down to, so it's omitted
+  // Live phase, so a card that starts or ends after the last deploy still reads
+  // correctly. Before mount this is the authored status, so SSR markup matches.
+  const now = useNow(1000);
+  const phase = eventPhase({ status, startDate, endDate }, now);
+
+  // Past events have no ticket sale, so no countdown (and the CTA is disabled),
+  // and once the event is under way there is nothing left to count down to — the
+  // card says NOW instead. Without a real startDate the countdown is omitted
   // rather than shown as a bogus 0d 00:00:00.
-  const countdown = useCountdown(
-    featured && status !== 'finished' ? startDate : undefined,
-  );
+  const countdown = countdownTo(featured && phase === 'upcoming' ? startDate : undefined, now);
   const pad = (n: number) => String(n).padStart(2, '0');
-  const finished = status === 'finished';
+  const finished = phase === 'finished';
   const cardHeight = featured ? 'h-[402px] md:h-[600px]' : 'h-[402px] md:h-[375px]';
   // Content box ≈ 3/4 of the card (min 380px), image ≈ 1/4. This width is fixed:
   // the hover animation lives on the block shape below, so the text never reflows.
@@ -139,6 +141,11 @@ export default function EventCard({
 
   const card = (
     <div
+      // Surfaced for the e2e tests, which assert the live phase without having to
+      // hardcode event slugs or dates (see tests/smoke.spec.ts).
+      data-phase={phase}
+      data-start={startDate}
+      data-end={endDate}
       className={`relative w-full ${cardHeight} group tile-press overflow-hidden rounded-4xl bg-brand-card-dark`}
     >
       {/* Cover art, cover-fitted to the strip the green block leaves uncovered
@@ -231,6 +238,18 @@ export default function EventCard({
               <button className="btn-black inline-flex h-[56px] cursor-pointer items-center justify-center self-start rounded-[20px] border-none px-[43px] py-1.5 font-onest text-base font-bold leading-[110%] tracking-oai text-white transition-colors duration-200 md:h-[80px] md:px-8 md:py-6 md:text-2xl md:leading-[110%]">
                 Get a free ticket
               </button>
+            )}
+            {phase === 'ongoing' && (
+              /* Happening right now — replaces the countdown, same type as the
+                 digits it stands in for. The dot is decorative; the word carries
+                 the meaning for screen readers. */
+              <div className="flex flex-row items-center gap-2 font-onest font-bold tracking-oai text-white md:text-black md:[[data-theme=dark]_&]:text-white">
+                <span
+                  aria-hidden
+                  className="h-2.5 w-2.5 flex-shrink-0 animate-pulse rounded-full bg-brand-green motion-reduce:animate-none md:h-3 md:w-3"
+                />
+                <span className="text-[16px] leading-[120%] md:text-[28px]">NOW</span>
+              </div>
             )}
             {countdown && (
               <div className="flex flex-row items-end gap-2 font-onest font-bold tabular-nums tracking-oai text-white md:text-black md:[[data-theme=dark]_&]:text-white">

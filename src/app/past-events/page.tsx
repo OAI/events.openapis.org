@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PastEventsList from '@/components/PastEventsList';
+import { events } from '@/lib/events';
 import { pastEvents } from '@/lib/pastEvents';
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export default function PastEventsPage() {
-  const items = pastEvents.map((event) => ({
+  const mapEvent = (event: (typeof events)[number]) => ({
     title: event.title,
     permalink: event.permalink,
     date: event.event_date,
@@ -28,7 +29,13 @@ export default function PastEventsPage() {
     type: event.type,
     status: event.status,
     image: event.image,
+    startDate: event.startDate,
+    endDate: event.endDate,
     speakers: event.speakers,
-  }));
-  return <PastEventsList items={items} />;
+  });
+
+  const items = pastEvents.map(mapEvent);
+  const scheduledItems = events.filter((event) => event.status !== 'finished').map(mapEvent);
+
+  return <PastEventsList items={items} scheduledItems={scheduledItems} />;
 }

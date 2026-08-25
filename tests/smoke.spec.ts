@@ -26,3 +26,35 @@ test.describe('Smoke checks across pages', () => {
     await expect(page).toHaveTitle(/OpenAPI/i);
   });
 });
+
+test.describe('Live event phase', () => {
+  test('every event reads as finished once its dates are in the past', async ({ page }) => {
+    await page.clock.setFixedTime(new Date('2099-01-01T12:00:00'));
+    await page.goto('/');
+
+    const cards = page.locator('[data-phase]');
+    await expect(cards.first()).toBeAttached();
+    await expect
+      .poll(() => page.locator('[data-phase="upcoming"], [data-phase="ongoing"]').count())
+      .toBe(0);
+  });
+
+  test('an event in progress shows NOW instead of a countdown', async ({ page }) => {
+    await page.goto('/');
+
+    const featured = page.locator('[data-phase][data-start][data-end]').first();
+    await expect(featured).toBeAttached();
+    const start = await featured.getAttribute('data-start');
+    const end = await featured.getAttribute('data-end');
+    expect(start, 'featured card should carry a parsed start date').toBeTruthy();
+    expect(new Date(end!).getTime()).toBeGreaterThan(new Date(start!).getTime());
+
+    // A minute past the opening bell — inside the window whatever the event is.
+    await page.clock.setFixedTime(new Date(new Date(start!).getTime() + 60_000));
+    await page.reload();
+
+    const live = page.locator('[data-phase][data-start="' + start + '"]').first();
+    await expect(live).toHaveAttribute('data-phase', 'ongoing');
+    await expect(live.getByText('NOW', { exact: true })).toBeVisible();
+  });
+});

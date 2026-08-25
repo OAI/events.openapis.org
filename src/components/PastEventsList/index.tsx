@@ -1,9 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import EventCard from '../EventCard';
 import OaiFooter from '../OaiFooter';
 import { asset } from '@/lib/basePath';
+import { splitByPhase } from '@/lib/eventPhase';
+import { useNow } from '@/lib/useNow';
 
 interface Speaker {
   name: string;
@@ -19,18 +21,27 @@ interface EventItem {
   type: string;
   status: string;
   image: string;
+  startDate?: string;
+  endDate?: string;
   speakers: Speaker[];
 }
 
 interface PastEventsListProps {
   items: EventItem[];
+  scheduledItems?: EventItem[];
 }
 
-export default function PastEventsList({ items }: PastEventsListProps) {
+export default function PastEventsList({ items, scheduledItems = [] }: PastEventsListProps) {
   const [displayCount, setDisplayCount] = useState(6);
 
-  const displayedEvents = items.slice(0, displayCount);
-  const hasMore = displayCount < items.length;
+  const now = useNow(30_000);
+  const { past } = useMemo(
+    () => splitByPhase(scheduledItems, items, now),
+    [scheduledItems, items, now],
+  );
+
+  const displayedEvents = past.slice(0, displayCount);
+  const hasMore = displayCount < past.length;
 
   const handleLoadMore = () => {
     setDisplayCount((prev) => prev + 6);
@@ -73,6 +84,8 @@ export default function PastEventsList({ items }: PastEventsListProps) {
                 type={item.type}
                 permalink={item.permalink}
                 status={item.status as 'active' | 'upcoming' | 'finished'}
+                startDate={item.startDate}
+                endDate={item.endDate}
               />
             ))}
           </div>

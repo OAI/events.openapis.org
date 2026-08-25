@@ -92,6 +92,7 @@ export interface EventItem {
   // ISO datetime of the event's first day, derived from event_date (+ time_start
   // when present). Drives the countdown on the featured card.
   startDate?: string;
+  endDate?: string;
   description: string;
   permalink: string;
   speakers: Speaker[];
@@ -156,12 +157,48 @@ function isoStartDate(event_date?: string, time_start?: string): string | undefi
   const pad = (n: number) => String(n).padStart(2, '0');
   const day = Number(m[2]);
   const year = Number(m[3]);
-  const time = /^\d{1,2}:\d{2}(:\d{2})?$/.test(time_start ?? '')
-    ? (time_start as string).length === 5
-      ? `${time_start}:00`
-      : (time_start as string)
-    : '09:00:00';
-  return `${year}-${pad(month + 1)}-${pad(day)}T${time}`;
+  return `${year}-${pad(month + 1)}-${pad(day)}T${timeOf(time_start, '09:00:00')}`;
+}
+
+// Pull the clock out of a time_start/time_end field ("09:00" / "17:30:00"),
+// falling back to `fallback` when the field is missing or malformed.
+function timeOf(value: string | undefined, fallback: string): string {
+  if (!/^\d{1,2}:\d{2}(:\d{2})?$/.test(value ?? '')) return fallback;
+  return (value as string).length === 5 ? `${value}:00` : (value as string);
+}
+
+// Parse the LAST day out of a display date and return a local ISO datetime
+// string. One pattern covers every shape in data/:
+//   "April 14 – 15, 2026"            en dash, same month
+//   "April 17 — 18, 2024"            em dash
+//   "September 30 – October 1, 2026" range crossing a month
+//   "September 4, 2025"              single day (no range at all)
+// The end month/day fall back to the start's when the range half is absent, so a
+// single-day event ends on the day it starts. time_end sets the clock; without
+// one the event runs to the end of its last day.
+//
+// Falls back to end-of-day on the start date if the pattern doesn't match, so
+// malformed input degrades to a one-day event instead of an undefined window.
+function isoEndDate(
+  event_date?: string,
+  time_end?: string,
+  startDate?: string,
+): string | undefined {
+  const endOfStartDay = startDate ? `${startDate.slice(0, 10)}T23:59:59` : undefined;
+  if (!event_date) return undefined;
+  const m =
+    /^\s*([A-Za-z]+)\s+(\d{1,2})\s*(?:[–—-]\s*(?:([A-Za-z]+)\s+)?(\d{1,2}))?\s*,\s*(\d{4})/.exec(
+      event_date,
+    );
+  if (!m) return endOfStartDay;
+  const startMonth = MONTHS.indexOf(m[1].toLowerCase());
+  const endMonth = m[3] ? MONTHS.indexOf(m[3].toLowerCase()) : startMonth;
+  if (startMonth < 0 || endMonth < 0) return endOfStartDay;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  const day = Number(m[4] ?? m[2]);
+  // A range whose end month sorts before its start month has crossed New Year.
+  const year = Number(m[5]) + (endMonth < startMonth ? 1 : 0);
+  return `${year}-${pad(endMonth + 1)}-${pad(day)}T${timeOf(time_end, '23:59:59')}`;
 }
 
 function toSpeaker(s: ResolvedSpeaker): Speaker {
@@ -225,12 +262,13 @@ function hydrateEvent(raw: RawEvent): EventItem {
   }));
 
   const startDate = raw.startDate ?? isoStartDate(raw.event_date, raw.time_start);
+  const endDate = raw.endDate ?? isoEndDate(raw.event_date, raw.time_end, startDate);
 
   // A cover image in the event's own images/ folder is the card artwork; the
   // event.yaml `image:` field is the fallback for events that don't have one yet.
   const image = coverBySlug[slug] ?? raw.image;
 
-  return { ...(raw as unknown as EventItem), image, startDate, speakers, agenda, talks };
+  return { ...(raw as unknown as EventItem), image, startDate, endDate, speakers, agenda, talks };
 }
 
 // require.context — globs every data/<year>/<slug>/event.yaml as a raw

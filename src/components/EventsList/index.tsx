@@ -1,8 +1,10 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import EventCard from '../EventCard';
+import { splitByPhase } from '@/lib/eventPhase';
+import { useNow } from '@/lib/useNow';
 import { asset } from '@/lib/basePath';
 import SpeakerCard from '../SpeakerCard';
 import OaiFooter from '../OaiFooter';
@@ -25,6 +27,7 @@ interface EventItem {
   status: string;
   image: string;
   startDate?: string;
+  endDate?: string;
   speakers: Speaker[];
 }
 
@@ -36,11 +39,22 @@ interface EventsListProps {
 export default function EventsList({ items, pastItems = [] }: EventsListProps) {
   const [showPast, setShowPast] = useState(false);
 
-  // Separate featured (active) from other events
-  const featured = items.find((i) => i.status === 'active') || items[0];
-  const otherEvents = items.filter((i) => i !== featured);
+  // Re-partition against the visitor's clock, so an event that ended since the
+  // last deploy leaves the listing on its own. A 30s tick is plenty: this only
+  // has to notice an event boundary, not animate anything (the featured card
+  // runs its own 1s clock for the countdown).
+  const now = useNow(30_000);
+  const { upcoming, past } = useMemo(
+    () => splitByPhase(items, pastItems, now),
+    [items, pastItems, now],
+  );
 
-  // Collect all unique speakers
+  const featured = upcoming.find((i) => i.status === 'active') || upcoming[0];
+  const otherEvents = upcoming.filter((i) => i !== featured);
+
+  // Collect all unique speakers. Deliberately sourced from the full `items` prop
+  // rather than the live split: the marquee is a showcase, not a schedule, and
+  // re-deriving it would reshuffle every card the moment the clock arrives.
   const allSpeakers = items.reduce<Speaker[]>((acc, item) => {
     for (const s of item.speakers) {
       if (!acc.some((existing) => existing.name === s.name)) {
@@ -147,6 +161,7 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
                 permalink={featured.permalink}
                 status={featured.status as 'active' | 'upcoming' | 'finished'}
                 startDate={featured.startDate}
+                endDate={featured.endDate}
                 featured
               />
             </div>
@@ -195,6 +210,8 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
                   type={item.type}
                   permalink={item.permalink}
                   status={item.status as 'active' | 'upcoming' | 'finished'}
+                  startDate={item.startDate}
+                  endDate={item.endDate}
                 />
               ))}
 
@@ -255,9 +272,9 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
           </div>
 
           {/* Inline past events — desktop only */}
-          {showPast && pastItems.length > 0 && (
+          {showPast && past.length > 0 && (
             <div className="mt-10 hidden grid-cols-1 gap-6 md:grid md:grid-cols-2">
-              {pastItems.map((item) => (
+              {past.map((item) => (
                 <EventCard
                   key={`past-${item.permalink}`}
                   title={item.title}
@@ -267,6 +284,8 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
                   type={item.type}
                   permalink={item.permalink}
                   status={item.status as 'active' | 'upcoming' | 'finished'}
+                  startDate={item.startDate}
+                  endDate={item.endDate}
                 />
               ))}
             </div>
