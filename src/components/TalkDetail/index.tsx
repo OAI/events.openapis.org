@@ -1,12 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import OaiFooter from '../OaiFooter';
+import SpeakerLinks from '../SpeakerLinks';
+import type { SpeakerLink } from '@/lib/speakers';
 import { asset } from '@/lib/basePath';
 
 interface Speaker {
   name: string;
   position: string;
   photo: string;
+  urls?: SpeakerLink[];
 }
 
 interface ScheduleSlot {
@@ -104,17 +107,11 @@ export default function TalkDetail({
                               )}
                             </div>
                           </div>
-                          <a
-                            href={`https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(speaker.name)}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                          <SpeakerLinks
+                            name={speaker.name}
+                            urls={speaker.urls}
                             className="flex h-12 w-12 flex-shrink-0 items-center justify-center text-[#15191c] transition-colors hover:text-brand-green"
-                            aria-label={`LinkedIn — ${speaker.name}`}
-                          >
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 0 1 2.063-2.065 2.062 2.062 0 0 1 2.062 2.065 2.062 2.062 0 0 1-2.062 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
-                            </svg>
-                          </a>
+                          />
                         </div>
                       ))}
                     </div>

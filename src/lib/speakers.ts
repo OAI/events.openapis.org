@@ -17,6 +17,21 @@ export interface SpeakerRef {
 }
 export type RawSpeakerRef = string | SpeakerRef;
 
+// One external link on a speaker (LinkedIn, GitHub, personal site, ...). `id`
+// picks the icon and the default label; `url` is used verbatim; `name` overrides
+// the label when the generic one reads wrong ("My LinkedIn Profile").
+export interface SpeakerLink {
+  id: string;
+  url: string;
+  name?: string;
+}
+
+// As authored: either a list of links or — for the common single-link case — one
+// bare mapping. Fields are optional here because YAML is hand-written; toLinks()
+// drops anything without a url rather than rendering a dead anchor.
+type RawSpeakerLink = { id?: string; url?: string; name?: string };
+type RawSpeakerLinks = RawSpeakerLink | RawSpeakerLink[];
+
 // One entry in a speakers.yaml file (global or per-event override).
 interface SpeakerDef {
   slug: string;
@@ -25,6 +40,7 @@ interface SpeakerDef {
   company?: string;
   image?: string;
   description?: string;
+  urls?: RawSpeakerLinks;
   // Membership badges shown after the name, e.g. [TSC, OAI]. Merged per-field
   // like everything else, so a per-event speakers.yaml can override the whole
   // list (useful once an event is finished and membership later changes).
@@ -42,6 +58,8 @@ export interface ResolvedSpeaker {
   // The speaker's own badges plus the optional session-level `tag`, so callers
   // render one list instead of handling two separate badge mechanisms.
   badges: string[];
+  // Always an array (possibly empty), so callers never branch on shape.
+  urls: SpeakerLink[];
   tag?: string;
 }
 
@@ -79,6 +97,17 @@ for (const key of ctx.keys()) {
   } else {
     overridesByEvent.set(parts[parts.length - 3], bySlug);
   }
+}
+
+function toLinks(raw: RawSpeakerLinks | undefined): SpeakerLink[] {
+  const list = Array.isArray(raw) ? raw : raw ? [raw] : [];
+  return list
+    .filter((link) => typeof link?.url === 'string' && link.url.trim() !== '')
+    .map((link) => ({
+      id: (link.id ?? 'website').trim().toLowerCase(),
+      url: (link.url as string).trim(),
+      name: link.name?.trim() || undefined,
+    }));
 }
 
 // A bare filename resolves to a served /img path; a full URL or an absolute
@@ -134,6 +163,7 @@ export function resolveSpeaker(eventSlug: string, ref: RawSpeakerRef): ResolvedS
     company: company || undefined,
     description: merged.description,
     badges,
+    urls: toLinks(merged.urls),
     ...(tag ? { tag } : {}),
   };
 }

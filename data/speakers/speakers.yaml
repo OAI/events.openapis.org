@@ -18,6 +18,20 @@
 # they just get no tooltip. Like every other field it merges per-event, so an
 # event override can pin the badges a speaker held at that event.
 #
+# `urls` is an optional list of external links, rendered as icons next to the
+# speaker in the agenda and talk cards:
+#
+#   urls:
+#     - id: linkedin
+#       url: https://www.linkedin.com/in/danciruli/
+#       name: My LinkedIn Profile   # optional; overrides the default label
+#
+# `id` picks the icon (linkedin, github, x — anything else gets a globe) and the
+# default accessible label; `url` is used verbatim; `name` overrides the label. A
+# single link may be written as one bare mapping instead of a list. A speaker
+# with no `urls` simply shows no link icons. Like every other field it merges per
+# event, but as a whole list, not entry by entry.
+#
 # `image` is either a bare filename (-> data/speakers/image/<file>, copied to
 # public/img/speakers/<slug>.webp by `npm run speakers`) or a full URL / absolute
 # /path (used as-is). Speakers with no image yet resolve to the neutral committed
