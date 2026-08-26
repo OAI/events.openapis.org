@@ -373,6 +373,9 @@
 - slug: pavel-kornev
   name: Pavel Kornev
   company: SAP
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/pavelkornev/
 
 - slug: peter-thomas
   name: Peter Thomas
