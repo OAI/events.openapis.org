@@ -10,6 +10,5 @@
 # newest first, so no edit is needed when an event's date passes or a new past
 # event is added. When an upcoming event finishes, just remove it from this list.
 
-- api-days-india-2026
 - api-days-london-2026
 - api-days-paris-2026

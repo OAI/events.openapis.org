@@ -260,6 +260,10 @@
   image: kuldeepak-angrish.webp
   company: Tyk
 
+- slug: lekshmi-a-m
+  name: Lekshmi A M
+  company: IBM
+
 - slug: lorna-mitchell
   name: Lorna Mitchell
   image: lorna-mitchell.webp
@@ -391,6 +395,10 @@
 - slug: raul-nogales
   name: Raul Nogales
   image: raul-nogales.webp
+
+- slug: ranjith-n
+  name: Ranjith N
+  company: IBM
 
 - slug: ryan-day
   name: Ryan Day

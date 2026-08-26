@@ -32,7 +32,6 @@
 
 **Annegret Junker** — Codecentric
 
-- [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 - [API Days Munich 2026](/events/api-days-munich-2026) — July 8 – 9, 2026
 - [API Days Amsterdam 2026](/events/api-days-amsterdam-2026) — June 9 – 10, 2026
 - [API Days London 2025](/events/api-days-london-2025) — September 22 – 24, 2025
@@ -154,6 +153,7 @@
 
 **Erik Wilde** — OpenAPI Initiative
 
+- [API Days London 2026](/events/api-days-london-2026) — September 30 – October 1, 2026
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 - [API Days Munich 2026](/events/api-days-munich-2026) — July 8 – 9, 2026
 - [API Days Amsterdam 2026](/events/api-days-amsterdam-2026) — June 9 – 10, 2026
@@ -248,7 +248,7 @@
 
 **Joel Rosario** — Specmatic
 
-- [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
+- _No events yet._
 
 **Jordan Walsh** — Postman
 
@@ -265,6 +265,7 @@
 
 **Kin Lane** — Naftiko
 
+- [API Days London 2026](/events/api-days-london-2026) — September 30 – October 1, 2026
 - [API Days Amsterdam 2026](/events/api-days-amsterdam-2026) — June 9 – 10, 2026
 - [API Days New York 2026](/events/api-days-new-york-2026) — May 13 – 14, 2026
 
@@ -272,8 +273,13 @@
 
 - [Developer Week San Jose 2026](/events/devweek-san-jose) — February 18 – 20, 2026
 
+**Lekshmi A M** — IBM
+
+- [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
+
 **Lorna Mitchell** — TM Forum
 
+- [API Days London 2026](/events/api-days-london-2026) — September 30 – October 1, 2026
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 - [API Days London 2025](/events/api-days-london-2025) — September 22 – 24, 2025
 - [API Days London 2024](/events/api-days-london-2024) — September 18 – 19, 2024
@@ -340,6 +346,7 @@
 
 **Naresh Jain** — Specmatic
 
+- [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 - [API Days London 2025](/events/api-days-london-2025) — September 22 – 24, 2025
 - [API Days New York 2025](/events/api-days-new-york-2025) — May 14 – 15, 2025
@@ -406,6 +413,10 @@
 **Rahul Dé** — Citi
 
 - [API Days London 2025](/events/api-days-london-2025) — September 22 – 24, 2025
+
+**Ranjith N** — IBM
+
+- [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 
 **Raul Nogales**
 

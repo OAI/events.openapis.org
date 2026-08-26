@@ -7,11 +7,95 @@ status: upcoming
 image: /img/events/api-days-london-2026/cover.jpg
 description: >-
   The OpenAPI Initiative returns to API Days London in 2026 with a dedicated
-  OpenAPI track at Convene Sancroft, St. Paul's. The full program and speaker
-  line-up will be announced closer to the event.
+  OpenAPI track at Convene Sancroft, St. Paul's — opening with OpenAPI in the age
+  of AI, what 1,637 'x-' extensions found in the wild say about the edges of the
+  specification, and what's new in OpenAPI 3.2. The rest of the program will be
+  announced closer to the event.
 permalink: /events/api-days-london-2026
+speakers:
+  - erik-wilde
+  - kin-lane
+  - lorna-mitchell
 tags:
   - event
 metaDescription: >-
-  The OpenAPI Initiative track at API Days London 2026 — program and speakers to
-  be announced.
+  The OpenAPI Initiative track at API Days London 2026 — OpenAPI in the age of AI,
+  what OpenAPI extensions map out, and what's new in OpenAPI 3.2.
+agenda:
+  October 1:
+    OpenAPI Track:
+      - title: OpenAPI Track Welcome and OpenAPI in the Age of AI
+        time: 9:30am–9:55am
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-london-2026-welcome-openapi-age-of-ai
+      - title: OpenAPI Extensions Are Not a Mess, They Are a Map
+        time: 10:00am–10:25am
+        speaker: kin-lane
+        permalink: /events/talks/api-days-london-2026-openapi-extensions-map
+      - title: What's new in OpenAPI 3.2
+        time: 10:30am–10:55am
+        speaker: lorna-mitchell
+        permalink: /events/talks/api-days-london-2026-whats-new-openapi-3-2
+talks:
+  - slug: api-days-london-2026-welcome-openapi-age-of-ai
+    title: OpenAPI Track Welcome and OpenAPI in the Age of AI
+    time: 9:30am–9:55am
+    category: OpenAPI Track
+    speakers:
+      - erik-wilde
+    description: >-
+      OpenAPI has seen a lot of success since it was created as Swagger in 2010
+      and became OpenAPI in 2016. What is the reason for its continued momentum
+      and how does the landscape change with AI entering the picture in a variety
+      of ways? We look at how OpenAPI can help you, how OAI can help you using
+      OpenAPI better, and how AI means that you have to slightly adjust the way
+      you design and manage your APIs.
+  - slug: api-days-london-2026-openapi-extensions-map
+    title: OpenAPI Extensions Are Not a Mess, They Are a Map
+    time: 10:00am–10:25am
+    category: OpenAPI Track
+    speakers:
+      - kin-lane
+    description: >-
+      Five years ago I looked at about fifty OpenAPI extensions from fourteen
+      providers and concluded that providers were quietly bending OpenAPI to carry
+      operational details the specification was never designed to hold. This year
+      I pointed a much bigger lens at the same question using my APIs.io search
+      engine — every OpenAPI in my catalog, 15,722 documents from 7,012 providers
+      I found 1,637 distinct 'x-' extensions. delivering on a variety of
+      operational concerns. Some you would guess: SDK generation, documentation,
+      mocking and testing. Others are there because the specification has no word
+      for them at all — provenance (where did this document come from), visibility
+      (who is allowed to see this operation), capability declaration (what can
+      this endpoint actually do), change management, monetization (what does a
+      call cost), legal, privacy. Not one of those is a fringe concern, and not
+      one of them has a home. The biggest job by far is saying something about
+      data that OpenAPI and JSON Schema could not, and inside it sit nine more
+      distinct problems, from type systems to identity and relationships to units
+      and formatting. A regulator needing to say 'this is a CDS PositiveInteger',
+      a payments company needing to say 'this is money', and a date library all
+      hit the same wall separately and each invented their own way through it.
+      Like most of my work with API, I do not see this as a mess we should clean
+      this up. Extensions are why OpenAPI has survived contact with reality. It is
+      that eighteen distinct jobs is not a specification gap you patch — it is the
+      wrong container. Almost none of what these extensions carry is the API
+      contract. It is operational metadata about the contract, and it belongs
+      alongside it, in Overlays and APIs.json, rather than crammed inside an
+      OpenAPI.
+  - slug: api-days-london-2026-whats-new-openapi-3-2
+    title: What's new in OpenAPI 3.2
+    time: 10:30am–10:55am
+    category: OpenAPI Track
+    speakers:
+      - lorna-mitchell
+    description: >-
+      Keeping up with all the new standards can be hard work! Instead, join this
+      session for an overview of what's new in the OpenAPI 3.2 release, so you'll
+      know what to expect when it's time to upgrade. You'll hear about support for
+      more HTTP methods, multipart formats, and handling the full query string as
+      a single input. There's also a major upgrade to tags, including nesting,
+      multiple tag types, and additional metadata—replacing the extensions you may
+      already be using with tags. The session will also cover document identities,
+      new security scheme additions, and improved support for XML-format APIs.
+      Come along to learn more about the latest changes and prepare for the
+      future!

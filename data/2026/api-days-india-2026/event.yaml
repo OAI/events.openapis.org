@@ -3,30 +3,32 @@ slug: api-days-india-2026
 event_date: August 19 – 20, 2026
 location: Conrad Bengaluru, Bengaluru, India
 type: Event
-status: upcoming
+status: finished
 image: /img/events/api-days-india-2026/cover.jpg
 description: >-
   The OpenAPI Initiative track at API Days India 2026, hosted at Conrad
-  Bengaluru — a program on OpenAPI in the age of AI, structuring API work,
-  Arazzo workflows for AI agents, event-driven AsyncAPI governance, and building
-  and testing specs with LLMs.
+  Bengaluru — a full-day program on OpenAPI in the age of AI, structuring API
+  work, Arazzo workflows for AI agents, event-driven AsyncAPI governance,
+  dynamic checks that catch what linting misses, open specifications for API
+  collections and operational CLIs, and contracts that agents can trust.
 permalink: /events/api-days-india-2026
 speakers:
   - erik-wilde
   - marjukka-niinioja
   - frank-kilcommins
   - dakshitha-ratnayake
-  - annegret-junker
+  - naresh-jain
   - anoop-m-d
   - peter-thomas
   - mike-holdsworth
-  - joel-rosario
+  - ranjith-n
+  - lekshmi-a-m
 tags:
   - event
 metaDescription: >-
   The OpenAPI Initiative track at API Days India 2026 in Bengaluru — OpenAPI in
-  the age of AI, Arazzo agent workflows, AsyncAPI governance, and LLM-built,
-  tested API specs.
+  the age of AI, Arazzo agent workflows, AsyncAPI governance, dynamic spec
+  checks, OpenCollection and OpenCLI.
 agenda:
   August 20:
     OpenAPI Track:
@@ -46,10 +48,10 @@ agenda:
         time: 12:30pm–12:55pm
         speaker: dakshitha-ratnayake
         permalink: /events/talks/api-days-india-2026-beyond-request-response-event-streams
-      - title: 'From Sticky Notes to AsyncAPI and OpenAPI: Specs LLMs Can Actually Build'
+      - title: 'When Linting Shrugs: Dynamic Checks for API Specs'
         time: 2:00pm–2:25pm
-        speaker: annegret-junker
-        permalink: /events/talks/api-days-india-2026-sticky-notes-asyncapi-openapi
+        speaker: naresh-jain
+        permalink: /events/talks/api-days-india-2026-when-linting-shrugs
       - title: OpenCollection – An Open Specification for Describing API Collections
         time: 2:30pm–2:55pm
         speaker: anoop-m-d
@@ -62,10 +64,12 @@ agenda:
         time: 4:00pm–4:25pm
         speaker: mike-holdsworth
         permalink: /events/talks/api-days-india-2026-contracts-earn-trust
-      - title: 'When Linting Shrugs: Dynamic Checks for API Specs'
+      - title: 'From OpenAPI to OpenCLI: AI-Ready Operations for Modern API Platforms'
         time: 4:30pm–4:55pm
-        speaker: joel-rosario
-        permalink: /events/talks/api-days-india-2026-when-linting-shrugs
+        speakers:
+          - ranjith-n
+          - lekshmi-a-m
+        permalink: /events/talks/api-days-india-2026-openapi-to-opencli
 talks:
   - slug: api-days-india-2026-welcome-openapi-age-of-ai
     title: OpenAPI Track Welcome and OpenAPI in the Age of AI
@@ -156,45 +160,28 @@ talks:
       alongside MCP and OpenAPI in the emerging agent stack. You will leave with
       three diagnostic questions to evaluate your own event-driven interfaces and
       a clear sense of what is production-ready today and where the gaps remain.
-  - slug: api-days-india-2026-sticky-notes-asyncapi-openapi
-    title: 'From Sticky Notes to AsyncAPI and OpenAPI: Specs LLMs Can Actually Build'
+  - slug: api-days-india-2026-when-linting-shrugs
+    title: 'When Linting Shrugs: Dynamic Checks for API Specs'
     time: 2:00pm–2:25pm
     category: OpenAPI Track
     speakers:
-      - annegret-junker
+      - naresh-jain
     description: >-
-      Most teams have now tried handing an LLM a vague description and asking for
-      an API. The results are familiar: plausible-looking endpoints, invented
-      fields, events that don't match anything real, and bugs that take hours to
-      trace. The easy reaction is to blame the model. That's the wrong angle.
-      LLMs don't produce wrong APIs because they're not capable — they produce
-      wrong APIs because they have no access to your domain. The fix is something
-      API teams can already recognize: a precise specification. This talk shows
-      that the collaborative modeling practices used to build shared
-      understanding — Domain Storytelling and EventStorming — double as a
-      remarkably good way to derive that specification, across both styles of
-      API. EventStorming's command/event/policy structure maps almost
-      one-to-one onto an API surface: commands become synchronous REST
-      operations, domain events become asynchronous channels and messages, and
-      policies become the orchestration and business rules that connect them.
-      Bounded contexts become clean service and product boundaries. The result is
-      a paired OpenAPI and AsyncAPI specification that is, in effect, a
-      machine-readable domain model. Using CookWithUs, a recipe-sharing platform
-      modeled and built across three iterations, we walk a concrete pipeline:
-      model the domain, derive the synchronous REST surface and the event-driven
-      async surface together, and split both specs by bounded context. We show
-      exactly what a well-formed spec gives an LLM — and exactly where generation
-      breaks down when the spec is incomplete, ambiguous, or missing its events.
-      We show how a sharper Ubiquitous Language produces a measurably better
-      OpenAPI document, a cleaner set of AsyncAPI channels, and a frontend the
-      model can generate without inventing a single field. The central claim is
-      simple: every naming decision, every event you make explicit, every scoping
-      choice travels all the way into the generated code. A spec is only as good
-      as the language behind it — and async APIs in particular punish vague
-      language, because an event nobody named precisely is an event nobody can
-      consume reliably. This is not a talk about replacing API designers with AI.
-      It's about what happens when rigorous API specification meets a powerful new
-      tool, and why the modeling work always comes first.
+      Static linting is an essential first line of defense for API specifications.
+      It catches syntax errors, style violations, missing fields, and many
+      structural issues before they escape into implementation. But semantic
+      failures are also expensive: a schema may be valid and still fail to
+      describe behavior that clients and servers can rely on. This talk explores a
+      more dynamic approach to validating API specs. Instead of only reading the
+      spec as a document, we exercise it as an executable description of behavior
+      using mocks, generated tests, boundary values, and examples. That forces
+      subtle issues into the open: contradictory constraints, impractical limits,
+      confusing content negotiation, ambiguous status codes, and missing error
+      cases. Through concrete examples and demos, we will compare what static
+      linting catches with what dynamic validation reveals. We will also look at
+      where this fits in an API delivery workflow so teams can use linting for
+      fast structural feedback and dynamic validation for deeper confidence before
+      specs reach consumers.
   - slug: api-days-india-2026-opencollection-api-collections
     title: OpenCollection – An Open Specification for Describing API Collections
     time: 2:30pm–2:55pm
@@ -253,25 +240,39 @@ talks:
       shippable. Attendees will walk away with a new mental model for translating
       plain-English intent into reliable, autonomous action behind trustworthy API
       guardrails.
-  - slug: api-days-india-2026-when-linting-shrugs
-    title: 'When Linting Shrugs: Dynamic Checks for API Specs'
+  - slug: api-days-india-2026-openapi-to-opencli
+    title: 'From OpenAPI to OpenCLI: AI-Ready Operations for Modern API Platforms'
     time: 4:30pm–4:55pm
     category: OpenAPI Track
     speakers:
-      - joel-rosario
+      - ranjith-n
+      - lekshmi-a-m
     description: >-
-      Static linting is an essential first line of defense for API specifications.
-      It catches syntax errors, style violations, missing fields, and many
-      structural issues before they escape into implementation. But semantic
-      failures are also expensive: a schema may be valid and still fail to
-      describe behavior that clients and servers can rely on. This talk explores a
-      more dynamic approach to validating API specs. Instead of only reading the
-      spec as a document, we exercise it as an executable description of behavior
-      using mocks, generated tests, boundary values, and examples. That forces
-      subtle issues into the open: contradictory constraints, impractical limits,
-      confusing content negotiation, ambiguous status codes, and missing error
-      cases. Through concrete examples and demos, we will compare what static
-      linting catches with what dynamic validation reveals. We will also look at
-      where this fits in an API delivery workflow so teams can use linting for
-      fast structural feedback and dynamic validation for deeper confidence before
-      specs reach consumers.
+      AI-native API platforms require more than machine-readable APIs. They also
+      require machine-readable operations. Modern API ecosystems standardized
+      service interfaces using OpenAPI, enabling discovery, integration,
+      governance, and automation across distributed systems. But the operational
+      layer behind those APIs, gateway administration CLIs, diagnostics, upgrade
+      workflows, traffic management tools, policy utilities, recovery scripts, and
+      operational runbooks still depends heavily on tribal knowledge and human
+      interpretation. This creates a major gap for organizations moving toward AI-
+      assisted operations and agent-driven platform management. AI systems can
+      reason about APIs because APIs expose structured contracts. Operational
+      tooling does not. Most CLI ecosystems remain fragmented, undocumented,
+      inconsistent, and difficult for both humans and autonomous systems to
+      consume safely. This session introduces OpenCLISpec, a specification-driven
+      approach for describing operational CLI interfaces using principles inspired
+      by OpenAPI. Using real operational scenarios from large API platform
+      environments, we’ll explore how structured operational contracts enable: AI-
+      assisted API operations; Semantic operational discovery; Safer automation
+      workflows; Governance-aware orchestration; Operational consistency across
+      teams; Agent-consumable infrastructure tooling. The session also
+      demonstrates HMM, a proof-of-concept CLI Tool Manager powered by OpenCLISpec
+      that transforms fragmented operational commands into structured operational
+      capabilities. Instead of relying on memorized syntax and scattered
+      documentation, operators and eventually AI agents interact with API platform
+      tooling through intent-driven workflows. Attendees will see how existing
+      operational tooling can become AI-ready without rewriting current CLIs or
+      replacing operational investments. The key insight is simple: OpenAPI
+      standardized service interfaces for machines. AI-first API management now
+      requires operational interfaces to become machine-readable too.

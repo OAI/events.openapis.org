@@ -1,0 +1,9 @@
+# Per-event overrides for API Days London 2026 — point-in-time affiliation
+# (company as of this event). Merged over the global registry per field; the
+# global registry holds the speaker's latest-known company (reconciled later).
+- slug: erik-wilde
+  company: OpenAPI Initiative
+- slug: kin-lane
+  company: API Evangelist
+- slug: lorna-mitchell
+  company: TM Forum
