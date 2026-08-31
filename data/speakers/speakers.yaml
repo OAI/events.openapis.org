@@ -114,74 +114,125 @@
 - slug: ashish-khichi
   name: Ashish Khichi
   company: Credit Agricole
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ashishkhichi/
 
 - slug: audrey-kolski
   name: Audrey Kolski
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/audreykolski/
 
 - slug: badr-nass-lahsen
   name: Badr Nass Lahsen
   image: badr-nass-lahsen.webp
   company: CyberArk
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/nasslahsen/
 
 - slug: beppe-catanese
   name: Beppe Catanese
   role: Developer Advocate
   company: Adyen
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/beppecatanese/
 
 - slug: bryam-vega
   name: Bryam Vega
   company: Thoughtworks
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/bryam-vega/
 
 - slug: budhaditya-bhattacharya
   name: Budhaditya Bhattacharya
   image: budhaditya-bhattacharya.webp
   company: Tyk
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/budha-b/
 
 - slug: carles-arnal
   name: Carles Arnal
   company: IBM
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/carles-arnal-824b44a5/
 
 - slug: chris-wood
   name: Chris Wood
   image: chris-wood.webp
   company: Ozone API
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/sensiblewood/
 
 - slug: dakshitha-ratnayake
   name: Dakshitha Ratnayake
   company: WSO2
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/dakshitha-ratnayake-3197181a/
 
 - slug: dan-ciruli
   name: Dan Ciruli
   image: dan-ciruli.webp
   company: Nutanix
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/danciruli/
 
 - slug: daniel-gutierrez-diez
   name: Daniel Gutierrez Diez
   role: Principal Software Engineer
   company: FactSet
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/daniel-gutierrez-diez-b296a03/
 
 - slug: daniel-hervas
   name: Daniel Hervás
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/d-hervas/
 
 - slug: darrel-miller
   name: Darrel Miller
   company: Microsoft
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/darrelmiller/
 
 - slug: dave-shanley
   name: Dave Shanley
   company: Princess Beef Heavy Industries
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/daveshanley/
 
 - slug: david-boyne
   name: David Boyne
   company: EventCatalog
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/david-boyne/
 
 - slug: david-oneill
   name: David O'Neill
   company: APIContext
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/davidon/
 
 - slug: derric-gilling
   name: Derric Gilling
   company: WSO2
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/derricgilling/
 
 - slug: dimitri-van-hees
   name: Dimitri van Hees
