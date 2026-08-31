@@ -43,43 +43,73 @@
 - slug: adeel-ali
   name: Adeel Ali
   company: APIMatic
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/adeel-apimatic/
 
 - slug: aditya-rohit
   name: Aditya Rohit
   image: aditya-rohit.webp
   company: SwytchCode
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/adityarohit/
 
 - slug: aditya-tangirala
   name: Aditya Tangirala
   image: aditya-tangirala.webp
   company: Venmo
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/adityatangirala/
 
 - slug: adrian-machado
   name: Adrian Machado
   company: Zuplo
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/adrianmachado/
 
 - slug: adrian-melillo
   name: Adrian Melillo
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/adrianmelillo/
 
 - slug: andreas-siegel
   name: Andreas Siegel
   company: Pentacor
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/andreassiegel/
 
 - slug: annegret-junker
   name: Annegret Junker
   company: Codecentric
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/dr-annegret-junker-141a99a4/
 
 - slug: anoop-m-d
   name: Anoop M D
   company: Bruno
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/anoop-m-d-868099100/
 
 - slug: anupriya-johari
   name: Anupriya Johari
   company: Simple Machines
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/anupriyajo/
 
 - slug: anusha-jayasundara
   name: Anusha Jayasundara
   company: WSO2
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/anushajayasundara/
 
 - slug: ashish-khichi
   name: Ashish Khichi
