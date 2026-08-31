@@ -238,49 +238,82 @@
   name: Dimitri van Hees
   image: dimitri-van-hees.webp
   company: Dutch Government
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/dimitrivanhees/
 
 - slug: edouard-lacourt
   name: Edouard Lacourt
   role: Software Engineer
   company: Theodo
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/edouard-lacourt/
 
 - slug: eduardo-maldonado
   name: Eduardo Maldonado
   company: The LEGO Group
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/eduardofesilva/
 
 - slug: emmanuel-bastien
   name: Emmanuel Bastien
   company: Shell
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ebastien/
 
 - slug: emmanuel-paraskakis
   name: Emmanuel Paraskakis
   image: emmanuel-paraskakis.webp
   company: Level 250
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/emmanuelparaskakis/
 
 - slug: erik-hansen
   name: Erik Hansen
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/eshansen/
 
 - slug: erik-wilde
   name: Erik Wilde
   image: erik-wilde.webp
   company: OpenAPI Initiative
   badges: [OAI]
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/erikwilde/
 
 - slug: ewen-quimerch
   name: Ewen Quimerc'h
   role: Software Engineer
   company: Theodo
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ewen-quimerch/
 
 - slug: eyal-sivan
   name: Eyal Sivan
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/eyalsivan/
 
 - slug: fabrizio-lazzaretti
   name: Fabrizio Lazzaretti
   company: Wavestone
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/fabrizio-lazzaretti/
 
 - slug: felix-medam
   name: Felix Medam
   company: Codecentric
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/felix-medam/
 
 - slug: francois-lasne
   name: Francois Lasne
