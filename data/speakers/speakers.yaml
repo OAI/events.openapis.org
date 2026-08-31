@@ -317,62 +317,100 @@
 
 - slug: francois-lasne
   name: Francois Lasne
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/francoislasne/
 
 - slug: frank-kilcommins
   name: Frank Kilcommins
   image: frank-kilcommins.webp
   company: Jentic
   badges: [TSC, OAI]
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/frank-kilcommins/
 
 - slug: gobe-hobona
   name: Gobe Hobona
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/gobehobona/
 
 - slug: hari-krishnan
   name: Hari Krishnan
   company: Specmatic
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/harikrishnan83/
 
 - slug: henry-andrews
   name: Henry Andrews
   image: henry-andrews.webp
   company: OpenAPI Initiative
   badges: [OAI]
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/handrews/
 
 - slug: ikenna-nwaiwu
   name: Ikenna Nwaiwu
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ikenna/
 
 - slug: ishraq-khan
   name: Ishraq Khan
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ishraqkhann/
 
 - slug: jeremy-glassenberg
   name: Jeremy Glassenberg
   company: Salesforce
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/jglassenberg/
 
 - slug: jeremy-snyder
   name: Jeremy Snyder
-
-- slug: joel-rosario
-  name: Joel Rosario
-  company: Specmatic
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/jeremysnyder/
 
 - slug: jordan-walsh
   name: Jordan Walsh
   company: Postman
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/jordanwalsh23/
 
 - slug: jose-haro-peralta
   name: Jose Haro Peralta
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/jose-haro-peralta/
 
 - slug: kevin-swiber
   name: Kevin Swiber
   company: Pointbreak
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/kevinswiber/
 
 - slug: kin-lane
   name: Kin Lane
   company: Naftiko
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/kinlane/
 
 - slug: kuldeepak-angrish
   name: Kuldeepak Angrish
   image: kuldeepak-angrish.webp
   company: Tyk
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/kuldeepakangrish/
 
 - slug: lekshmi-a-m
   name: Lekshmi A M
