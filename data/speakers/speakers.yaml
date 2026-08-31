@@ -415,26 +415,44 @@
 - slug: lekshmi-a-m
   name: Lekshmi A M
   company: IBM
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/lekshmi-a-m-05a53a1a9/
 
 - slug: lorna-mitchell
   name: Lorna Mitchell
   image: lorna-mitchell.webp
   company: TM Forum
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/lornajane/
 
 - slug: luiz-carneiro
   name: Luiz Carneiro
   company: Smapiot
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/carneirodotdev/
 
 - slug: madhu-sudan-jangid
   name: Madhu Sudan Jangid
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/madhu53/
 
 - slug: manasa-hari
   name: Manasa Hari
   company: Adobe
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/harimanasa/
 
 - slug: manaswini-talagadadivi
   name: Manaswini Talagadadivi
   company: Constructor
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/durga-r-manaswini-talagadadivi/
 
 - slug: manideep-galala
   name: Manideep Galala
@@ -444,83 +462,143 @@
 - slug: manuel-ottlik
   name: Manuel Ottlik
   company: HDI Global SE
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/manuelottlik/
 
 - slug: mario-alvarez
   name: Mario Alvarez
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/marioaae/
 
 - slug: marjukka-niinioja
   name: Marjukka Niinioja
   image: marjukka-niinioja.webp
   company: Osaango
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/marjukkaniinioja/
 
 - slug: marty-pitt
   name: Marty Pitt
   company: Orbital
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/martypitt/
 
 - slug: maxim-danilov
   name: Maxim Danilov
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/danilovmy/
 
 - slug: miguel-quintero
   name: Miguel Quintero
   image: miguel-quintero.webp
   company: Postman
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/miguel-quintero-a558531/
 
 - slug: mike-amundsen
   name: Mike Amundsen
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/mamund/
 
 - slug: mike-holdsworth
   name: Mike Holdsworth
   company: Monowai
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/mholdsworth/
 
 - slug: miriam-greis
   name: Miriam Greis
   company: Adorsys
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/miriam-greis/
 
 - slug: naresh-jain
   name: Naresh Jain
   image: naresh-jain.webp
   company: Specmatic
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/nareshjain/
 
 - slug: neelesh-pateriya
   name: Neelesh Pateriya
   company: Cisco
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/neeleshpateriya/
 
 - slug: nolan-sullivan
   name: Nolan Sullivan
   company: Speakeasy
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/nolan-dm-sullivan-010/
 
 - slug: nuwan-dias
   name: Nuwan Dias
   image: nuwan-dias.webp
   company: WSO2
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/nuwandias/
 
 - slug: ole-wendland
   name: Ole Wendland
   company: INNOQ
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ole-wendland-42613135a/
 
 - slug: oleg-nenashev
   name: Oleg Nenashev
   role: Community Builder and Developer Advocate
   company: Gradle
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/onenashev/
 
 - slug: olga-podolyako
   name: Olga Podolyako
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/olga-podolyako-ea2019/
 
 - slug: omri-gazitt
   name: Omri Gazitt
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ogazitt/
 
 - slug: patrick-brosse
   name: Patrick Brosse
   role: Head of API & DataModel Governance
   company: Amadeus
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/patrick-brosse/
 
 - slug: patrick-chiu
   name: Patrick Chiu
   company: Telstra
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/patrick-c-74672b15/
 
 - slug: paul-bradley
   name: Paul Bradley
   company: Excelsa
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/paulbradley4/
 
 - slug: pavel-kornev
   name: Pavel Kornev
@@ -532,83 +610,146 @@
 - slug: peter-thomas
   name: Peter Thomas
   company: Karate Labs
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ptrthomas/
 
 - slug: rafael-granados
   name: Rafael Granados
   role: API Architect
   company: INDITEX
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/rafagranados/
 
 - slug: rafael-ruiz
   name: Rafael Ruiz
   company: 101OBEX
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/juan-rafael-ruiz-carrillo-63595214b/
 
 - slug: rahul-de
   name: Rahul Dé
   image: rahul-de.webp
   company: Citi
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/lispyclouds/
 
 - slug: raul-nogales
   name: Raul Nogales
   image: raul-nogales.webp
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/raulnogales/
 
 - slug: ranjith-n
   name: Ranjith N
   company: IBM
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ranjith-n-1a3551166/
 
 - slug: ryan-day
   name: Ryan Day
   company: Conference of State Bank Supervisors
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/ryanday1/
 
 - slug: sean-blanchfield
   name: Sean Blanchfield
   company: Jentic
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/seanblanchfield/
 
 - slug: sebastian-rhode
   name: Sebastian Rhode
   company: Zeiss
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/sebisabs/
 
 - slug: shireen-nagdive
   name: Shireen Nagdive
   company: Salesforce
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/shireennagdive/
 
 - slug: simon-harrer
   name: Simon Harrer
   image: simon-harrer.webp
   company: Entropy Data
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/simonharrer/
 
 - slug: simon-heimler
   name: Simon Heimler
   company: SAP
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/simonheimler/
 
 - slug: sohaib-tariq
   name: Sohaib Tariq
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/sohaibtariqsprofile/
 
 - slug: steve-sfartz
   name: Stève Sfartz
   company: Cisco
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/stevesfartz/
 
 - slug: steven-willmott
   name: Steven Willmott
   company: Timewarp
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/stevenwillmott/
 
 - slug: stu-waldron
   name: Stu Waldron
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/stu-waldron-b550a61/
 
 - slug: sumit-amar
   name: Sumit Amar
   image: sumit-amar.webp
   company: WEX
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/samar/
 
 - slug: thomas-bayer
   name: Thomas Bayer
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/thomasub/
 
 - slug: yan-sun
   name: Yan Sun
   company: IATA
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/yan-sun-27385b6/
 
 - slug: yousaf-nabi
   name: Yousaf Nabi
   company: SmartBear
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/yousaf-nabi/
 
 - slug: yusuke-tsutsumi
   name: Yusuke Tsutsumi
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/yusuke-tsutsumi/
