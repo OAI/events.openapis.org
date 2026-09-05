@@ -114,6 +114,16 @@ body {
   padding-top: calc(var(--navbar-h) + env(safe-area-inset-top));
 }
 
+.avatar-placeholder {
+  background-image: var(--avatar-ph-light, url('/img/placeholder_light.svg'));
+  background-size: cover;
+  background-position: center;
+}
+
+[data-theme='dark'] .avatar-placeholder {
+  background-image: var(--avatar-ph-dark, url('/img/placeholder_dark.svg'));
+}
+
 [data-theme='dark'] body {
   background-color: var(--brand-bg);
 }

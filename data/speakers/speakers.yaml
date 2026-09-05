@@ -35,7 +35,8 @@
 # `image` is either a bare filename (-> data/speakers/image/<file>, copied to
 # public/img/speakers/<slug>.webp by `npm run speakers`) or a full URL / absolute
 # /path (used as-is). Speakers with no image yet resolve to the neutral committed
-# avatar /img/_avatar-placeholder.svg (real photos are harvested in a later pass).
+# avatar (/img/placeholder_light.svg, swapped per theme) — real photos are
+# harvested in a later pass.
 #
 # Speakers who only appeared at company-less events have no company yet. image is
 # still backfilled in a later pass.

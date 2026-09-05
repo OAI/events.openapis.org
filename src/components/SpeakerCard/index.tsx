@@ -1,5 +1,6 @@
 import React from 'react';
 import { asset } from '@/lib/basePath';
+import { portraitStyle } from '@/lib/avatarPlaceholder';
 import SpeakerBadge from '../SpeakerBadge';
 
 interface SpeakerCardProps {
@@ -11,9 +12,10 @@ interface SpeakerCardProps {
 }
 
 export default function SpeakerCard({ name, position, photo, badges = [] }: SpeakerCardProps) {
+  const portrait = portraitStyle(photo, asset);
   // Dark mode: #15191C base + 4% white overlay = #1E2225 (blended solid).
   return (
-    <div className="tile-press flex h-[180px] w-full flex-row items-center overflow-hidden rounded-[40px] bg-white [[data-theme=dark]_&]:bg-[#1e2225] md:w-[428px]">
+    <div className="tile-press flex h-[180px] w-full flex-row items-center overflow-hidden rounded-[40px] bg-white md:w-[428px] [[data-theme=dark]_&]:bg-[#1e2225]">
       {/* Text side — 248px × 180px, padding 16px 24px, gap 8px */}
       <div className="flex h-[180px] flex-1 flex-col items-start justify-center gap-2 px-6 py-4 md:w-[248px] md:flex-none">
         {/* Name container — flex-row, gap 8px */}
@@ -30,13 +32,10 @@ export default function SpeakerCard({ name, position, photo, badges = [] }: Spea
           {position}
         </span>
       </div>
-      {/* Photo side — 180×180, semi-circular left edge */}
+      {/* Photo side — 180×180, semi-circular left edge.*/}
       <div
-        className="h-[180px] w-[180px] flex-shrink-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${asset(photo)})`,
-          borderRadius: '200px 0px 0px 200px',
-        }}
+        className={`h-[180px] w-[180px] flex-shrink-0 bg-cover bg-center ${portrait.className}`}
+        style={{ ...portrait.style, borderRadius: '200px 0px 0px 200px' }}
       />
     </div>
   );

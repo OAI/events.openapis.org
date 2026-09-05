@@ -4,6 +4,7 @@ import OaiFooter from '../OaiFooter';
 import SpeakerLinks from '../SpeakerLinks';
 import type { SpeakerLink } from '@/lib/speakers';
 import { asset } from '@/lib/basePath';
+import { hasPhoto } from '@/lib/avatarPlaceholder';
 
 interface Speaker {
   name: string;
@@ -87,14 +88,18 @@ export default function TalkDetail({
                       {speakers.map((speaker) => (
                         <div key={speaker.name} className="flex items-center gap-6">
                           <div className="flex flex-1 items-center gap-3">
-                            {speaker.photo ? (
+                            {hasPhoto(speaker) ? (
                               <img
                                 src={asset(speaker.photo)}
                                 alt={speaker.name}
                                 className="h-16 w-16 flex-shrink-0 rounded-bl-[8px] rounded-br-[32px] rounded-tl-[8px] rounded-tr-[32px] object-cover"
                               />
                             ) : (
-                              <div className="h-16 w-16 flex-shrink-0 rounded-bl-[8px] rounded-br-[32px] rounded-tl-[8px] rounded-tr-[32px] bg-[#d9d9d9]" />
+                              <div
+                                className="avatar-placeholder h-16 w-16 flex-shrink-0 rounded-bl-[8px] rounded-br-[32px] rounded-tl-[8px] rounded-tr-[32px]"
+                                role="img"
+                                aria-label={`${speaker.name} — no photo`}
+                              />
                             )}
                             <div className="flex min-w-0 flex-col gap-1">
                               <span className="font-onest text-base font-bold leading-[1.2] tracking-oai text-[#15191c]">

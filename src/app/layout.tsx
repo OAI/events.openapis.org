@@ -57,7 +57,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       className={onest.variable}
-      style={{ ['--bg1-url' as string]: `url('${asset('/img/bg_top.png')}')` }}
+      style={
+        {
+          ['--bg1-url']: `url('${asset('/img/bg_top.png')}')`,
+          ['--avatar-ph-light']: `url('${asset('/img/placeholder_light.svg')}')`,
+          ['--avatar-ph-dark']: `url('${asset('/img/placeholder_dark.svg')}')`,
+        } as React.CSSProperties
+      }
       suppressHydrationWarning
     >
       <body>

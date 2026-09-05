@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { asset } from '@/lib/basePath';
+import { portraitStyle } from '@/lib/avatarPlaceholder';
 import type { SearchItem, SearchSpeaker } from '@/lib/searchIndex';
 import { lockScroll } from '@/lib/scrollLock';
 import SpeakerBadge from '@/components/SpeakerBadge';
@@ -72,13 +73,14 @@ function TypeIcon() {
 
 /** Speaker portrait, in the asymmetric pill the agenda and speaker cards use. */
 function Portrait({ photo, size }: { photo: string; size: number }) {
+  const portrait = portraitStyle(photo, asset);
   return (
     <div
-      className="flex-shrink-0 bg-[#D9D9D9] bg-cover bg-center"
+      className={`flex-shrink-0 bg-cover bg-center ${portrait.className}`}
       style={{
         width: size,
         height: size,
-        backgroundImage: `url(${asset(photo)})`,
+        ...portrait.style,
         borderRadius: `${size / 8}px ${size / 2}px ${size / 2}px ${size / 8}px`,
       }}
     />
@@ -201,7 +203,15 @@ export default function SearchModal({ items, open, onClose }: SearchModalProps) 
               aria-label="Clear search"
               className="flex h-6 w-6 flex-shrink-0 cursor-pointer items-center justify-center rounded-full border-none bg-transparent p-0 text-[color:var(--brand-muted)] transition-colors hover:text-[color:var(--ifm-font-color-base)]"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              >
                 <path d="M18 6L6 18M6 6l12 12" />
               </svg>
             </button>
@@ -217,7 +227,15 @@ export default function SearchModal({ items, open, onClose }: SearchModalProps) 
              are the same blends the .btn-black / .btn-white fills use. */
           className="absolute right-6 top-6 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-none bg-[#15191C] text-white transition-colors hover:bg-[#313537] md:right-10 [[data-theme=dark]_&]:bg-white [[data-theme=dark]_&]:text-[#15191C] [[data-theme=dark]_&]:hover:bg-[#E3E3E4]"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          >
             <path d="M18 6L6 18M6 6l12 12" />
           </svg>
         </button>
@@ -235,7 +253,12 @@ export default function SearchModal({ items, open, onClose }: SearchModalProps) 
             </p>
           ) : (
             results.map((r) => (
-              <Link key={`${r.type}-${r.permalink}-${r.title}`} href={r.permalink} onClick={onClose} className={rowClass}>
+              <Link
+                key={`${r.type}-${r.permalink}-${r.title}`}
+                href={r.permalink}
+                onClick={onClose}
+                className={rowClass}
+              >
                 {r.type === 'event' && (
                   <>
                     <span className="flex flex-row items-center gap-2 font-onest text-sm font-semibold leading-[120%] tracking-oai">

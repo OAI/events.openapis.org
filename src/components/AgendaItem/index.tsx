@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { asset } from '@/lib/basePath';
+import { portraitStyle } from '@/lib/avatarPlaceholder';
 
 interface Speaker {
   name: string;
@@ -32,14 +33,12 @@ function TimeRange({ start, end }: { start: string; end: string }) {
 }
 
 function SpeakerDetail({ speaker }: { speaker: Speaker }) {
+  const portrait = portraitStyle(speaker.photo, asset);
   return (
     <div className="flex flex-row items-center gap-3">
       <div
-        className="h-16 w-16 flex-shrink-0 bg-[#D9D9D9] bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${asset(speaker.photo)})`,
-          borderRadius: '8px 32px 32px 8px',
-        }}
+        className={`h-16 w-16 flex-shrink-0 bg-cover bg-center ${portrait.className}`}
+        style={{ ...portrait.style, borderRadius: '8px 32px 32px 8px' }}
       />
       <div className="flex flex-col justify-center gap-1">
         <span className="font-onest text-base font-bold leading-[120%] tracking-oai text-white">

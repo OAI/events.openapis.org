@@ -1,4 +1,5 @@
 import yaml from 'js-yaml';
+import { AVATAR_PLACEHOLDER } from './avatarPlaceholder';
 
 // Speaker resolution. Speakers have one canonical definition in the global
 // registry (data/speakers/speakers.yaml); events reference them by slug and may
@@ -116,11 +117,7 @@ function isServedAsIs(image: string): boolean {
   return /^https?:\/\//.test(image) || image.startsWith('/');
 }
 
-export const AVATAR_PLACEHOLDER = '/img/_avatar-placeholder.svg';
-
-export function hasPhoto(speaker: { photo: string }): boolean {
-  return speaker.photo !== AVATAR_PLACEHOLDER;
-}
+export { AVATAR_PLACEHOLDER, hasPhoto } from './avatarPlaceholder';
 
 export function resolveSpeaker(eventSlug: string, ref: RawSpeakerRef): ResolvedSpeaker {
   const slug = typeof ref === 'string' ? ref : ref.slug;

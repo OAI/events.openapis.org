@@ -99,7 +99,9 @@ file is also the manual override mechanism: present fields win, missing fields
 fall back to the global entry.
 
 `npm run speakers` **fails the build** if an event references a slug that isn't in
-the registry. Speakers with no `image` fall back to `/img/_avatar-placeholder.svg`.
+the registry. Speakers with no `image` fall back to a neutral placeholder —
+`/img/placeholder_light.svg`, swapped for `placeholder_dark.svg` under
+`[data-theme='dark']` by the `.avatar-placeholder` rule in `app/globals.css`.
 
 ### Image layout
 
