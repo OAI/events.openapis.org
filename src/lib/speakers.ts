@@ -116,6 +116,12 @@ function isServedAsIs(image: string): boolean {
   return /^https?:\/\//.test(image) || image.startsWith('/');
 }
 
+export const AVATAR_PLACEHOLDER = '/img/_avatar-placeholder.svg';
+
+export function hasPhoto(speaker: { photo: string }): boolean {
+  return speaker.photo !== AVATAR_PLACEHOLDER;
+}
+
 export function resolveSpeaker(eventSlug: string, ref: RawSpeakerRef): ResolvedSpeaker {
   const slug = typeof ref === 'string' ? ref : ref.slug;
   const tag = typeof ref === 'string' ? undefined : ref.tag;
@@ -139,7 +145,7 @@ export function resolveSpeaker(eventSlug: string, ref: RawSpeakerRef): ResolvedS
   // with no image yet fall back to a neutral committed avatar (photos are
   // harvested in a later pass), so background-image call sites never emit url().
   const imageFromOverride = !!override?.image;
-  let photo = '/img/_avatar-placeholder.svg';
+  let photo: string = AVATAR_PLACEHOLDER;
   if (merged.image) {
     if (isServedAsIs(merged.image)) {
       photo = merged.image;

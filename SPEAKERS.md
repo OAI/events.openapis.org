@@ -246,10 +246,6 @@
 
 - [Developer Week Santa Clara 2025](/events/devweek-santa-clara) — February 11 – 13, 2025
 
-**Joel Rosario** — Specmatic
-
-- _No events yet._
-
 **Jordan Walsh** — Postman
 
 - [API Days Australia 2023](/events/api-days-australia-2023) — October 11 – 12, 2023

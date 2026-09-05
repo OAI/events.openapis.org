@@ -15,6 +15,7 @@ interface Speaker {
   name: string;
   position: string;
   photo: string;
+  hasPhoto: boolean;
   badges?: string[];
 }
 
@@ -52,17 +53,23 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
   const featured = upcoming.find((i) => i.status === 'active') || upcoming[0];
   const otherEvents = upcoming.filter((i) => i !== featured);
 
-  // Collect all unique speakers. Deliberately sourced from the full `items` prop
-  // rather than the live split: the marquee is a showcase, not a schedule, and
-  // re-deriving it would reshuffle every card the moment the clock arrives.
-  const allSpeakers = items.reduce<Speaker[]>((acc, item) => {
-    for (const s of item.speakers) {
-      if (!acc.some((existing) => existing.name === s.name)) {
-        acc.push(s);
-      }
-    }
-    return acc;
-  }, []);
+  // Collect every unique speaker who has ever appeared, upcoming events first.
+  const SHOWCASE_LIMIT = 24;
+  const allSpeakers = useMemo(
+    () =>
+      [...items, ...pastItems]
+        .reduce<Speaker[]>((acc, item) => {
+          for (const s of item.speakers) {
+            if (!s.hasPhoto) continue;
+            if (!acc.some((existing) => existing.name === s.name)) {
+              acc.push(s);
+            }
+          }
+          return acc;
+        }, [])
+        .slice(0, SHOWCASE_LIMIT),
+    [items, pastItems],
+  );
 
   // The two marquee rows draw from disjoint halves, so the same person is never
   // on screen twice. Each row then repeats its own half up to MARQUEE_MIN cards

@@ -51,8 +51,8 @@ export default function EventCard({
 
   // Past events have no ticket sale, so no countdown (and the CTA is disabled),
   // and once the event is under way there is nothing left to count down to — the
-  // card says NOW instead. Without a real startDate the countdown is omitted
-  // rather than shown as a bogus 0d 00:00:00.
+  // card says "Happening now" instead. Without a real startDate the countdown is
+  // omitted rather than shown as a bogus 0d 00:00:00.
   const countdown = countdownTo(featured && phase === 'upcoming' ? startDate : undefined, now);
   const pad = (n: number) => String(n).padStart(2, '0');
   const finished = phase === 'finished';
@@ -121,7 +121,9 @@ export default function EventCard({
   );
 
   const titleH3 = (
-    <h3 className={`font-onest font-bold ${titleSize} m-0 max-w-[250px] tracking-oai text-black md:max-w-none`}>
+    <h3
+      className={`font-onest font-bold ${titleSize} m-0 max-w-[250px] tracking-oai text-black md:max-w-none`}
+    >
       {title}
     </h3>
   );
@@ -146,7 +148,7 @@ export default function EventCard({
       data-phase={phase}
       data-start={startDate}
       data-end={endDate}
-      className={`relative w-full ${cardHeight} group tile-press overflow-hidden rounded-4xl bg-brand-card-dark`}
+      className={`relative w-full ${cardHeight} tile-press group overflow-hidden rounded-4xl bg-brand-card-dark`}
     >
       {/* Cover art, cover-fitted to the strip the green block leaves uncovered
           (see imageInset). Its right corners are rounded to match the card so the
@@ -240,15 +242,12 @@ export default function EventCard({
               </button>
             )}
             {phase === 'ongoing' && (
-              /* Happening right now — replaces the countdown, same type as the
-                 digits it stands in for. The dot is decorative; the word carries
-                 the meaning for screen readers. */
-              <div className="flex flex-row items-center gap-2 font-onest font-bold tracking-oai text-white md:text-black md:[[data-theme=dark]_&]:text-white">
+              <div className="flex flex-row items-center gap-2 whitespace-nowrap font-onest font-bold tracking-oai text-white md:text-black md:[[data-theme=dark]_&]:text-white">
                 <span
                   aria-hidden
                   className="h-2.5 w-2.5 flex-shrink-0 animate-pulse rounded-full bg-brand-green motion-reduce:animate-none md:h-3 md:w-3"
                 />
-                <span className="text-[16px] leading-[120%] md:text-[28px]">NOW</span>
+                <span className="text-[16px] leading-[120%] md:text-[22px]">Happening now</span>
               </div>
             )}
             {countdown && (
@@ -257,11 +256,17 @@ export default function EventCard({
                   {countdown.d}
                   <span className="ml-0.5 align-super text-xs">d</span>
                 </span>
-                <span className="text-[16px] leading-[120%] md:text-[28px]">{pad(countdown.h)}</span>
+                <span className="text-[16px] leading-[120%] md:text-[28px]">
+                  {pad(countdown.h)}
+                </span>
                 <span className="text-[16px] leading-[120%] opacity-60 md:text-[28px]">:</span>
-                <span className="text-[16px] leading-[120%] md:text-[28px]">{pad(countdown.m)}</span>
+                <span className="text-[16px] leading-[120%] md:text-[28px]">
+                  {pad(countdown.m)}
+                </span>
                 <span className="text-[16px] leading-[120%] opacity-60 md:text-[28px]">:</span>
-                <span className="text-[16px] leading-[120%] md:text-[28px]">{pad(countdown.s)}</span>
+                <span className="text-[16px] leading-[120%] md:text-[28px]">
+                  {pad(countdown.s)}
+                </span>
               </div>
             )}
           </div>

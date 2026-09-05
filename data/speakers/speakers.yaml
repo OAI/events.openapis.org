@@ -42,6 +42,7 @@
 
 - slug: adeel-ali
   name: Adeel Ali
+  image: adeel-ali.webp
   company: APIMatic
   urls:
     - id: linkedin
@@ -65,6 +66,7 @@
 
 - slug: adrian-machado
   name: Adrian Machado
+  image: adrian-machado.webp
   company: Zuplo
   urls:
     - id: linkedin
@@ -72,12 +74,14 @@
 
 - slug: adrian-melillo
   name: Adrian Melillo
+  image: adrian-melillo.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/adrianmelillo/
 
 - slug: andreas-siegel
   name: Andreas Siegel
+  image: andreas-siegel.webp
   company: Pentacor
   urls:
     - id: linkedin
@@ -85,6 +89,7 @@
 
 - slug: annegret-junker
   name: Annegret Junker
+  image: annegret-junker.webp
   company: Codecentric
   urls:
     - id: linkedin
@@ -92,6 +97,7 @@
 
 - slug: anoop-m-d
   name: Anoop M D
+  image: anoop-m-d.webp
   company: Bruno
   urls:
     - id: linkedin
@@ -99,6 +105,7 @@
 
 - slug: anupriya-johari
   name: Anupriya Johari
+  image: anupriya-johari.webp
   company: Simple Machines
   urls:
     - id: linkedin
@@ -106,6 +113,7 @@
 
 - slug: anusha-jayasundara
   name: Anusha Jayasundara
+  image: anusha-jayasundara.webp
   company: WSO2
   urls:
     - id: linkedin
@@ -113,6 +121,7 @@
 
 - slug: ashish-khichi
   name: Ashish Khichi
+  image: ashish-khichi.webp
   company: Credit Agricole
   urls:
     - id: linkedin
@@ -120,6 +129,7 @@
 
 - slug: audrey-kolski
   name: Audrey Kolski
+  image: audrey-kolski.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/audreykolski/
@@ -134,6 +144,7 @@
 
 - slug: beppe-catanese
   name: Beppe Catanese
+  image: beppe-catanese.webp
   role: Developer Advocate
   company: Adyen
   urls:
@@ -142,6 +153,7 @@
 
 - slug: bryam-vega
   name: Bryam Vega
+  image: bryam-vega.webp
   company: Thoughtworks
   urls:
     - id: linkedin
@@ -157,6 +169,7 @@
 
 - slug: carles-arnal
   name: Carles Arnal
+  image: carles-arnal.webp
   company: IBM
   urls:
     - id: linkedin
@@ -172,6 +185,7 @@
 
 - slug: dakshitha-ratnayake
   name: Dakshitha Ratnayake
+  image: dakshitha-ratnayake.webp
   company: WSO2
   urls:
     - id: linkedin
@@ -195,12 +209,14 @@
 
 - slug: daniel-hervas
   name: Daniel Hervás
+  image: daniel-hervas.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/d-hervas/
 
 - slug: darrel-miller
   name: Darrel Miller
+  image: darrel-miller.webp
   company: Microsoft
   urls:
     - id: linkedin
@@ -208,6 +224,7 @@
 
 - slug: dave-shanley
   name: Dave Shanley
+  image: dave-shanley.webp
   company: Princess Beef Heavy Industries
   urls:
     - id: linkedin
@@ -215,6 +232,7 @@
 
 - slug: david-boyne
   name: David Boyne
+  image: david-boyne.webp
   company: EventCatalog
   urls:
     - id: linkedin
@@ -222,6 +240,7 @@
 
 - slug: david-oneill
   name: David O'Neill
+  image: david-oneill.webp
   company: APIContext
   urls:
     - id: linkedin
@@ -229,6 +248,7 @@
 
 - slug: derric-gilling
   name: Derric Gilling
+  image: derric-gilling.webp
   company: WSO2
   urls:
     - id: linkedin
@@ -244,6 +264,7 @@
 
 - slug: edouard-lacourt
   name: Edouard Lacourt
+  image: edouard-lacourt.webp
   role: Software Engineer
   company: Theodo
   urls:
@@ -259,6 +280,7 @@
 
 - slug: emmanuel-bastien
   name: Emmanuel Bastien
+  image: emmanuel-bastien.webp
   company: Shell
   urls:
     - id: linkedin
@@ -274,6 +296,7 @@
 
 - slug: erik-hansen
   name: Erik Hansen
+  image: erik-hansen.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/eshansen/
@@ -289,6 +312,7 @@
 
 - slug: ewen-quimerch
   name: Ewen Quimerc'h
+  image: ewen-quimerch.webp
   role: Software Engineer
   company: Theodo
   urls:
@@ -297,12 +321,14 @@
 
 - slug: eyal-sivan
   name: Eyal Sivan
+  image: eyal-sivan.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/eyalsivan/
 
 - slug: fabrizio-lazzaretti
   name: Fabrizio Lazzaretti
+  image: fabrizio-lazzaretti.webp
   company: Wavestone
   urls:
     - id: linkedin
@@ -310,6 +336,7 @@
 
 - slug: felix-medam
   name: Felix Medam
+  image: felix-medam.webp
   company: Codecentric
   urls:
     - id: linkedin
@@ -317,6 +344,7 @@
 
 - slug: francois-lasne
   name: Francois Lasne
+  image: francois-lasne.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/francoislasne/
@@ -338,6 +366,7 @@
 
 - slug: hari-krishnan
   name: Hari Krishnan
+  image: hari-krishnan.webp
   company: Specmatic
   urls:
     - id: linkedin
@@ -354,18 +383,21 @@
 
 - slug: ikenna-nwaiwu
   name: Ikenna Nwaiwu
+  image: ikenna-nwaiwu.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/ikenna/
 
 - slug: ishraq-khan
   name: Ishraq Khan
+  image: ishraq-khan.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/ishraqkhann/
 
 - slug: jeremy-glassenberg
   name: Jeremy Glassenberg
+  image: jeremy-glassenberg.webp
   company: Salesforce
   urls:
     - id: linkedin
@@ -373,12 +405,14 @@
 
 - slug: jeremy-snyder
   name: Jeremy Snyder
+  image: jeremy-snyder.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/jeremysnyder/
 
 - slug: jordan-walsh
   name: Jordan Walsh
+  image: jordan-walsh.webp
   company: Postman
   urls:
     - id: linkedin
@@ -386,12 +420,14 @@
 
 - slug: jose-haro-peralta
   name: Jose Haro Peralta
+  image: jose-haro-peralta.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/jose-haro-peralta/
 
 - slug: kevin-swiber
   name: Kevin Swiber
+  image: kevin-swiber.webp
   company: Pointbreak
   urls:
     - id: linkedin
@@ -399,6 +435,7 @@
 
 - slug: kin-lane
   name: Kin Lane
+  image: kin-lane.webp
   company: Naftiko
   urls:
     - id: linkedin
@@ -414,6 +451,7 @@
 
 - slug: lekshmi-a-m
   name: Lekshmi A M
+  image: lekshmi-a-m.webp
   company: IBM
   urls:
     - id: linkedin
@@ -429,6 +467,7 @@
 
 - slug: luiz-carneiro
   name: Luiz Carneiro
+  image: luiz-carneiro.webp
   company: Smapiot
   urls:
     - id: linkedin
@@ -436,12 +475,14 @@
 
 - slug: madhu-sudan-jangid
   name: Madhu Sudan Jangid
+  image: madhu-sudan-jangid.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/madhu53/
 
 - slug: manasa-hari
   name: Manasa Hari
+  image: manasa-hari.webp
   company: Adobe
   urls:
     - id: linkedin
@@ -449,6 +490,7 @@
 
 - slug: manaswini-talagadadivi
   name: Manaswini Talagadadivi
+  image: manaswini-talagadadivi.webp
   company: Constructor
   urls:
     - id: linkedin
@@ -461,6 +503,7 @@
 
 - slug: manuel-ottlik
   name: Manuel Ottlik
+  image: manuel-ottlik.webp
   company: HDI Global SE
   urls:
     - id: linkedin
@@ -468,6 +511,7 @@
 
 - slug: mario-alvarez
   name: Mario Alvarez
+  image: mario-alvarez.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/marioaae/
@@ -482,6 +526,7 @@
 
 - slug: marty-pitt
   name: Marty Pitt
+  image: marty-pitt.webp
   company: Orbital
   urls:
     - id: linkedin
@@ -503,12 +548,14 @@
 
 - slug: mike-amundsen
   name: Mike Amundsen
+  image: mike-amundsen.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/mamund/
 
 - slug: mike-holdsworth
   name: Mike Holdsworth
+  image: mike-holdsworth.webp
   company: Monowai
   urls:
     - id: linkedin
@@ -531,6 +578,7 @@
 
 - slug: neelesh-pateriya
   name: Neelesh Pateriya
+  image: neelesh-pateriya.webp
   company: Cisco
   urls:
     - id: linkedin
@@ -538,6 +586,7 @@
 
 - slug: nolan-sullivan
   name: Nolan Sullivan
+  image: nolan-sullivan.webp
   company: Speakeasy
   urls:
     - id: linkedin
@@ -553,6 +602,7 @@
 
 - slug: ole-wendland
   name: Ole Wendland
+  image: ole-wendland.webp
   company: INNOQ
   urls:
     - id: linkedin
@@ -560,6 +610,7 @@
 
 - slug: oleg-nenashev
   name: Oleg Nenashev
+  image: oleg-nenashev.webp
   role: Community Builder and Developer Advocate
   company: Gradle
   urls:
@@ -568,18 +619,21 @@
 
 - slug: olga-podolyako
   name: Olga Podolyako
+  image: olga-podolyako.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/olga-podolyako-ea2019/
 
 - slug: omri-gazitt
   name: Omri Gazitt
+  image: omri-gazitt.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/ogazitt/
 
 - slug: patrick-brosse
   name: Patrick Brosse
+  image: patrick-brosse.webp
   role: Head of API & DataModel Governance
   company: Amadeus
   urls:
@@ -588,6 +642,7 @@
 
 - slug: patrick-chiu
   name: Patrick Chiu
+  image: patrick-chiu.webp
   company: Telstra
   urls:
     - id: linkedin
@@ -595,6 +650,7 @@
 
 - slug: paul-bradley
   name: Paul Bradley
+  image: paul-bradley.webp
   company: Excelsa
   urls:
     - id: linkedin
@@ -602,6 +658,7 @@
 
 - slug: pavel-kornev
   name: Pavel Kornev
+  image: pavel-kornev.webp
   company: SAP
   urls:
     - id: linkedin
@@ -609,6 +666,7 @@
 
 - slug: peter-thomas
   name: Peter Thomas
+  image: peter-thomas.webp
   company: Karate Labs
   urls:
     - id: linkedin
@@ -616,6 +674,7 @@
 
 - slug: rafael-granados
   name: Rafael Granados
+  image: rafael-granados.webp
   role: API Architect
   company: INDITEX
   urls:
@@ -624,6 +683,7 @@
 
 - slug: rafael-ruiz
   name: Rafael Ruiz
+  image: rafael-ruiz.webp
   company: 101OBEX
   urls:
     - id: linkedin
@@ -646,6 +706,7 @@
 
 - slug: ranjith-n
   name: Ranjith N
+  image: ranjith-n.webp
   company: IBM
   urls:
     - id: linkedin
@@ -653,6 +714,7 @@
 
 - slug: ryan-day
   name: Ryan Day
+  image: ryan-day.webp
   company: Conference of State Bank Supervisors
   urls:
     - id: linkedin
@@ -660,6 +722,7 @@
 
 - slug: sean-blanchfield
   name: Sean Blanchfield
+  image: sean-blanchfield.webp
   company: Jentic
   urls:
     - id: linkedin
@@ -667,6 +730,7 @@
 
 - slug: sebastian-rhode
   name: Sebastian Rhode
+  image: sebastian-rhode.webp
   company: Zeiss
   urls:
     - id: linkedin
@@ -674,6 +738,7 @@
 
 - slug: shireen-nagdive
   name: Shireen Nagdive
+  image: shireen-nagdive.webp
   company: Salesforce
   urls:
     - id: linkedin
@@ -689,6 +754,7 @@
 
 - slug: simon-heimler
   name: Simon Heimler
+  image: simon-heimler.webp
   company: SAP
   urls:
     - id: linkedin
@@ -696,12 +762,14 @@
 
 - slug: sohaib-tariq
   name: Sohaib Tariq
+  image: sohaib-tariq.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/sohaibtariqsprofile/
 
 - slug: steve-sfartz
   name: Stève Sfartz
+  image: steve-sfartz.webp
   company: Cisco
   urls:
     - id: linkedin
@@ -709,6 +777,7 @@
 
 - slug: steven-willmott
   name: Steven Willmott
+  image: steven-willmott.webp
   company: Timewarp
   urls:
     - id: linkedin
@@ -716,6 +785,7 @@
 
 - slug: stu-waldron
   name: Stu Waldron
+  image: stu-waldron.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/stu-waldron-b550a61/
@@ -730,12 +800,14 @@
 
 - slug: thomas-bayer
   name: Thomas Bayer
+  image: thomas-bayer.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/thomasub/
 
 - slug: yan-sun
   name: Yan Sun
+  image: yan-sun.webp
   company: IATA
   urls:
     - id: linkedin
@@ -743,6 +815,7 @@
 
 - slug: yousaf-nabi
   name: Yousaf Nabi
+  image: yousaf-nabi.webp
   company: SmartBear
   urls:
     - id: linkedin
@@ -750,6 +823,7 @@
 
 - slug: yusuke-tsutsumi
   name: Yusuke Tsutsumi
+  image: yusuke-tsutsumi.webp
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/yusuke-tsutsumi/

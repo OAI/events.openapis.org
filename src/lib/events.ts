@@ -6,6 +6,7 @@ import yaml from 'js-yaml';
 // source. Speakers are referenced by slug and rehydrated by ./speakers.
 import rawOrder from '../../data/events.order.yml';
 import {
+  hasPhoto,
   resolveSpeaker,
   type RawSpeakerRef,
   type ResolvedSpeaker,
@@ -18,6 +19,7 @@ export interface Speaker {
   name: string;
   position: string;
   photo: string;
+  hasPhoto: boolean;
   // Membership pills rendered after the name (e.g. ["TSC", "OAI"]).
   badges?: string[];
   urls?: SpeakerLink[];
@@ -209,7 +211,14 @@ function isoEndDate(
 }
 
 function toSpeaker(s: ResolvedSpeaker): Speaker {
-  return { name: s.name, position: s.position, photo: s.photo, badges: s.badges, urls: s.urls };
+  return {
+    name: s.name,
+    position: s.position,
+    photo: s.photo,
+    hasPhoto: hasPhoto(s),
+    badges: s.badges,
+    urls: s.urls,
+  };
 }
 
 // Resolve every slug reference in an event into concrete speaker objects.

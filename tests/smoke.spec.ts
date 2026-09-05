@@ -39,7 +39,7 @@ test.describe('Live event phase', () => {
       .toBe(0);
   });
 
-  test('an event in progress shows NOW instead of a countdown', async ({ page }) => {
+  test('an event in progress says it is happening now', async ({ page }) => {
     await page.goto('/');
 
     const featured = page.locator('[data-phase][data-start][data-end]').first();
@@ -55,6 +55,6 @@ test.describe('Live event phase', () => {
 
     const live = page.locator('[data-phase][data-start="' + start + '"]').first();
     await expect(live).toHaveAttribute('data-phase', 'ongoing');
-    await expect(live.getByText('NOW', { exact: true })).toBeVisible();
+    await expect(live.getByText('Happening now', { exact: true })).toBeVisible();
   });
 });
