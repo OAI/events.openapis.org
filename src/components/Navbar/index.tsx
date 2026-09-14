@@ -21,8 +21,7 @@ export default function Navbar({ searchItems = [] }: { searchItems?: SearchItem[
     // The page scrolls inside #scroll-root, not the window (see app/layout.tsx).
     const scroller = document.getElementById('scroll-root');
     const target: HTMLElement | Window = scroller ?? window;
-    const onScroll = () =>
-      setScrolled((scroller ? scroller.scrollTop : window.scrollY) > 8);
+    const onScroll = () => setScrolled((scroller ? scroller.scrollTop : window.scrollY) > 8);
     onScroll();
     target.addEventListener('scroll', onScroll, { passive: true });
     return () => target.removeEventListener('scroll', onScroll);
@@ -88,7 +87,7 @@ export default function Navbar({ searchItems = [] }: { searchItems?: SearchItem[
           paddingTop: 'env(safe-area-inset-top)',
           height: `calc(${scrolled ? 'var(--navbar-h-scrolled)' : 'var(--navbar-h)'} + env(safe-area-inset-top))`,
         }}
-        className={`fixed inset-x-0 top-0 z-30 flex items-center justify-center px-6 md:px-10 transition-[height,background-color,box-shadow] duration-200 ease-out ${
+        className={`fixed inset-x-0 top-0 z-30 flex items-center justify-center px-6 transition-[height,background-color,box-shadow] duration-200 ease-out md:px-10 ${
           scrolled
             ? 'bg-[color:var(--brand-bg)] shadow-[0_1px_0_var(--brand-separator)]'
             : 'bg-transparent shadow-none'
@@ -96,63 +95,73 @@ export default function Navbar({ searchItems = [] }: { searchItems?: SearchItem[
       >
         {/* Full-width bar: 24px side padding on mobile, 40px on desktop (px-6 → md:px-10). */}
         <div className="flex h-full w-full items-center justify-between">
-        <div className="flex items-center gap-2">
-          {!isHome && (
-            <Link
-              href="/"
-              aria-label="Back to home"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border-none bg-transparent text-[color:var(--ifm-font-color-base)] no-underline transition hover:text-brand-green active:text-brand-green-pressed"
-            >
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 12H4" />
-                <path d="M10 6l-6 6 6 6" />
-              </svg>
-            </Link>
-          )}
-          <Link href="/" data-navbar-logo className="flex items-center no-underline">
-            <img
-              src={asset('/img/openlogo.svg')}
-              alt="OpenAPI Initiative"
-              /* Mobile: fixed 121px width (height follows the 228×68 ratio ≈ 36px).
-                 Desktop rests at the design's full 227×68. The 227 is the
-                 design's box; the SVG is 228×68, so pinning the width shaves a
-                 sub-pixel rather than distorting anything visibly. Scrolled
-                 drops to 40px tall and goes back to w-auto so the width tracks
-                 the animating height rather than snapping to a second fixed
-                 number. */
-              className={`navbar-logo-img h-auto w-[121px] transition-[height] duration-200 ease-out ${
-                scrolled ? 'md:h-10 md:w-auto' : 'md:h-[68px] md:w-[227px]'
-              }`}
-            />
-          </Link>
-        </div>
-
-        {/* Desktop actions */}
-        <div className="hidden items-center gap-8 md:flex">
-          <ShareButton onClick={handleShare} />
-          <SearchButton onClick={() => setSearchOpen(true)} />
-          <ThemeToggle scrolled={scrolled} />
-        </div>
-
-        {/* Mobile hamburger */}
-        <button
-          type="button"
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Open menu"
-          aria-expanded={menuOpen}
-          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border-none bg-transparent text-[color:var(--ifm-font-color-base)] transition hover:text-brand-green active:text-brand-green-pressed md:hidden"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-            {menuOpen ? (
-              <path d="M6 6l12 12M6 18L18 6" />
-            ) : (
-              <>
-                <path d="M4 7h16" />
-                <path d="M4 17h16" />
-              </>
+          <div className="flex items-center gap-2">
+            {!isHome && (
+              <Link
+                href="/"
+                aria-label="Back to home"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border-none bg-transparent text-[color:var(--ifm-font-color-base)] no-underline transition hover:text-brand-green active:text-brand-green-pressed"
+              >
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M20 12H4" />
+                  <path d="M10 6l-6 6 6 6" />
+                </svg>
+              </Link>
             )}
-          </svg>
-        </button>
+            <Link href="/" data-navbar-logo className="flex items-center no-underline">
+              <img
+                src={asset('/img/openlogo.svg')}
+                alt="OpenAPI Initiative"
+                className={`navbar-logo-img h-auto w-[121px] transition-[height] duration-200 ease-out ${
+                  scrolled ? 'md:h-10 md:w-auto' : 'md:h-[68px] md:w-[227px]'
+                }`}
+              />
+            </Link>
+          </div>
+
+          {/* Desktop actions */}
+          <div className="hidden items-center gap-8 md:flex">
+            <ShareButton onClick={handleShare} />
+            <SearchButton onClick={() => setSearchOpen(true)} />
+            <ThemeToggle scrolled={scrolled} />
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Open menu"
+            aria-expanded={menuOpen}
+            className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border-none bg-transparent text-[color:var(--ifm-font-color-base)] transition hover:text-brand-green active:text-brand-green-pressed md:hidden"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              {menuOpen ? (
+                <path d="M6 6l12 12M6 18L18 6" />
+              ) : (
+                <>
+                  <path d="M4 7h16" />
+                  <path d="M4 17h16" />
+                </>
+              )}
+            </svg>
+          </button>
         </div>
       </nav>
 
@@ -164,7 +173,7 @@ export default function Navbar({ searchItems = [] }: { searchItems?: SearchItem[
             paddingTop: 'env(safe-area-inset-top)',
             height: 'calc(4rem + env(safe-area-inset-top))',
           }}
-          className="fixed inset-x-0 top-0 z-40 flex items-center justify-between bg-white px-6 [[data-theme=dark]_&]:bg-[#15191c] md:hidden"
+          className="fixed inset-x-0 top-0 z-40 flex items-center justify-between bg-white px-6 md:hidden [[data-theme=dark]_&]:bg-[#15191c]"
         >
           <div className="flex items-center gap-6 text-[#15191c] [[data-theme=dark]_&]:text-white">
             <button
@@ -195,9 +204,17 @@ export default function Navbar({ searchItems = [] }: { searchItems?: SearchItem[
             type="button"
             aria-label="Close menu"
             onClick={() => setMenuOpen(false)}
-            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border-none bg-transparent text-[#15191c] transition hover:text-brand-green active:text-brand-green-pressed [[data-theme=dark]_&]:text-white"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border-none bg-transparent text-[#15191c] transition hover:text-brand-green active:text-brand-green-pressed [[data-theme=dark]_&]:text-white [[data-theme=dark]_&]:hover:text-brand-green [[data-theme=dark]_&]:active:text-brand-green-pressed"
           >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
               <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           </button>

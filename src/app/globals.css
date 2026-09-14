@@ -114,6 +114,10 @@ body {
   padding-top: calc(var(--navbar-h) + env(safe-area-inset-top));
 }
 
+#page:has(> [data-flat-bg]) {
+  background-image: none;
+}
+
 .avatar-placeholder {
   background-image: var(--avatar-ph-light, url('/img/placeholder_light.svg'));
   background-size: cover;

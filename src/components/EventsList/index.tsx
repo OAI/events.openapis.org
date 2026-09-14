@@ -12,6 +12,7 @@ import PhotoLightbox from '../PhotoLightbox';
 import { galleryPhotos, galleryPhotoSrcs, tileWidth } from '@/lib/galleryPhotos';
 
 interface Speaker {
+  slug: string;
   name: string;
   position: string;
   photo: string;
@@ -174,9 +175,8 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
             </div>
           )}
 
-          {/* Become a Speaker — MOBILE ONLY, directly under the featured card
-              (aligned with the card's content at 24px). On desktop it instead sits
-              below the Featured Speakers marquee. */}
+          {/* Become a Speaker — hidden for now; there is nowhere for it to
+              link yet. Restore by un-commenting this block.
           <div className="mb-10 px-6 md:hidden">
             <a
               href="#"
@@ -203,6 +203,7 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
               </span>
             </a>
           </div>
+          */}
 
           {/* Other Events Grid — edge-to-edge on mobile, padded on desktop */}
           {otherEvents.length > 0 && (
@@ -319,7 +320,9 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
                 <div className="speakers-marquee__track">
                   {speakersRow1.map((s, i) => (
                     <div key={`r1-${i}`} className="speakers-marquee__item">
-                      <SpeakerCard variant="dark" {...s} />
+                      <Link href={`/speakers/${s.slug}`} className="block no-underline">
+                        <SpeakerCard variant="dark" {...s} />
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -330,15 +333,17 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
                 <div className="speakers-marquee__track">
                   {speakersRow2.map((s, i) => (
                     <div key={`r2-${i}`} className="speakers-marquee__item">
-                      <SpeakerCard variant="dark" {...s} />
+                      <Link href={`/speakers/${s.slug}`} className="block no-underline">
+                        <SpeakerCard variant="dark" {...s} />
+                      </Link>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Become a Speaker — DESKTOP ONLY, sits 61px below the marquee. On
-                mobile its copy lives under the featured card instead. */}
+            {/* Become a Speaker — hidden for now; there is nowhere for it to
+                link yet. Restore by un-commenting this block.
             <div className="mx-auto mt-[61px] hidden max-w-[1408px] px-6 md:block md:px-[104px]">
               <a
                 href="#"
@@ -365,13 +370,14 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
                 </span>
               </a>
             </div>
+            */}
 
             {/* Mobile: Vertical speaker list */}
             <div className="mb-10 grid grid-cols-1 gap-2.5 md:hidden">
               {allSpeakers.map((s) => (
-                <div key={s.name}>
+                <Link key={s.name} href={`/speakers/${s.slug}`} className="block no-underline">
                   <SpeakerCard variant="dark" {...s} />
-                </div>
+                </Link>
               ))}
             </div>
           </section>

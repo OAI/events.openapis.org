@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import Link from 'next/link';
 import { SESSION_PARAM, sessionHref, sessionKey } from '@/lib/sessionKey';
 import EventCard from '../EventCard';
 import OaiFooter from '../OaiFooter';
@@ -20,12 +21,36 @@ interface Speaker {
 }
 
 interface AgendaSpeaker {
+  // Absent only for the legacy singular `speaker:` form, which is a bare name
+  // with no registry entry — such a row simply isn't linkable.
+  slug?: string;
   name: string;
   position?: string;
   photo?: string;
   badges?: string[];
   urls?: SpeakerLink[];
   tag?: string;
+}
+
+function SpeakerRowLink({
+  slug,
+  onNavigate,
+  children,
+}: {
+  slug?: string;
+  onNavigate: () => void;
+  children: React.ReactNode;
+}) {
+  if (!slug) return <div className="flex flex-1 items-center gap-3">{children}</div>;
+  return (
+    <Link
+      href={`/speakers/${slug}`}
+      onClick={onNavigate}
+      className="group flex flex-1 items-center gap-3 no-underline"
+    >
+      {children}
+    </Link>
+  );
 }
 
 interface AgendaSession {
@@ -468,7 +493,7 @@ export default function EventDetail({
         {selectedSession &&
           (() => {
             const [startTime, endTime] = splitTimeRange(selectedSession.time);
-            const sessionSpeakers =
+            const sessionSpeakers: AgendaSpeaker[] =
               selectedSession.speakers && selectedSession.speakers.length > 0
                 ? selectedSession.speakers
                 : selectedSession.speaker
@@ -640,7 +665,7 @@ export default function EventDetail({
                             <div className="flex flex-1 flex-col gap-4">
                               {sessionSpeakers.map((sp, idx) => (
                                 <div key={`${sp.name}-${idx}`} className="flex items-center gap-6">
-                                  <div className="flex flex-1 items-center gap-3">
+                                  <SpeakerRowLink slug={sp.slug} onNavigate={closeSession}>
                                     {hasPhoto(sp) ? (
                                       <img
                                         src={asset(photoSrc(sp.photo))}
@@ -655,7 +680,7 @@ export default function EventDetail({
                                       />
                                     )}
                                     <div className="flex min-w-0 flex-col gap-1">
-                                      <span className="font-onest text-base font-bold leading-[1.2] tracking-oai text-[#15191c] [[data-theme=dark]_&]:text-white">
+                                      <span className="font-onest text-base font-bold leading-[1.2] tracking-oai text-[#15191c] transition-colors group-hover:text-brand-green [[data-theme=dark]_&]:text-white [[data-theme=dark]_&]:group-hover:text-brand-green">
                                         {sp.name}
                                       </span>
                                       {sp.position && (
@@ -664,11 +689,11 @@ export default function EventDetail({
                                         </span>
                                       )}
                                     </div>
-                                  </div>
+                                  </SpeakerRowLink>
                                   <SpeakerLinks
                                     name={sp.name}
                                     urls={sp.urls}
-                                    className="flex h-12 w-12 flex-shrink-0 items-center justify-center text-[#15191c] transition-colors hover:text-brand-green [[data-theme=dark]_&]:text-white"
+                                    className="flex h-12 w-12 flex-shrink-0 items-center justify-center text-[#15191c] transition-colors hover:text-brand-green [[data-theme=dark]_&]:text-white [[data-theme=dark]_&]:hover:text-brand-green"
                                   />
                                 </div>
                               ))}

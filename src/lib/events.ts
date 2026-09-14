@@ -16,6 +16,7 @@ import {
 export type { SpeakerLink };
 
 export interface Speaker {
+  slug: string;
   name: string;
   position: string;
   photo: string;
@@ -27,6 +28,7 @@ export interface Speaker {
 
 // --- Event detail page (agenda) ---------------------------------------------
 export interface AgendaSpeaker {
+  slug: string;
   name: string;
   position?: string;
   photo?: string;
@@ -68,6 +70,7 @@ export interface ScheduleSlot {
 }
 
 export interface TalkSpeaker {
+  slug: string;
   name: string;
   position: string;
   photo: string;
@@ -212,6 +215,7 @@ function isoEndDate(
 
 function toSpeaker(s: ResolvedSpeaker): Speaker {
   return {
+    slug: s.slug,
     name: s.name,
     position: s.position,
     photo: s.photo,
@@ -258,6 +262,7 @@ function hydrateEvent(raw: RawEvent): EventItem {
             videoUrl: session.videoUrl,
             description: talkSlug ? talkDescBySlug.get(talkSlug) : undefined,
             speakers: resolved.map((s) => ({
+              slug: s.slug,
               name: s.name,
               position: s.position,
               photo: s.photo,
