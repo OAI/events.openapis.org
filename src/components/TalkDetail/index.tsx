@@ -124,43 +124,30 @@ export default function TalkDetail({
                 </div>
               )}
 
-              {/* Slides / recording buttons — shown only when a link exists.
-                  If neither is available, a disabled "View slides" button keeps
-                  the card's original shape. */}
-              <div className="flex flex-col gap-3 pt-3 md:flex-row">
-                {slidesUrl ? (
-                  <a
-                    href={slidesUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-green inline-flex h-[56px] w-full cursor-pointer items-center justify-center gap-2.5 whitespace-nowrap rounded-[20px] border-none px-6 py-1.5 font-onest text-base font-bold tracking-oai text-[#15191c] no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(101,209,0,0.4)] active:translate-y-0 active:shadow-none md:h-[64px] md:w-auto md:px-6 md:text-lg"
-                  >
-                    View slides
-                  </a>
-                ) : (
-                  !videoUrl && (
-                    <button
-                      type="button"
-                      disabled
-                      aria-disabled="true"
-                      title="Slides not available"
-                      className="inline-flex h-[56px] w-full cursor-not-allowed items-center justify-center gap-2.5 whitespace-nowrap rounded-[20px] border-none bg-[rgba(21,25,28,0.12)] px-6 py-1.5 font-onest text-base font-bold tracking-oai text-[rgba(21,25,28,0.4)] md:h-[64px] md:w-auto md:px-6 md:text-lg"
+              {(slidesUrl || videoUrl) && (
+                <div className="flex flex-col gap-3 pt-3 md:flex-row">
+                  {slidesUrl && (
+                    <a
+                      href={slidesUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-green inline-flex h-[56px] w-full cursor-pointer items-center justify-center gap-2.5 whitespace-nowrap rounded-[20px] border-none px-6 py-1.5 font-onest text-base font-bold tracking-oai text-[#15191c] no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(101,209,0,0.4)] active:translate-y-0 active:shadow-none md:h-[64px] md:w-auto md:px-6 md:text-lg"
                     >
                       View slides
-                    </button>
-                  )
-                )}
-                {videoUrl && (
-                  <a
-                    href={videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex h-[56px] w-full cursor-pointer items-center justify-center gap-2.5 whitespace-nowrap rounded-[20px] border-2 border-[#15191c] bg-transparent px-6 py-1.5 font-onest text-base font-bold tracking-oai text-[#15191c] no-underline transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 md:h-[64px] md:w-auto md:px-6 md:text-lg"
-                  >
-                    Watch recording
-                  </a>
-                )}
-              </div>
+                    </a>
+                  )}
+                  {videoUrl && (
+                    <a
+                      href={videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-[56px] w-full cursor-pointer items-center justify-center gap-2.5 whitespace-nowrap rounded-[20px] border-2 border-[#15191c] bg-transparent px-6 py-1.5 font-onest text-base font-bold tracking-oai text-[#15191c] no-underline transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 md:h-[64px] md:w-auto md:px-6 md:text-lg"
+                    >
+                      Watch recording
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>

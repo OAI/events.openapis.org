@@ -14,7 +14,7 @@ const onest = Onest({
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://events.openapis.org';
-const OG_IMAGE = asset('/img/docusaurus-social-card.jpg');
+const OG_IMAGE = asset('/img/opengraph_logo.jpg');
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -23,7 +23,25 @@ export const metadata: Metadata = {
     template: '%s | OpenAPI Events',
   },
   description: 'OpenAPI events and conferences',
-  icons: { icon: asset('/img/favicon.ico') },
+  icons: {
+    icon: [
+      { url: asset('/img/favicon/favicon.ico'), sizes: 'any' },
+      { url: asset('/img/favicon.svg'), type: 'image/svg+xml' },
+      { url: asset('/img/favicon/favicon-16x16.png'), sizes: '16x16', type: 'image/png' },
+      { url: asset('/img/favicon/favicon-32x32.png'), sizes: '32x32', type: 'image/png' },
+      {
+        url: asset('/img/favicon/android-chrome-192x192.png'),
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        url: asset('/img/favicon/android-chrome-512x512.png'),
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
+    apple: { url: asset('/img/favicon/apple-touch-icon.png'), sizes: '180x180', type: 'image/png' },
+  },
   openGraph: {
     title: 'OpenAPI Events',
     description: 'OpenAPI events and conferences',
