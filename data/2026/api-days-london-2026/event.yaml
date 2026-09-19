@@ -7,39 +7,51 @@ status: upcoming
 image: /img/events/api-days-london-2026/cover.jpg
 description: >-
   The OpenAPI Initiative returns to API Days London in 2026 with a dedicated
-  OpenAPI track at Convene Sancroft, St. Paul's — opening with OpenAPI in the age
-  of AI, what 1,637 'x-' extensions found in the wild say about the edges of the
-  specification, and what's new in OpenAPI 3.2. The rest of the program will be
-  announced closer to the event.
+  OpenAPI track at Convene Sancroft, St. Paul's — opening with OpenAPI in the
+  age of AI, what 1,637 'x-' extensions found in the wild say about the edges
+  of the specification, practical tactics for upgrading to OpenAPI 3.1 and
+  beyond, Arazzo workflows that AI agents can execute, and the state of
+  proposals for API security profiles in OpenAPI.
 permalink: /events/api-days-london-2026
 speakers:
   - erik-wilde
+  - frank-kilcommins
   - kin-lane
   - lorna-mitchell
+  - chris-wood
 tags:
   - event
 metaDescription: >-
-  The OpenAPI Initiative track at API Days London 2026 — OpenAPI in the age of AI,
-  what OpenAPI extensions map out, and what's new in OpenAPI 3.2.
+  The OpenAPI Initiative track at API Days London 2026 — OpenAPI in the age of
+  AI, what OpenAPI extensions map out, upgrading to 3.1+, Arazzo agent
+  workflows, and API security profile proposals.
 agenda:
   October 1:
     OpenAPI Track:
-      - title: OpenAPI Track Welcome and OpenAPI in the Age of AI
-        time: 9:30am–9:55am
+      - title: OpenAPI Track Welcome
+        time: 9:30am–9:35am
         speaker: erik-wilde
         permalink: /events/talks/api-days-london-2026-welcome-openapi-age-of-ai
+      - title: 'Beyond OpenAPI: API Workflows That AI Agents Can Actually Execute'
+        time: 9:35am–9:55am
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-london-2026-workflows-ai-agents-execute
       - title: OpenAPI Extensions Are Not a Mess, They Are a Map
-        time: 10:00am–10:25am
+        time: 9:55am–10:20am
         speaker: kin-lane
         permalink: /events/talks/api-days-london-2026-openapi-extensions-map
-      - title: What's new in OpenAPI 3.2
-        time: 10:30am–10:55am
+      - title: 'OpenAPI Upgrades: The What, the Why and the How'
+        time: 10:20am–10:45am
         speaker: lorna-mitchell
-        permalink: /events/talks/api-days-london-2026-whats-new-openapi-3-2
+        permalink: /events/talks/api-days-london-2026-openapi-upgrades
+      - title: The State of Proposals for API Security Profiles in OpenAPI
+        time: 10:45am–11:10am
+        speaker: chris-wood
+        permalink: /events/talks/api-days-london-2026-api-security-profiles
 talks:
   - slug: api-days-london-2026-welcome-openapi-age-of-ai
-    title: OpenAPI Track Welcome and OpenAPI in the Age of AI
-    time: 9:30am–9:55am
+    title: OpenAPI Track Welcome
+    time: 9:30am–9:35am
     category: OpenAPI Track
     speakers:
       - erik-wilde
@@ -50,9 +62,36 @@ talks:
       of ways? We look at how OpenAPI can help you, how OAI can help you using
       OpenAPI better, and how AI means that you have to slightly adjust the way
       you design and manage your APIs.
+  - slug: api-days-london-2026-workflows-ai-agents-execute
+    title: 'Beyond OpenAPI: API Workflows That AI Agents Can Actually Execute'
+    time: 9:35am–9:55am
+    category: OpenAPI Track
+    speakers:
+      - frank-kilcommins
+    description: >-
+      AI agents can call individual API endpoints, but multi-step workflows?
+      That's where they struggle. OpenAPI describes what each endpoint does, but
+      not how to orchestrate them into business processes. Agents are left to
+      infer sequencing, handle conditional logic, and manage state across
+      calls—burning tokens and producing unpredictable results. The Arazzo
+      Specification solves this by providing machine-readable workflow
+      descriptions that agents can execute directly. And Arazzo 1.1 takes it
+      further, extending support from OpenAPI-based REST services to
+      AsyncAPI-defined event systems, enabling true workflow orchestration across
+      synchronous and asynchronous boundaries. This talk explores what's new in
+      Arazzo 1.1: AsyncAPI support for event-driven workflows, enhanced selector
+      support using JSONPath and XPath for precise data extraction, and chained
+      workflow composition for reusable process libraries. These capabilities
+      transform how agents interact with APIs—from inferring workflows to
+      executing defined processes. Whether you're building automation across
+      distributed systems, exposing use-case-oriented capabilities to AI agents,
+      or designing MCP servers with governed capability access, Arazzo 1.1
+      provides the declarative fabric for predictable, testable, agent-executable
+      workflows. If OpenAPI tells agents what they can call, Arazzo tells them
+      what they should do—and how to do it reliably.
   - slug: api-days-london-2026-openapi-extensions-map
     title: OpenAPI Extensions Are Not a Mess, They Are a Map
-    time: 10:00am–10:25am
+    time: 9:55am–10:20am
     category: OpenAPI Track
     speakers:
       - kin-lane
@@ -82,20 +121,37 @@ talks:
       contract. It is operational metadata about the contract, and it belongs
       alongside it, in Overlays and APIs.json, rather than crammed inside an
       OpenAPI.
-  - slug: api-days-london-2026-whats-new-openapi-3-2
-    title: What's new in OpenAPI 3.2
-    time: 10:30am–10:55am
+  - slug: api-days-london-2026-openapi-upgrades
+    title: 'OpenAPI Upgrades: The What, the Why and the How'
+    time: 10:20am–10:45am
     category: OpenAPI Track
     speakers:
       - lorna-mitchell
     description: >-
-      Keeping up with all the new standards can be hard work! Instead, join this
-      session for an overview of what's new in the OpenAPI 3.2 release, so you'll
-      know what to expect when it's time to upgrade. You'll hear about support for
-      more HTTP methods, multipart formats, and handling the full query string as
-      a single input. There's also a major upgrade to tags, including nesting,
-      multiple tag types, and additional metadata—replacing the extensions you may
-      already be using with tags. The session will also cover document identities,
-      new security scheme additions, and improved support for XML-format APIs.
-      Come along to learn more about the latest changes and prepare for the
-      future!
+      Plenty of teams produced an OpenAPI 3.0 description years ago and have been
+      using it ever since; the tooling has moved on, and they haven't. The upgrade
+      to 3.1 and beyond is achievable and brings many benefits: proper JSON Schema
+      alignment, nullable retired in favour of type arrays, webhooks described
+      where they belong, and $ref that plays nicely with a description beside it.
+      In this session you'll hear practical tactics for making the jump, what to
+      expect along the way, and how to get the best from the tools that have
+      appeared while you weren't looking. Find out what your API description
+      could be doing for you instead of quietly rotting in a repository.
+  - slug: api-days-london-2026-api-security-profiles
+    title: The State of Proposals for API Security Profiles in OpenAPI
+    time: 10:45am–11:10am
+    category: OpenAPI Track
+    speakers:
+      - chris-wood
+    description: >-
+      OpenAPI Security Scheme Objects are a point-in-time snapshot of security
+      that is increasingly duplicated in dedicated security profiles like FAPI and
+      GNAP. OpenAPI needs a way to align more closely with security requirements,
+      while also dovetailing with existing approaches like OpenID Discovery, which
+      allows clients and agents alike to scaffold code and make runtime decisions
+      meaningfully. This session walks through the state of the current proposals
+      to enhance the OpenAPI Specification and unlock these capabilities. It will
+      describe the proposed additions to OpenAPI, and how they might improve how
+      security requirements are represented in OpenAPI in the future. We'll touch
+      on the proposal's status and demonstrate meaningful examples showing the
+      value of these improvements.
