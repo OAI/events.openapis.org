@@ -73,6 +73,8 @@ interface EventDetailProps {
   type: string;
   status: 'active' | 'upcoming' | 'finished';
   description?: string;
+  ticketUrl?: string;
+  ticketLabel?: string;
   agenda?: {
     [date: string]: {
       [category: string]: AgendaSession[];
@@ -110,6 +112,8 @@ export default function EventDetail({
   type,
   status,
   description,
+  ticketUrl,
+  ticketLabel,
   agenda = {},
   speakers = [],
   sponsors = [],
@@ -244,6 +248,8 @@ export default function EventDetail({
                 type={type}
                 permalink=""
                 status={status}
+                ticketUrl={ticketUrl}
+                ticketLabel={ticketLabel}
                 featured
               />
             </div>

@@ -72,6 +72,17 @@
       "minLength": 1,
       "description": "Prose blurb shown on the event page."
     },
+    "ticketUrl": {
+      "type": "string",
+      "pattern": "^https?://.+",
+      "description": "Where the featured card's ticket CTA links — the organiser's registration or ticket page. Opens in a new tab. The featured card always shows the CTA — without a ticketUrl it falls back to linking at the event page itself."
+    },
+    "ticketLabel": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Overrides the CTA label, which defaults to \"Get a free ticket\" — wrong for any event that charges. Ignored without ticketUrl.",
+      "examples": ["Register", "Buy tickets"]
+    },
     "permalink": {
       "type": "string",
       "pattern": "^/events/[a-z0-9]+(-[a-z0-9]+)*$",

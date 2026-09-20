@@ -18,6 +18,8 @@ export interface EventDetailData {
   type: string;
   status: 'active' | 'upcoming' | 'finished';
   description?: string;
+  ticketUrl?: string;
+  ticketLabel?: string;
   agenda?: AgendaByDate;
   sponsors?: Sponsor[];
   metaTitle?: string;
@@ -35,6 +37,8 @@ export function getEventDetail(slug: string): EventDetailData | undefined {
     type: event.type,
     status: event.status,
     description: event.description,
+    ticketUrl: event.ticketUrl,
+    ticketLabel: event.ticketLabel,
     agenda: event.agenda,
     sponsors: event.sponsors,
     metaTitle: event.metaTitle,

@@ -30,6 +30,8 @@ interface EventItem {
   image: string;
   startDate?: string;
   endDate?: string;
+  ticketUrl?: string;
+  ticketLabel?: string;
   speakers: Speaker[];
 }
 
@@ -170,6 +172,8 @@ export default function EventsList({ items, pastItems = [] }: EventsListProps) {
                 status={featured.status as 'active' | 'upcoming' | 'finished'}
                 startDate={featured.startDate}
                 endDate={featured.endDate}
+                ticketUrl={featured.ticketUrl}
+                ticketLabel={featured.ticketLabel}
                 featured
               />
             </div>

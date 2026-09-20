@@ -106,6 +106,10 @@ export interface EventItem {
   startDate?: string;
   endDate?: string;
   description: string;
+  // Registration/ticket page for the featured card's CTA. Without one the CTA
+  // still renders and falls back to the event page — see EventCard.
+  ticketUrl?: string;
+  ticketLabel?: string;
   permalink: string;
   speakers: Speaker[];
   tags: string[];

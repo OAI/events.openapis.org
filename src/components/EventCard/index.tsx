@@ -17,7 +17,13 @@ interface EventCardProps {
   featured?: boolean;
   startDate?: string;
   endDate?: string;
+  ticketUrl?: string;
+  ticketLabel?: string;
 }
+
+// Shared by the live link and the closed-sale button so the two cannot drift.
+const CTA_CLASS =
+  'btn-black inline-flex h-[56px] items-center justify-center self-start rounded-[20px] border-none px-[43px] py-1.5 font-onest text-base font-bold leading-[110%] tracking-oai text-white transition-colors duration-200 md:h-[80px] md:px-8 md:py-6 md:text-2xl md:leading-[110%]';
 
 // `now` is 0 until mounted (see useNow), which is also when the countdown must
 // render nothing — the server has no clock to count from.
@@ -43,6 +49,8 @@ export default function EventCard({
   featured = false,
   startDate,
   endDate,
+  ticketUrl,
+  ticketLabel = 'Get a free ticket',
 }: EventCardProps) {
   // Live phase, so a card that starts or ends after the last deploy still reads
   // correctly. Before mount this is the authored status, so SSR markup matches.
@@ -218,28 +226,41 @@ export default function EventCard({
           </>
         )}
 
-        {/* Get a free ticket (featured) or Free entry tag */}
+        {/* Ticket CTA (featured) or Free entry tag. The button is part of the
+            featured card's shape, so it always renders at full strength; only
+            where it points changes. Disabled is reserved for a finished event,
+            where the sale really is closed.
+
+            pointer-events-auto on the live variants: the content box above is
+            transparent to pointers so taps reach the stretched card link, and
+            the CTA has to opt back in. */}
         {featured ? (
           <div className="flex w-full flex-col items-stretch gap-2 md:flex-row md:items-center md:gap-8">
             {finished ? (
-              /* Past event — tickets are closed, so the CTA is shown disabled. */
-              <button
-                disabled
-                className="btn-black inline-flex h-[56px] items-center justify-center self-start rounded-[20px] border-none px-[43px] py-1.5 font-onest text-base font-bold leading-[110%] tracking-oai text-white transition-colors duration-200 md:h-[80px] md:px-8 md:py-6 md:text-2xl md:leading-[110%]"
-              >
-                Get a free ticket
+              <button disabled className={CTA_CLASS}>
+                {ticketLabel}
               </button>
+            ) : ticketUrl ? (
+              <a
+                href={ticketUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${CTA_CLASS} pointer-events-auto cursor-pointer no-underline hover:text-white`}
+              >
+                {ticketLabel}
+              </a>
             ) : permalink ? (
+              /* No ticket link authored yet — fall back to the event page, which
+                 is where someone clicking this wants to end up anyway. */
               <Link
                 href={permalink}
-                className="btn-black pointer-events-auto inline-flex h-[56px] cursor-pointer items-center justify-center self-start rounded-[20px] border-none px-[43px] py-1.5 font-onest text-base font-bold leading-[110%] tracking-oai text-white no-underline transition-colors duration-200 hover:text-white md:h-[80px] md:px-8 md:py-6 md:text-2xl md:leading-[110%]"
+                className={`${CTA_CLASS} pointer-events-auto cursor-pointer no-underline hover:text-white`}
               >
-                Get a free ticket
+                {ticketLabel}
               </Link>
             ) : (
-              <button className="btn-black inline-flex h-[56px] cursor-pointer items-center justify-center self-start rounded-[20px] border-none px-[43px] py-1.5 font-onest text-base font-bold leading-[110%] tracking-oai text-white transition-colors duration-200 md:h-[80px] md:px-8 md:py-6 md:text-2xl md:leading-[110%]">
-                Get a free ticket
-              </button>
+              /* The event page's own hero: no ticket link and nowhere to go. */
+              <button className={`${CTA_CLASS} cursor-pointer`}>{ticketLabel}</button>
             )}
             {phase === 'ongoing' && (
               <div className="flex flex-row items-center gap-2 whitespace-nowrap font-onest font-bold tracking-oai text-white md:text-black md:[[data-theme=dark]_&]:text-white">

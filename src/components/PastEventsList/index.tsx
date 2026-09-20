@@ -23,6 +23,8 @@ interface EventItem {
   image: string;
   startDate?: string;
   endDate?: string;
+  ticketUrl?: string;
+  ticketLabel?: string;
   speakers: Speaker[];
 }
 

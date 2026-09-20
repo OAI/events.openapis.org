@@ -18,6 +18,8 @@ export default function Home() {
     image: event.image,
     startDate: event.startDate,
     endDate: event.endDate,
+    ticketUrl: event.ticketUrl,
+    ticketLabel: event.ticketLabel,
     speakers: event.speakers,
   });
 

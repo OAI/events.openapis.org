@@ -54,6 +54,8 @@ export default async function EventPage({ params }: PageProps) {
       type={detail.type}
       status={detail.status}
       description={detail.description}
+      ticketUrl={detail.ticketUrl}
+      ticketLabel={detail.ticketLabel}
       agenda={detail.agenda}
       sponsors={detail.sponsors}
     />
