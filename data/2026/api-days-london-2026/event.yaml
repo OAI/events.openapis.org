@@ -16,8 +16,8 @@ permalink: /events/api-days-london-2026
 speakers:
   - erik-wilde
   - frank-kilcommins
-  - kin-lane
   - lorna-mitchell
+  - kin-lane
   - chris-wood
 tags:
   - event
@@ -36,14 +36,14 @@ agenda:
         time: 9:35am–9:55am
         speaker: frank-kilcommins
         permalink: /events/talks/api-days-london-2026-workflows-ai-agents-execute
-      - title: OpenAPI Extensions Are Not a Mess, They Are a Map
-        time: 9:55am–10:20am
-        speaker: kin-lane
-        permalink: /events/talks/api-days-london-2026-openapi-extensions-map
       - title: 'OpenAPI Upgrades: The What, the Why and the How'
-        time: 10:20am–10:45am
+        time: 9:55am–10:20am
         speaker: lorna-mitchell
         permalink: /events/talks/api-days-london-2026-openapi-upgrades
+      - title: OpenAPI Extensions Are Not a Mess, They Are a Map
+        time: 10:20am–10:45am
+        speaker: kin-lane
+        permalink: /events/talks/api-days-london-2026-openapi-extensions-map
       - title: The State of Proposals for API Security Profiles in OpenAPI
         time: 10:45am–11:10am
         speaker: chris-wood
@@ -89,9 +89,25 @@ talks:
       provides the declarative fabric for predictable, testable, agent-executable
       workflows. If OpenAPI tells agents what they can call, Arazzo tells them
       what they should do—and how to do it reliably.
+  - slug: api-days-london-2026-openapi-upgrades
+    title: 'OpenAPI Upgrades: The What, the Why and the How'
+    time: 9:55am–10:20am
+    category: OpenAPI Track
+    speakers:
+      - lorna-mitchell
+    description: >-
+      Plenty of teams produced an OpenAPI 3.0 description years ago and have been
+      using it ever since; the tooling has moved on, and they haven't. The upgrade
+      to 3.1 and beyond is achievable and brings many benefits: proper JSON Schema
+      alignment, nullable retired in favour of type arrays, webhooks described
+      where they belong, and $ref that plays nicely with a description beside it.
+      In this session you'll hear practical tactics for making the jump, what to
+      expect along the way, and how to get the best from the tools that have
+      appeared while you weren't looking. Find out what your API description
+      could be doing for you instead of quietly rotting in a repository.
   - slug: api-days-london-2026-openapi-extensions-map
     title: OpenAPI Extensions Are Not a Mess, They Are a Map
-    time: 9:55am–10:20am
+    time: 10:20am–10:45am
     category: OpenAPI Track
     speakers:
       - kin-lane
@@ -121,22 +137,6 @@ talks:
       contract. It is operational metadata about the contract, and it belongs
       alongside it, in Overlays and APIs.json, rather than crammed inside an
       OpenAPI.
-  - slug: api-days-london-2026-openapi-upgrades
-    title: 'OpenAPI Upgrades: The What, the Why and the How'
-    time: 10:20am–10:45am
-    category: OpenAPI Track
-    speakers:
-      - lorna-mitchell
-    description: >-
-      Plenty of teams produced an OpenAPI 3.0 description years ago and have been
-      using it ever since; the tooling has moved on, and they haven't. The upgrade
-      to 3.1 and beyond is achievable and brings many benefits: proper JSON Schema
-      alignment, nullable retired in favour of type arrays, webhooks described
-      where they belong, and $ref that plays nicely with a description beside it.
-      In this session you'll hear practical tactics for making the jump, what to
-      expect along the way, and how to get the best from the tools that have
-      appeared while you weren't looking. Find out what your API description
-      could be doing for you instead of quietly rotting in a repository.
   - slug: api-days-london-2026-api-security-profiles
     title: The State of Proposals for API Security Profiles in OpenAPI
     time: 10:45am–11:10am
