@@ -82,6 +82,7 @@
 
 **Chris Wood** — Ozone API
 
+- [API Days London 2026](/events/api-days-london-2026) — September 30 – October 1, 2026
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 - [API Days Helsinki 2025](/events/api-days-helsinki-2025) — June 3 – 4, 2025
 
@@ -197,6 +198,7 @@
 
 **Frank Kilcommins** — Jentic
 
+- [API Days London 2026](/events/api-days-london-2026) — September 30 – October 1, 2026
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 - [API Days Amsterdam 2026](/events/api-days-amsterdam-2026) — June 9 – 10, 2026
 - [API Days New York 2026](/events/api-days-new-york-2026) — May 13 – 14, 2026
