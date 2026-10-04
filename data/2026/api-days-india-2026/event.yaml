@@ -36,40 +36,49 @@ agenda:
         time: 11:00am–11:25am
         speaker: erik-wilde
         permalink: /events/talks/api-days-india-2026-welcome-openapi-age-of-ai
+        videoUrl: https://www.youtube.com/watch?v=SbB1kuWiNwU
       - title: 'Fixing API Chaos: A Practical, Open Method to Structure API Work'
         time: 11:30am–11:55am
         speaker: marjukka-niinioja
         permalink: /events/talks/api-days-india-2026-fixing-api-chaos
+        videoUrl: https://www.youtube.com/watch?v=tzECMYZD1EM
       - title: 'Beyond OpenAPI: API Workflows That AI Agents Can Actually Execute'
         time: 12:00pm–12:25pm
         speaker: frank-kilcommins
         permalink: /events/talks/api-days-india-2026-workflows-ai-agents-execute
+        videoUrl: https://www.youtube.com/watch?v=BcQwfDq9ujM
       - title: 'Beyond Request/Response: What AI Agents Actually Need From Your Event Streams'
         time: 12:30pm–12:55pm
         speaker: dakshitha-ratnayake
         permalink: /events/talks/api-days-india-2026-beyond-request-response-event-streams
+        videoUrl: https://www.youtube.com/watch?v=UxnvUOXtj70
       - title: 'When Linting Shrugs: Dynamic Checks for API Specs'
         time: 2:00pm–2:25pm
         speaker: naresh-jain
         permalink: /events/talks/api-days-india-2026-when-linting-shrugs
+        videoUrl: https://www.youtube.com/watch?v=7qxo7YCrr2I
       - title: OpenCollection – An Open Specification for Describing API Collections
         time: 2:30pm–2:55pm
         speaker: anoop-m-d
         permalink: /events/talks/api-days-india-2026-opencollection-api-collections
+        videoUrl: https://www.youtube.com/watch?v=p5Iz3myXPxg
       - title: 'Beyond OpenAPI and AsyncAPI: AI Agents Wrote the Spec, Code, and Tests – Now What?'
         time: 3:00pm–3:25pm
         speaker: peter-thomas
         permalink: /events/talks/api-days-india-2026-agents-wrote-spec-code-tests
+        videoUrl: https://www.youtube.com/watch?v=chnrDmUnovg
       - title: 'Contracts Earn Trust: API-First Delivery for Teams and for Agents'
         time: 4:00pm–4:25pm
         speaker: mike-holdsworth
         permalink: /events/talks/api-days-india-2026-contracts-earn-trust
+        videoUrl: https://www.youtube.com/watch?v=LqThgQaEc5w
       - title: 'From OpenAPI to OpenCLI: AI-Ready Operations for Modern API Platforms'
         time: 4:30pm–4:55pm
         speakers:
           - ranjith-n
           - lekshmi-a-m
         permalink: /events/talks/api-days-india-2026-openapi-to-opencli
+        videoUrl: https://www.youtube.com/watch?v=FNiggaS-1oM
 talks:
   - slug: api-days-india-2026-welcome-openapi-age-of-ai
     title: OpenAPI Track Welcome and OpenAPI in the Age of AI
@@ -84,6 +93,7 @@ talks:
       of ways? We look at how OpenAPI can help you, how OAI can help you using
       OpenAPI better, and how AI means that you have to slightly adjust the way
       you design and manage your APIs.
+    videoUrl: https://www.youtube.com/watch?v=SbB1kuWiNwU
   - slug: api-days-india-2026-fixing-api-chaos
     title: 'Fixing API Chaos: A Practical, Open Method to Structure API Work'
     time: 11:30am–11:55am
@@ -106,6 +116,7 @@ talks:
       Kong, MuleSoft, AWS, etc.) and can be applied immediately in enterprise
       environments. This is not a lifecycle model. It is a way to make API work
       visible, structured, and improvable.
+    videoUrl: https://www.youtube.com/watch?v=tzECMYZD1EM
   - slug: api-days-india-2026-workflows-ai-agents-execute
     title: 'Beyond OpenAPI: API Workflows That AI Agents Can Actually Execute'
     time: 12:00pm–12:25pm
@@ -133,6 +144,7 @@ talks:
       provides the declarative fabric for predictable, testable, agent-executable
       workflows. If OpenAPI tells agents what they can call, Arazzo tells them
       what they should do—and how to do it reliably.
+    videoUrl: https://www.youtube.com/watch?v=BcQwfDq9ujM
   - slug: api-days-india-2026-beyond-request-response-event-streams
     title: 'Beyond Request/Response: What AI Agents Actually Need From Your Event Streams'
     time: 12:30pm–12:55pm
@@ -160,6 +172,7 @@ talks:
       alongside MCP and OpenAPI in the emerging agent stack. You will leave with
       three diagnostic questions to evaluate your own event-driven interfaces and
       a clear sense of what is production-ready today and where the gaps remain.
+    videoUrl: https://www.youtube.com/watch?v=UxnvUOXtj70
   - slug: api-days-india-2026-when-linting-shrugs
     title: 'When Linting Shrugs: Dynamic Checks for API Specs'
     time: 2:00pm–2:25pm
@@ -182,6 +195,7 @@ talks:
       where this fits in an API delivery workflow so teams can use linting for
       fast structural feedback and dynamic validation for deeper confidence before
       specs reach consumers.
+    videoUrl: https://www.youtube.com/watch?v=7qxo7YCrr2I
   - slug: api-days-india-2026-opencollection-api-collections
     title: OpenCollection – An Open Specification for Describing API Collections
     time: 2:30pm–2:55pm
@@ -199,6 +213,7 @@ talks:
       solve, the principles that guided the design of the specification, and why
       we believe open and interoperable standards are essential for the future of
       API tooling.
+    videoUrl: https://www.youtube.com/watch?v=p5Iz3myXPxg
   - slug: api-days-india-2026-agents-wrote-spec-code-tests
     title: 'Beyond OpenAPI and AsyncAPI: AI Agents Wrote the Spec, Code, and Tests – Now What?'
     time: 3:00pm–3:25pm
@@ -223,6 +238,7 @@ talks:
       regenerate code on demand, the code is disposable - what's worth governing
       is the spec, the checks, the contracts, and the evidence of what actually
       ran.
+    videoUrl: https://www.youtube.com/watch?v=chnrDmUnovg
   - slug: api-days-india-2026-contracts-earn-trust
     title: 'Contracts Earn Trust: API-First Delivery for Teams and for Agents'
     time: 4:00pm–4:25pm
@@ -240,6 +256,7 @@ talks:
       shippable. Attendees will walk away with a new mental model for translating
       plain-English intent into reliable, autonomous action behind trustworthy API
       guardrails.
+    videoUrl: https://www.youtube.com/watch?v=LqThgQaEc5w
   - slug: api-days-india-2026-openapi-to-opencli
     title: 'From OpenAPI to OpenCLI: AI-Ready Operations for Modern API Platforms'
     time: 4:30pm–4:55pm
@@ -276,3 +293,4 @@ talks:
       replacing operational investments. The key insight is simple: OpenAPI
       standardized service interfaces for machines. AI-first API management now
       requires operational interfaces to become machine-readable too.
+    videoUrl: https://www.youtube.com/watch?v=FNiggaS-1oM
