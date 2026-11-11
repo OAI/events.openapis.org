@@ -6,12 +6,272 @@ type: Event
 status: upcoming
 image: /img/events/api-days-paris-2026/cover.jpg
 description: >-
-  The OpenAPI Initiative returns to API Days Paris in 2026 with a dedicated
-  OpenAPI program at the Centre des Nouvelles Industries et Technologies. The
-  full program and speaker line-up will be announced closer to the event.
+  The OpenAPI Initiative co-organizes the API Standards Conference at API Days
+  Paris 2026 with the AsyncAPI Initiative, JSON Schema, and the GraphQL
+  Foundation, at the Centre des Nouvelles Industries et Technologies. The
+  OpenAPI talks span all three days: OpenAPI in the age of AI, AI-ready API
+  metadata, Arazzo workflows for humans and agents, LLMs versus dedicated
+  OpenAPI tooling, agent registries, and open standards that connect APIs with
+  data.
 permalink: /events/api-days-paris-2026
+speakers:
+  - erik-wilde
+  - galina-tuova
+  - frank-kilcommins
+  - reuven-harrison
+  - pubudu-gunatilaka
+  - carles-arnal
+  - naresh-jain
+  - simon-harrer
 tags:
   - event
 metaDescription: >-
-  The OpenAPI Initiative track at API Days Paris 2026 — program and speakers to
-  be announced.
+  The OpenAPI talks at the API Standards Conference at API Days Paris 2026 —
+  OpenAPI in the age of AI, Arazzo workflows for agents, AI-ready API
+  metadata, and OpenAPI tooling in the age of LLMs.
+agenda:
+  December 1:
+    API Standards Conference:
+      - title: API Standards Conference Welcome and OpenAPI in the Age of AI
+        time: 11:00am–11:25am
+        speaker: erik-wilde
+        permalink: /events/talks/api-days-paris-2026-welcome-openapi-age-of-ai
+      - title: Make Your API Metadata AI-Ready and Automatically Discoverable by Agents
+        time: 12:30pm–12:55pm
+        speaker: galina-tuova
+        permalink: /events/talks/api-days-paris-2026-ai-ready-api-metadata-ord
+      - title: 'Arazzo: Turning Business Workflows into Agent Capabilities via MCP and Beyond'
+        time: 3:30pm–3:55pm
+        speaker: frank-kilcommins
+        permalink: /events/talks/api-days-paris-2026-arazzo-agent-capabilities-mcp
+      - title: 'oasdiff vs Claude: A Case Study in LLMs vs Dedicated Tools'
+        time: 5:00pm–5:25pm
+        speaker: reuven-harrison
+        permalink: /events/talks/api-days-paris-2026-oasdiff-vs-claude
+  December 2:
+    API Standards Conference:
+      - title: 'Your Portal Has Two Kinds of Visitors Now: Arazzo Workflows for Humans and Agents'
+        time: 2:00pm–2:25pm
+        speaker: pubudu-gunatilaka
+        permalink: /events/talks/api-days-paris-2026-portal-arazzo-humans-agents
+      - title: 'From Schema Registry to Agent Registry: Governing AI Discovery with the A2A Protocol'
+        time: 3:00pm–3:25pm
+        speaker: carles-arnal
+        permalink: /events/talks/api-days-paris-2026-schema-registry-agent-registry
+  December 3:
+    API Standards Conference:
+      - title: 'Beyond REST: Evolving Arazzo for Real-World Agentic Workflows'
+        time: 9:45am–10:10am
+        speaker: naresh-jain
+        permalink: /events/talks/api-days-paris-2026-beyond-rest-evolving-arazzo
+      - title: Let’s Help Agents to Navigate the API and the Data World
+        time: 11:00am–11:25am
+        speaker: simon-harrer
+        permalink: /events/talks/api-days-paris-2026-agents-api-data-world
+talks:
+  - slug: api-days-paris-2026-welcome-openapi-age-of-ai
+    title: API Standards Conference Welcome and OpenAPI in the Age of AI
+    time: 11:00am–11:25am
+    category: API Standards Conference
+    speakers:
+      - erik-wilde
+    description: >-
+      OpenAPI has seen a lot of success since it was created as Swagger in
+      2010 and became OpenAPI in 2016. What is the reason for its
+      continued momentum and how does the landscape change with AI
+      entering the picture in a variety of ways? We look at how OpenAPI
+      can help you, how OAI can help you using OpenAPI better, and how AI
+      means that you have to slightly adjust the way you design and manage
+      your APIs.
+  - slug: api-days-paris-2026-ai-ready-api-metadata-ord
+    title: Make Your API Metadata AI-Ready and Automatically Discoverable by Agents
+    time: 12:30pm–12:55pm
+    category: API Standards Conference
+    speakers:
+      - galina-tuova
+    description: >-
+      Open Resource Discovery (ORD) addresses this with an open standard —
+      governed by the Linux Foundation (NeoNephos Project) — for
+      decentralized, self-describing systems. Instead of registering
+      everything in a central catalog by hand, systems publish
+      machine-readable metadata at the source, so catalogs, tools, and AI
+      agents can crawl and refresh it automatically from a single entry
+      point. ORD complements OpenAPI and AsyncAPI rather than replacing
+      them, adding the high-level context and relationships that make APIs
+      — along with events, data products, and AI resources such as agents,
+      skills, and workflows — automatically discoverable, together with
+      their contracts and documentation. ORD is also built for AI
+      consumers: dedicated AI-facing metadata (such as hints for LLMs and
+      agent orchestrators) and native support for agent protocols let AI
+      orchestrators dynamically discover the capabilities available to
+      them in a system landscape. With ORD, organizations can publish
+      their metadata offerings, analyze their IT landscape in real time,
+      and build platforms for software development, data management, and
+      AI.
+  - slug: api-days-paris-2026-arazzo-agent-capabilities-mcp
+    title: 'Arazzo: Turning Business Workflows into Agent Capabilities via MCP and Beyond'
+    time: 3:30pm–3:55pm
+    category: API Standards Conference
+    speakers:
+      - frank-kilcommins
+    description: >-
+      Giving agents raw API operations is like handing someone a parts
+      list instead of a finished product. Individually the operations are
+      valid but assembled in the wrong order, with the wrong inputs, they
+      produce the wrong outcomes. This is wasteful, unpredictable, and
+      incurs a real cost on both sides of the interaction.
+  - slug: api-days-paris-2026-oasdiff-vs-claude
+    title: 'oasdiff vs Claude: A Case Study in LLMs vs Dedicated Tools'
+    time: 5:00pm–5:25pm
+    category: API Standards Conference
+    speakers:
+      - reuven-harrison
+    description: >-
+      Frontier models can now judge a single OpenAPI change correctly
+      almost every time. Will general LLMs replace dedicated tools? We
+      took oasdiff, an open-source OpenAPI breaking-change checker, as a
+      test case and ran the experiment. Three Claude models faced oasdiff
+      on six spec changes, five of them from real bug reports. The best
+      model was right on all five cases the checker had missed. The
+      smaller ones changed their verdict on identical input or applied the
+      wrong rule with confidence. On the 44 MB Microsoft Graph spec, far
+      beyond any context window, agents matched oasdiff's 521 affected
+      operations only by writing a one-off program for that one kind of
+      change. And when Claude fixed one of the bugs it had found, it
+      introduced a new one that only review caught. The results fit a
+      maturity model for turning intelligence into a durable capability:
+      ask the model for each answer, have it write a throwaway program,
+      have it develop or enhance a maintained tool under review where
+      every failure becomes a test, then call it only for cases the tool
+      cannot decide. Each step trades breadth for what a CI gate needs:
+      every change covered, the same answer every run, stable findings,
+      explicit policy, near-zero cost. Climbing these modes is the
+      maintainers' job, not the users'. A shared tool also pools what
+      every team learns, so one team's edge case becomes everyone's rule.
+      Better models make such tools cheaper to build: expect more of them,
+      not fewer.
+  - slug: api-days-paris-2026-portal-arazzo-humans-agents
+    title: 'Your Portal Has Two Kinds of Visitors Now: Arazzo Workflows for Humans and Agents'
+    time: 2:00pm–2:25pm
+    category: API Standards Conference
+    speakers:
+      - pubudu-gunatilaka
+    description: >-
+      OpenAPI tells an agent which operations exist. It does not tell it
+      that placing an order takes four calls across three APIs, in a
+      specific order, passing an identifier from step two into step four.
+      Agents rediscover that sequence by trial and error, and they get it
+      wrong in ways that are expensive to debug and risky to run in
+      production. We built API Workflows into our developer portal on top
+      of Arazzo. Each workflow pairs an Arazzo definition, which tells an
+      agent exactly how the calls chain together, with a natural language
+      agent prompt that tells it when reaching for this workflow is the
+      right move. Agents turn out to need both: the mechanics and the
+      intent. The more interesting half is publication. One workflow is
+      rendered in the portal for human developers and emitted into
+      llms.txt and api-workflows.md for agents, with visibility controlled
+      independently per audience and a draft-and-publish lifecycle so
+      nothing reaches either surface early. This talk covers what Arazzo
+      gave us for free, what we had to build around it, and why publishing
+      outcome-level workflows beats handing agents a catalog of endpoints.
+      Key Takeaways: - Why OpenAPI alone leaves agents guessing at
+      multi-step business processes, and precisely what Arazzo adds -
+      Pairing a machine-readable Arazzo definition with natural-language
+      invocation guidance, and why agents need both - Publishing the same
+      workflow to human and agent surfaces, including llms.txt and
+      markdown, from one definition - Governing agent-facing capability
+      with independent per-audience visibility and a publish lifecycle -
+      Where Arazzo fit cleanly, where we had to extend around it, and what
+      that suggests for the spec's evolution
+  - slug: api-days-paris-2026-schema-registry-agent-registry
+    title: 'From Schema Registry to Agent Registry: Governing AI Discovery with the A2A Protocol'
+    time: 3:00pm–3:25pm
+    category: API Standards Conference
+    speakers:
+      - carles-arnal
+    description: >-
+      API governance solved discovery, versioning, and compatibility for
+      REST services. Now AI agents face the same challenges. One team
+      updates a prompt template and downstream agents silently break.
+      Welcome to the API governance problem all over again but for agents.
+      This talk shows how Apicurio Registry (CNCF sandbox) evolved to
+      manage AI-native artifacts using the same governance patterns that
+      worked for APIs: A2A Agent Cards for discovery, LLM Model Schemas
+      for metadata, and prompt templates with version control. Live demo:
+      agents discovering each other through the A2A Protocol backed by
+      registry-enforced compatibility rules. You'll see agent cards
+      registered via REST API, agents discover peers using the same
+      patterns as OpenAPI discovery, and the registry reject incompatible
+      version pushes. This brings proven API governance patterns to
+      multi-agent AI systems. Key message for API audience: if you solved
+      API discovery and versioning, you already know how to solve agent
+      discovery. The patterns are identical.
+  - slug: api-days-paris-2026-beyond-rest-evolving-arazzo
+    title: 'Beyond REST: Evolving Arazzo for Real-World Agentic Workflows'
+    time: 9:45am–10:10am
+    category: API Standards Conference
+    speakers:
+      - naresh-jain
+    description: >-
+      A real-world business workflow rarely stays within the boundaries of
+      a single API style. An order might begin with an HTTP API described
+      using OpenAPI, trigger an event described using AsyncAPI, invoke a
+      Protobuf RPC service, query data through GraphQL, and eventually
+      receive an asynchronous notification. Agentic applications make this
+      even more important: an agent needs to understand not just
+      individual API operations, but how capabilities across heterogeneous
+      systems can be composed into a meaningful workflow. Arazzo was
+      created to describe sequences of API calls and the dependencies
+      between them. But what happens when the next step isn’t another
+      OpenAPI operation? In this talk, we’ll look at how Arazzo is
+      evolving to support heterogeneous API interaction models. Drawing on
+      the work to introduce AsyncAPI, Protocol Buffer RPC and GraphQL
+      support into the Arazzo Specification, we’ll explore some of the
+      surprisingly difficult design questions that emerge when REST-style
+      request/response assumptions disappear. How do you represent send
+      and receive operations in an event-driven system? What does a
+      workflow step mean when an RPC is server-streaming or bidirectional?
+      How should GraphQL queries, mutations and subscriptions participate
+      in a workflow? And how can we add these capabilities without turning
+      Arazzo into a collection of protocol-specific special cases? We’ll
+      use these questions to explore a broader idea: Arazzo can become a
+      protocol-independent description of how API capabilities are
+      composed to accomplish an outcome. That has implications beyond API
+      documentation and testing. For AI agents, an Arazzo workflow can
+      provide something increasingly valuable: an explicit,
+      machine-readable description of which capabilities to invoke, in
+      what sequence, how data flows between them, and what successful
+      execution looks like. Rather than asking agents to infer workflows
+      from a collection of disconnected API descriptions, we can start
+      making the workflow itself part of the contract.
+  - slug: api-days-paris-2026-agents-api-data-world
+    title: Let’s Help Agents to Navigate the API and the Data World
+    time: 11:00am–11:25am
+    category: API Standards Conference
+    speakers:
+      - simon-harrer
+    description: >-
+      AI agents work across two worlds. Data lives in tables, and business
+      functions live behind APIs. Real tasks need both. "Give every
+      customer with a late delivery a voucher" means querying shipment
+      data first and then calling a voucher API. The table calls the
+      customer customer_id and the API calls it customerNumber. Nothing
+      tells the agent that both mean the same customer, so it has to
+      guess. A wrong guess means a wrong join or a wrong action. This talk
+      covers three open standards that together close this gap: - The Open
+      Data Contract Standard (ODCS) describes the data world: tables,
+      columns, types, quality, and terms of use. - OpenAPI describes the
+      API world: endpoints, requests, and responses. - Apache Ossie
+      describes the meaning: business concepts such as Customer, Shipment,
+      and Voucher, and how they relate. ODCS and OpenAPI describe the
+      shape of the data, and Ossie describes what it means. When columns
+      in data contracts and fields in API specifications link to the same
+      Ossie concepts, the agent can start from the concepts in its task.
+      The ontology leads it to the right data product and the right API,
+      so it can combine both without guessing. We go through the voucher
+      example step by step, with real files for all three standards, and
+      discuss how teams build and maintain the ontology without a central
+      bottleneck. You will learn: - what ODCS, OpenAPI, and Apache Ossie
+      each describe, and where each one stops - how to link data contract
+      columns and API fields to concepts in one Ossie ontology - how an
+      agent uses these links to read data and then act through APIs

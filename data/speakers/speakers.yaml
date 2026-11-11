@@ -359,6 +359,13 @@
     - id: linkedin
       url: https://www.linkedin.com/in/frank-kilcommins/
 
+- slug: galina-tuova
+  name: Galina Tuova
+  company: SAP
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/galina-tuova-178563157/
+
 - slug: gobe-hobona
   name: Gobe Hobona
   urls:
@@ -673,6 +680,13 @@
     - id: linkedin
       url: https://www.linkedin.com/in/ptrthomas/
 
+- slug: pubudu-gunatilaka
+  name: Pubudu Gunatilaka
+  company: WSO2
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/pubudugunatilaka/
+
 - slug: rafael-granados
   name: Rafael Granados
   image: rafael-granados.webp
@@ -712,6 +726,13 @@
   urls:
     - id: linkedin
       url: https://www.linkedin.com/in/ranjith-n-1a3551166/
+
+- slug: reuven-harrison
+  name: Reuven Harrison
+  company: oasdiff
+  urls:
+    - id: linkedin
+      url: https://www.linkedin.com/in/reuvenharrison/
 
 - slug: ryan-day
   name: Ryan Day
