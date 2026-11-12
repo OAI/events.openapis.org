@@ -361,6 +361,7 @@
 
 - slug: galina-tuova
   name: Galina Tuova
+  image: galina-tuova.webp
   company: SAP
   urls:
     - id: linkedin
@@ -682,6 +683,7 @@
 
 - slug: pubudu-gunatilaka
   name: Pubudu Gunatilaka
+  image: pubudu-gunatilaka.webp
   company: WSO2
   urls:
     - id: linkedin
@@ -729,6 +731,7 @@
 
 - slug: reuven-harrison
   name: Reuven Harrison
+  image: reuven-harrison.webp
   company: oasdiff
   urls:
     - id: linkedin
