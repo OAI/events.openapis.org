@@ -332,8 +332,9 @@
 
 - [API Days Paris 2024](/events/api-days-paris-2024) — December 2 – 5, 2024
 
-**Miguel Quintero** — Postman
+**Miguel Quintero** — Adapt
 
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 
 **Mike Amundsen**

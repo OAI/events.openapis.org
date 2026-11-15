@@ -11,8 +11,8 @@ description: >-
   Foundation, at the Centre des Nouvelles Industries et Technologies. The
   OpenAPI talks span all three days: OpenAPI in the age of AI, AI-ready API
   metadata, Arazzo workflows for humans and agents, LLMs versus dedicated
-  OpenAPI tooling, agent registries, and open standards that connect APIs with
-  data.
+  OpenAPI tooling, testing MCP tools against OpenAPI, agent registries, and
+  open standards that connect APIs with data.
 permalink: /events/api-days-paris-2026
 speakers:
   - erik-wilde
@@ -21,6 +21,7 @@ speakers:
   - reuven-harrison
   - pubudu-gunatilaka
   - carles-arnal
+  - miguel-quintero
   - naresh-jain
   - simon-harrer
 tags:
@@ -58,6 +59,10 @@ agenda:
         time: 3:00pm–3:25pm
         speaker: carles-arnal
         permalink: /events/talks/api-days-paris-2026-schema-registry-agent-registry
+      - title: 'OpenAPI: The Answer Key for MCP Tool Calling'
+        time: 5:30pm–5:55pm
+        speaker: miguel-quintero
+        permalink: /events/talks/api-days-paris-2026-openapi-answer-key-mcp-tool-calling
   December 3:
     API Standards Conference:
       - title: 'Beyond REST: Evolving Arazzo for Real-World Agentic Workflows'
@@ -206,6 +211,30 @@ talks:
       multi-agent AI systems. Key message for API audience: if you solved
       API discovery and versioning, you already know how to solve agent
       discovery. The patterns are identical.
+  - slug: api-days-paris-2026-openapi-answer-key-mcp-tool-calling
+    title: 'OpenAPI: The Answer Key for MCP Tool Calling'
+    time: 5:30pm–5:55pm
+    category: API Standards Conference
+    speakers:
+      - miguel-quintero
+    description: >-
+      Your MCP server passes its unit tests. Then an agent connects, picks
+      the wrong tool, sends a well-formed date for the wrong week, and
+      reports success. Failures like these come from how a model reads
+      your tool names, descriptions, and schemas, and most teams have no
+      way to measure them before release. This talk argues that the answer
+      key already exists: your OpenAPI description. The same document that
+      generates your MCP tools can grade how agents use them. Examples
+      become golden test cases. JSON Schema becomes argument assertions.
+      HTTP semantics and deprecation metadata become safety gates. We'll
+      walk through a pipeline that lints the spec for agent readiness,
+      generates the tools, scores tool selection, arguments, and task
+      completion, and blocks a release in CI when an unsafe call slips
+      through. You'll leave with a mapping from OpenAPI fields to eval
+      signals you can apply to your own specs, a pipeline that fits into
+      existing CI, and a case for holding destructive and
+      permission-boundary calls to a zero-tolerance threshold instead of a
+      blended pass rate.
   - slug: api-days-paris-2026-beyond-rest-evolving-arazzo
     title: 'Beyond REST: Evolving Arazzo for Real-World Agentic Workflows'
     time: 9:45am–10:10am
