@@ -78,6 +78,7 @@
 
 **Carles Arnal** — IBM
 
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days Amsterdam 2026](/events/api-days-amsterdam-2026) — June 9 – 10, 2026
 
 **Chris Wood** — Ozone API
@@ -154,6 +155,7 @@
 
 **Erik Wilde** — OpenAPI Initiative
 
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days London 2026](/events/api-days-london-2026) — September 30 – October 1, 2026
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 - [API Days Munich 2026](/events/api-days-munich-2026) — July 8 – 9, 2026
@@ -198,6 +200,7 @@
 
 **Frank Kilcommins** — Jentic
 
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days London 2026](/events/api-days-london-2026) — September 30 – October 1, 2026
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 - [API Days Amsterdam 2026](/events/api-days-amsterdam-2026) — June 9 – 10, 2026
@@ -216,6 +219,10 @@
 - [API Days New York 2024](/events/api-days-new-york-2024) — April 30 – May 1, 2024
 - [API Days Paris 2023](/events/api-days-paris-2023) — December 6 – 8, 2023
 - [API Days London 2023](/events/api-days-london-2023) — September 13 – 14, 2023
+
+**Galina Tuova** — SAP
+
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 
 **Gobe Hobona**
 
@@ -325,8 +332,9 @@
 
 - [API Days Paris 2024](/events/api-days-paris-2024) — December 2 – 5, 2024
 
-**Miguel Quintero** — Postman
+**Miguel Quintero** — Adapt
 
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 
 **Mike Amundsen**
@@ -344,6 +352,7 @@
 
 **Naresh Jain** — Specmatic
 
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 - [API Days London 2025](/events/api-days-london-2025) — September 22 – 24, 2025
@@ -400,6 +409,10 @@
 
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 
+**Pubudu Gunatilaka** — WSO2
+
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
+
 **Rafael Granados** — API Architect, INDITEX
 
 - [API Days Paris 2024](/events/api-days-paris-2024) — December 2 – 5, 2024
@@ -420,6 +433,10 @@
 
 - _No events yet._
 
+**Reuven Harrison** — oasdiff
+
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
+
 **Ryan Day** — Conference of State Bank Supervisors
 
 - [API Days New York 2025](/events/api-days-new-york-2025) — May 14 – 15, 2025
@@ -438,6 +455,7 @@
 
 **Simon Harrer** — Entropy Data
 
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 - [API Days London 2025](/events/api-days-london-2025) — September 22 – 24, 2025
 - [JAX Mainz 2024](/events/jax-mainz) — April 22 – 26, 2024
