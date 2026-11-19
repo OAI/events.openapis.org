@@ -69,7 +69,7 @@ agenda:
         time: 9:45am–10:10am
         speaker: naresh-jain
         permalink: /events/talks/api-days-paris-2026-beyond-rest-evolving-arazzo
-      - title: Let’s Help Agents to Navigate the API and the Data World
+      - title: Let's Help Agents to Navigate the API and the Data World
         time: 11:00am–11:25am
         speaker: simon-harrer
         permalink: /events/talks/api-days-paris-2026-agents-api-data-world
@@ -274,7 +274,7 @@ talks:
       from a collection of disconnected API descriptions, we can start
       making the workflow itself part of the contract.
   - slug: api-days-paris-2026-agents-api-data-world
-    title: Let’s Help Agents to Navigate the API and the Data World
+    title: Let's Help Agents to Navigate the API and the Data World
     time: 11:00am–11:25am
     category: API Standards Conference
     speakers:
