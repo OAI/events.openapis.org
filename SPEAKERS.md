@@ -46,7 +46,7 @@
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 - [API Days London 2025](/events/api-days-london-2025) — September 22 – 24, 2025
 
-**Anusha Jayasundara** — WSO2
+**Anusha Jayasundara** — Choreo Labs
 
 - [API Days Singapore 2026](/events/api-days-singapore-2026) — April 14 – 15, 2026
 
@@ -87,7 +87,7 @@
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 - [API Days Helsinki 2025](/events/api-days-helsinki-2025) — June 3 – 4, 2025
 
-**Dakshitha Ratnayake** — WSO2
+**Dakshitha Ratnayake** — Choreo Labs
 
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 
@@ -121,7 +121,7 @@
 
 - [API World Santa Clara 2025](/events/api-world-santa-clara) — September 4, 2025
 
-**Derric Gilling** — WSO2
+**Derric Gilling** — Choreo Labs
 
 - [API Days New York 2026](/events/api-days-new-york-2026) — May 13 – 14, 2026
 
@@ -367,7 +367,7 @@
 
 - [API Days Paris 2023](/events/api-days-paris-2023) — December 6 – 8, 2023
 
-**Nuwan Dias** — WSO2
+**Nuwan Dias** — Choreo Labs
 
 - [Developer Week San Jose 2026](/events/devweek-san-jose) — February 18 – 20, 2026
 
@@ -409,7 +409,7 @@
 
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 
-**Pubudu Gunatilaka** — WSO2
+**Pubudu Gunatilaka** — Choreo Labs
 
 - [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 
