@@ -12,6 +12,10 @@
 
 export const SESSION_PARAM = 'session';
 
+// The agenda's selected day is deep-linked the same way, so a shared link can
+// open straight onto a later day: /events/<event>/?day=december-2.
+export const DAY_PARAM = 'day';
+
 function slugify(value: string): string {
   return value
     .toLowerCase()
@@ -29,6 +33,11 @@ export function talkSlugFromPermalink(permalink?: string): string | undefined {
 
 export function sessionKey(session: { title: string; permalink?: string }): string {
   return talkSlugFromPermalink(session.permalink) ?? slugify(session.title);
+}
+
+/** An agenda date heading as a URL key: `December 2` -> `december-2`, `December 6/7` -> `december-6-7`. */
+export function dayKey(date: string): string {
+  return slugify(date);
 }
 
 /**

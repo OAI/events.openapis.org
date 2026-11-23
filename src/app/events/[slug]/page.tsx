@@ -53,7 +53,6 @@ export default async function EventPage({ params }: PageProps) {
       image={detail.image}
       type={detail.type}
       status={detail.status}
-      description={detail.description}
       ticketUrl={detail.ticketUrl}
       ticketLabel={detail.ticketLabel}
       agenda={detail.agenda}
