@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import Link from 'next/link';
-import { SESSION_PARAM, sessionHref, sessionKey } from '@/lib/sessionKey';
+import { DAY_PARAM, SESSION_PARAM, dayKey, sessionKey } from '@/lib/sessionKey';
 import EventCard from '../EventCard';
 import OaiFooter from '../OaiFooter';
 import PhotoLightbox from '../PhotoLightbox';
@@ -13,12 +13,6 @@ import { galleryPhotos, galleryPhotoSrcs, tileWidth } from '@/lib/galleryPhotos'
 import { asset } from '@/lib/basePath';
 import { hasPhoto, photoSrc } from '@/lib/avatarPlaceholder';
 import { lockScroll } from '@/lib/scrollLock';
-
-interface Speaker {
-  name: string;
-  position: string;
-  photo: string;
-}
 
 interface AgendaSpeaker {
   // Absent only for the legacy singular `speaker:` form, which is a bare name
@@ -72,7 +66,6 @@ interface EventDetailProps {
   image: string;
   type: string;
   status: 'active' | 'upcoming' | 'finished';
-  description?: string;
   ticketUrl?: string;
   ticketLabel?: string;
   agenda?: {
@@ -80,7 +73,6 @@ interface EventDetailProps {
       [category: string]: AgendaSession[];
     };
   };
-  speakers?: Speaker[];
   sponsors?: { name: string; logo?: string }[];
 }
 
@@ -104,6 +96,16 @@ function timeToMinutes(label: string): number | null {
   return h * 60 + Number(m[2]);
 }
 
+function agendaUrl(day: string | null, session: string | null): string {
+  const params = new URLSearchParams(window.location.search);
+  params.delete(DAY_PARAM);
+  params.delete(SESSION_PARAM);
+  if (session) params.set(SESSION_PARAM, session);
+  else if (day) params.set(DAY_PARAM, day);
+  const query = params.toString();
+  return query ? `${window.location.pathname}?${query}` : window.location.pathname;
+}
+
 export default function EventDetail({
   title,
   date,
@@ -111,23 +113,24 @@ export default function EventDetail({
   image,
   type,
   status,
-  description,
   ticketUrl,
   ticketLabel,
   agenda = {},
-  speakers = [],
   sponsors = [],
 }: EventDetailProps) {
-  const agendaDates = Object.keys(agenda);
-  const [selectedDate, setSelectedDate] = useState(agendaDates[0] || '');
+  const agendaDates = useMemo(() => Object.keys(agenda), [agenda]);
+  const firstDate = agendaDates[0] || '';
+  const [selectedDate, setSelectedDate] = useState(firstDate);
   const currentAgenda = agenda[selectedDate] || {};
   const agendaCategories = Object.keys(currentAgenda);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [selectedSession, setSelectedSession] = useState<AgendaSession | null>(null);
 
-  // --- Deep-linking the session modal ---------------------------------------
+  // --- Deep-linking the agenda day and the session modal ---------------------
   // The open session is mirrored into ?session=<key>, so a session can be linked
   // to directly (search results do exactly that) and so Back closes the modal.
+  // The selected day is mirrored into ?day=<key> (see agendaUrl), so a link can
+  // open the agenda on a later day.
   //
   // This drives the URL through window.history rather than useSearchParams:
   // reading search params during render opts the page out of static rendering,
@@ -148,18 +151,27 @@ export default function EventDetail({
     return map;
   }, [agenda]);
 
-  // Single source of truth: whatever ?session= currently says.
+  const datesByKey = useMemo(
+    () => new Map(agendaDates.map((date) => [dayKey(date), date])),
+    [agendaDates],
+  );
+
+  // Single source of truth: whatever ?session= / ?day= currently say.
   const syncFromUrl = useCallback(() => {
-    const key = new URLSearchParams(window.location.search).get(SESSION_PARAM);
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get(SESSION_PARAM);
     const hit = key ? sessionsByKey.get(key) : undefined;
-    if (!hit) {
-      setSelectedSession(null);
+    if (hit) {
+      // The session may live on a day other than the one currently tabbed.
+      setSelectedDate(hit.date);
+      setSelectedSession(hit.session);
       return;
     }
-    // The session may live on a day other than the one currently tabbed.
-    setSelectedDate(hit.date);
-    setSelectedSession(hit.session);
-  }, [sessionsByKey]);
+    setSelectedSession(null);
+    // A missing or unknown ?day= lands on the first day.
+    const day = params.get(DAY_PARAM);
+    setSelectedDate((day && datesByKey.get(day)) || firstDate);
+  }, [sessionsByKey, datesByKey, firstDate]);
 
   // Run on mount (handles arriving from search) and on Back/Forward.
   useEffect(() => {
@@ -168,10 +180,24 @@ export default function EventDetail({
     return () => window.removeEventListener('popstate', syncFromUrl);
   }, [syncFromUrl]);
 
+  // Switching days replaces the entry: the tabs are a view of one page, so Back
+  // should leave the page rather than step through every day clicked.
+  const selectDate = useCallback(
+    (date: string) => {
+      setSelectedDate(date);
+      window.history.replaceState(
+        null,
+        '',
+        agendaUrl(date === firstDate ? null : dayKey(date), null),
+      );
+    },
+    [firstDate],
+  );
+
   // Opening from the agenda adds a history entry, so Back closes the modal.
   const openSession = useCallback((session: AgendaSession) => {
     setSelectedSession(session);
-    window.history.pushState(null, '', sessionHref(window.location.pathname, sessionKey(session)));
+    window.history.pushState(null, '', agendaUrl(null, sessionKey(session)));
   }, []);
 
   // Stepping between sessions inside the modal (swipe, time pills) replaces the
@@ -179,19 +205,20 @@ export default function EventDetail({
   // came from under ten Back presses.
   const showSession = useCallback((session: AgendaSession) => {
     setSelectedSession(session);
-    window.history.replaceState(
-      null,
-      '',
-      sessionHref(window.location.pathname, sessionKey(session)),
-    );
+    window.history.replaceState(null, '', agendaUrl(null, sessionKey(session)));
   }, []);
 
   const closeSession = useCallback(() => {
     setSelectedSession(null);
     // replaceState, not back(): the modal may have been opened directly from a
     // search result, in which case there is no in-page entry to return to.
-    window.history.replaceState(null, '', window.location.pathname);
-  }, []);
+    // The URL goes back to naming the day the modal was showing.
+    window.history.replaceState(
+      null,
+      '',
+      agendaUrl(selectedDate === firstDate ? null : dayKey(selectedDate), null),
+    );
+  }, [selectedDate, firstDate]);
 
   // Lock background scrolling while the session modal is open.
   useEffect(() => {
@@ -239,47 +266,23 @@ export default function EventDetail({
         {/* Hero Section with Event Card */}
         <section className="relative overflow-hidden pb-1 pt-16 md:pb-1.5 md:pt-24">
           <div className="mx-auto max-w-[1408px] md:px-6">
-            <div className="mb-8">
-              <EventCard
-                title={title}
-                date={date}
-                location={location}
-                image={image}
-                type={type}
-                permalink=""
-                status={status}
-                ticketUrl={ticketUrl}
-                ticketLabel={ticketLabel}
-                featured
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Map Section (Placeholder) — fills the 1360 column like the event card */}
-        <section className="relative z-10 mx-auto mb-12 max-w-[1408px] md:px-6">
-          <div className="flex h-[227px] w-full items-center justify-center rounded-[40px] bg-brand-card-dark md:h-[400px]">
-            <div className="text-center">
-              <span
-                className="mb-4 block text-4xl"
-                style={{ color: 'var(--ifm-font-color-base)', opacity: 0.2 }}
-              >
-                📍
-              </span>
-              <span
-                className="font-onest text-lg font-semibold tracking-oai"
-                style={{ color: 'var(--ifm-font-color-base)', opacity: 0.2 }}
-              >
-                Venue Map
-              </span>
-            </div>
+            <EventCard
+              title={title}
+              date={date}
+              location={location}
+              image={image}
+              type={type}
+              permalink=""
+              status={status}
+              ticketUrl={ticketUrl}
+              ticketLabel={ticketLabel}
+              featured
+            />
           </div>
         </section>
 
         {/* Agenda Section */}
         {agendaCategories.length > 0 && (
-          /* The top margin collapses with the map section's mb-12, so the 140px
-           wins rather than stacking on top of it. */
           <section className="relative z-10 mx-auto mb-12 mt-20 max-w-[1408px] md:mt-[140px] md:px-6">
             {/* Headings and the date picker keep the 80px side inset (md:px-20);
               the session cards below fill the full column width (no inset). */}
@@ -302,7 +305,8 @@ export default function EventDetail({
                   return (
                     <button
                       key={agendaDate}
-                      onClick={() => setSelectedDate(agendaDate)}
+                      onClick={() => selectDate(agendaDate)}
+                      aria-pressed={isActive}
                       className={`flex h-[32px] cursor-pointer items-center justify-center rounded-[20px] border-none px-5 py-5 font-onest text-[12px] font-semibold tracking-[-0.48px] transition-colors ${
                         isActive
                           ? 'bg-brand-green text-[#15191c]'

@@ -58,3 +58,45 @@ test.describe('Live event phase', () => {
     await expect(live.getByText('Happening now', { exact: true })).toBeVisible();
   });
 });
+
+test.describe('Agenda day deep links', () => {
+  test('the selected day is mirrored into ?day= and restored from it', async ({ page }) => {
+    // Find a multi-day event among those the homepage links to, for the same
+    // reason the smoke test above avoids a hardcoded slug.
+    await page.goto('/');
+    const hrefs = await page
+      .locator('a[href^="/events/"]:not([href*="/events/talks/"])')
+      .evaluateAll((links) => [...new Set(links.map((a) => a.getAttribute('href')!))]);
+    const dayTabs = page.locator('button[aria-pressed]');
+    let eventPath: string | undefined;
+    for (const href of hrefs) {
+      await page.goto(href);
+      if ((await dayTabs.count()) > 1) {
+        eventPath = new URL(page.url()).pathname;
+        break;
+      }
+    }
+    test.skip(!eventPath, 'no multi-day event is linked from the homepage');
+
+    const [first, second] = [dayTabs.nth(0), dayTabs.nth(1)];
+    const dayKey = (await second.innerText())
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-+|-+$)/g, '');
+
+    // Picking a later day names it in the URL...
+    await second.click();
+    await expect(page).toHaveURL(`${eventPath}?day=${dayKey}`);
+    await expect(second).toHaveAttribute('aria-pressed', 'true');
+
+    // ...and that URL opens on it.
+    await page.reload();
+    await expect(second).toHaveAttribute('aria-pressed', 'true');
+    await expect(first).toHaveAttribute('aria-pressed', 'false');
+
+    // The first day is the default, so it gets the bare URL back.
+    await first.click();
+    await expect(page).toHaveURL(eventPath!);
+    await expect(first).toHaveAttribute('aria-pressed', 'true');
+  });
+});

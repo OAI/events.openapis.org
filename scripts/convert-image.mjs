@@ -36,7 +36,7 @@
 // speakers.yaml, then `npm run speakers`).
 
 import sharp from 'sharp';
-import { mkdir, writeFile, readFile, readdir, stat } from 'node:fs/promises';
+import { mkdir, readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
