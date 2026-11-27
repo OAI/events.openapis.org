@@ -352,7 +352,6 @@
 
 **Naresh Jain** — Specmatic
 
-- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days India 2026](/events/api-days-india-2026) — August 19 – 20, 2026
 - [API Days Paris 2025](/events/api-days-paris-2025) — December 9 – 11, 2025
 - [API Days London 2025](/events/api-days-london-2025) — September 22 – 24, 2025
@@ -472,6 +471,7 @@
 
 **Stève Sfartz** — Cisco
 
+- [API Days Paris 2026](/events/api-days-paris-2026) — December 1 – 3, 2026
 - [API Days Paris 2023](/events/api-days-paris-2023) — December 6 – 8, 2023
 
 **Steven Willmott** — Timewarp
