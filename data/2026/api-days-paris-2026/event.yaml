@@ -11,8 +11,9 @@ description: >-
   Foundation, at the Centre des Nouvelles Industries et Technologies. The
   OpenAPI talks span all three days: OpenAPI in the age of AI, AI-ready API
   metadata, Arazzo workflows for humans and agents, LLMs versus dedicated
-  OpenAPI tooling, testing MCP tools against OpenAPI, agent registries, and
-  open standards that connect APIs with data.
+  OpenAPI tooling, testing MCP tools against OpenAPI, the MCP Description
+  Specification, agent registries, and open standards that connect APIs with
+  data.
 permalink: /events/api-days-paris-2026
 speakers:
   - erik-wilde
@@ -22,7 +23,7 @@ speakers:
   - pubudu-gunatilaka
   - carles-arnal
   - miguel-quintero
-  - naresh-jain
+  - steve-sfartz
   - simon-harrer
 tags:
   - event
@@ -65,10 +66,10 @@ agenda:
         permalink: /events/talks/api-days-paris-2026-openapi-answer-key-mcp-tool-calling
   December 3:
     API Standards Conference:
-      - title: 'Beyond REST: Evolving Arazzo for Real-World Agentic Workflows'
+      - title: From OpenAPI to the MCP Description Specification
         time: 9:45am–10:10am
-        speaker: naresh-jain
-        permalink: /events/talks/api-days-paris-2026-beyond-rest-evolving-arazzo
+        speaker: steve-sfartz
+        permalink: /events/talks/api-days-paris-2026-openapi-to-mcp-description
       - title: Let's Help Agents to Navigate the API and the Data World
         time: 11:00am–11:25am
         speaker: simon-harrer
@@ -235,44 +236,27 @@ talks:
       existing CI, and a case for holding destructive and
       permission-boundary calls to a zero-tolerance threshold instead of a
       blended pass rate.
-  - slug: api-days-paris-2026-beyond-rest-evolving-arazzo
-    title: 'Beyond REST: Evolving Arazzo for Real-World Agentic Workflows'
+  - slug: api-days-paris-2026-openapi-to-mcp-description
+    title: From OpenAPI to the MCP Description Specification
     time: 9:45am–10:10am
     category: API Standards Conference
     speakers:
-      - naresh-jain
+      - steve-sfartz
     description: >-
-      A real-world business workflow rarely stays within the boundaries of
-      a single API style. An order might begin with an HTTP API described
-      using OpenAPI, trigger an event described using AsyncAPI, invoke a
-      Protobuf RPC service, query data through GraphQL, and eventually
-      receive an asynchronous notification. Agentic applications make this
-      even more important: an agent needs to understand not just
-      individual API operations, but how capabilities across heterogeneous
-      systems can be composed into a meaningful workflow. Arazzo was
-      created to describe sequences of API calls and the dependencies
-      between them. But what happens when the next step isn’t another
-      OpenAPI operation? In this talk, we’ll look at how Arazzo is
-      evolving to support heterogeneous API interaction models. Drawing on
-      the work to introduce AsyncAPI, Protocol Buffer RPC and GraphQL
-      support into the Arazzo Specification, we’ll explore some of the
-      surprisingly difficult design questions that emerge when REST-style
-      request/response assumptions disappear. How do you represent send
-      and receive operations in an event-driven system? What does a
-      workflow step mean when an RPC is server-streaming or bidirectional?
-      How should GraphQL queries, mutations and subscriptions participate
-      in a workflow? And how can we add these capabilities without turning
-      Arazzo into a collection of protocol-specific special cases? We’ll
-      use these questions to explore a broader idea: Arazzo can become a
-      protocol-independent description of how API capabilities are
-      composed to accomplish an outcome. That has implications beyond API
-      documentation and testing. For AI agents, an Arazzo workflow can
-      provide something increasingly valuable: an explicit,
-      machine-readable description of which capabilities to invoke, in
-      what sequence, how data flows between them, and what successful
-      execution looks like. Rather than asking agents to infer workflows
-      from a collection of disconnected API descriptions, we can start
-      making the workflow itself part of the contract.
+      This session traces how an internal serialization format became the
+      MCP Description initiative. We'll explain why OpenAPI was the
+      starting point, which ideas carried over to MCP, and what it takes
+      to maintain a description specification as the protocol evolves.
+      We'll look at the tooling that makes the specification usable, from
+      editors and validators to mocks and contract checks, and share what
+      we learned as the project moved toward open governance and broader
+      community participation. If you build or deploy MCP servers, you'll
+      see how a shared description can support design reviews, keep
+      documentation aligned with implementation, and help verify what
+      ships to production. You'll also learn how to help shape the
+      specification. If you're building a developer ecosystem around a
+      format, you'll take away practical lessons on what independent tool
+      builders need to adopt it.
   - slug: api-days-paris-2026-agents-api-data-world
     title: Let's Help Agents to Navigate the API and the Data World
     time: 11:00am–11:25am
