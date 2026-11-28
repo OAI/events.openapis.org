@@ -9,8 +9,8 @@ description: >-
   The OpenAPI Initiative co-organizes the API Standards Conference at API Days
   Paris 2026 with the AsyncAPI Initiative, JSON Schema, and the GraphQL
   Foundation, at the Centre des Nouvelles Industries et Technologies. The
-  OpenAPI talks span all three days: OpenAPI in the age of AI, AI-ready API
-  metadata, Arazzo workflows for humans and agents, LLMs versus dedicated
+  OpenAPI talks span all three days: API standards in the age of AI, AI-ready
+  API metadata, Arazzo workflows for humans and agents, LLMs versus dedicated
   OpenAPI tooling, testing MCP tools against OpenAPI, the MCP Description
   Specification, agent registries, and open standards that connect APIs with
   data.
@@ -29,12 +29,12 @@ tags:
   - event
 metaDescription: >-
   The OpenAPI talks at the API Standards Conference at API Days Paris 2026 —
-  OpenAPI in the age of AI, Arazzo workflows for agents, AI-ready API
+  API standards in the age of AI, Arazzo workflows for agents, AI-ready API
   metadata, and OpenAPI tooling in the age of LLMs.
 agenda:
   December 1:
     API Standards Conference:
-      - title: API Standards Conference Welcome and OpenAPI in the Age of AI
+      - title: API Standards Conference Welcome and API Standards in the Age of AI
         time: 11:00am–11:25am
         speaker: erik-wilde
         permalink: /events/talks/api-days-paris-2026-welcome-openapi-age-of-ai
@@ -76,7 +76,7 @@ agenda:
         permalink: /events/talks/api-days-paris-2026-agents-api-data-world
 talks:
   - slug: api-days-paris-2026-welcome-openapi-age-of-ai
-    title: API Standards Conference Welcome and OpenAPI in the Age of AI
+    title: API Standards Conference Welcome and API Standards in the Age of AI
     time: 11:00am–11:25am
     category: API Standards Conference
     speakers:
